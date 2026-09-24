@@ -1,0 +1,80 @@
+export const testimonialsData = [
+  {
+    id: 'test-1',
+    name: 'Aarav Sharma',
+    avatarType: 'student1',
+    university: 'Northeastern University, USA',
+    program: 'MS in Computer Science',
+    intake: 'Fall 2025',
+    flag: '🇺🇸',
+    rating: 5,
+    quote: 'The team at KC Overseas guided me step-by-step from GRE preparation all the way to my US visa interview. Their mock interview session was identical to what the visa officer actually asked me at the Mumbai consulate!',
+    loanAssisted: true,
+    scholarship: '$12,000 Dean’s Award'
+  },
+  {
+    id: 'test-2',
+    name: 'Ananya Deshmukh',
+    avatarType: 'student2',
+    university: 'University of Manchester, UK',
+    program: 'MSc in Artificial Intelligence',
+    intake: 'Autumn 2025',
+    flag: '🇬🇧',
+    rating: 5,
+    quote: 'I was overwhelmed by university options, but their CourseFinder tool filtered the ideal Russell Group colleges matching my academic profile. My SOP editor worked patiently with me over 4 iterations.',
+    loanAssisted: false,
+    scholarship: '£5,000 Global Merit'
+  },
+  {
+    id: 'test-3',
+    name: 'Rohan Varma',
+    avatarType: 'student3',
+    university: 'University of Melbourne, Australia',
+    program: 'Master of Data Science',
+    intake: 'Feb 2026',
+    flag: '🇦🇺',
+    rating: 5,
+    quote: 'Securing an education loan without collateral felt daunting until Élan stepped in. They had my sanction letter ready in 4 days from HDFC Credila at an unbeatable interest rate. Truly seamless!',
+    loanAssisted: true,
+    scholarship: '20% Fee Concession'
+  },
+  {
+    id: 'test-4',
+    name: 'Priyanka Iyer',
+    avatarType: 'student4',
+    university: 'Technical University of Munich (TUM), Germany',
+    program: 'M.Sc. Automotive Engineering',
+    intake: 'Winter 2025',
+    flag: '🇩🇪',
+    rating: 5,
+    quote: 'Getting into a tuition-free public university in Germany requires absolute precision with APS certification and blocked account setup. The counselors at KC gave me clarity every single week.',
+    loanAssisted: false,
+    scholarship: '100% Tuition Free'
+  },
+  {
+    id: 'test-5',
+    name: 'Vikramjit Singh',
+    avatarType: 'student5',
+    university: 'Trinity College Dublin, Ireland',
+    program: 'MSc in Financial Technology',
+    intake: 'Fall 2025',
+    flag: '🇮🇪',
+    rating: 5,
+    quote: 'Choosing Ireland for FinTech was the best decision. Within 3 months of arriving, the alumni buddy network connected me with seniors working at Dublin tech hubs. KC is unmatched!',
+    loanAssisted: true,
+    scholarship: '€4,000 Global Excellence'
+  },
+  {
+    id: 'test-6',
+    name: 'Meera Nambiar',
+    avatarType: 'student6',
+    university: 'University of Toronto, Canada',
+    program: 'Master of Biotechnology',
+    intake: 'Fall 2025',
+    flag: '🇨🇦',
+    rating: 5,
+    quote: 'The visa filing assistance and SDS checklist verification were impeccable. My study permit was approved in less than 3 weeks with zero hassle. Highly recommend KC to every overseas aspirant.',
+    loanAssisted: true,
+    scholarship: 'CAD $8,000 Faculty Award'
+  }
+];
