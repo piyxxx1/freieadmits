@@ -21,6 +21,11 @@ import {
   Handshake
 } from 'lucide-react';
 
+const getFlagUrl = (id) => { 
+  const map = { germany: 'de', finland: 'fi', ireland: 'ie', netherlands: 'nl', france: 'fr', spain: 'es', italy: 'it', poland: 'pl', austria: 'at', sweden: 'se', denmark: 'dk' }; 
+  return `https://flagcdn.com/w640/${map[id] || 'eu'}.png`; 
+};
+
 export function Navbar({ onOpenCounselling, onOpenEvaluation }) {
   const { currentPath, navigate } = useRouter();
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
@@ -164,22 +169,10 @@ export function Navbar({ onOpenCounselling, onOpenEvaluation }) {
                                   onClick={() => handleDestinationSelect(dest.slug)}
                                 >
                                   <div className="mega-card-thumb">
-                                    <img src={dest.image} alt={dest.name} />
-                                    <div className="mega-card-flag-overlay">
-                                      <CountryFlag countryId={dest.id} size={14} />
-                                    </div>
+                                    <img src={getFlagUrl(dest.id)} alt={dest.name} style={{ width: '100%', height: '100%', objectFit: 'cover' }} />
                                   </div>
                                   <div className="mega-card-info">
-                                    <div className="mega-card-name-row">
-                                      <span className="mega-card-name">{dest.name}</span>
-                                      {isGermany && <span className="badge-focus">Core Focus</span>}
-                                      {(dest.id === 'finland' || dest.id === 'ireland') && <span className="badge-hot">Popular</span>}
-                                    </div>
-                                    <span className="mega-card-desc">
-                                      {isGermany 
-                                        ? '€0 Tuition • dMAT • Tech' 
-                                        : (dest.popularStudyAreas ? dest.popularStudyAreas.slice(0, 2).join(' • ') : dest.headline)}
-                                    </span>
+                                    <span className="mega-card-name">{dest.name}</span>
                                   </div>
                                 </div>
                               );

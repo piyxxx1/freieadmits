@@ -118,7 +118,7 @@ export function Home({ onOpenCounselling, onOpenEvaluation }) {
         <div className="container">
           <div style={{ display: 'grid', gridTemplateColumns: '1.2fr 0.8fr', gap: '36px', alignItems: 'center' }} className="dmat-banner-grid">
             <div>
-              <div style={{ display: 'inline-flex', alignItems: 'center', gap: '6px', background: 'rgba(245, 158, 11, 0.2)', color: '#94a3b8', padding: '4px 12px', borderRadius: '4px', fontSize: '0.78rem', fontWeight: 800, textTransform: 'uppercase', letterSpacing: '0.5px', marginBottom: '12px' }}>
+              <div style={{ display: 'inline-flex', alignItems: 'center', gap: '6px', background: '#ffffff', color: '#1c2a4f', padding: '4px 12px', borderRadius: '4px', fontSize: '0.78rem', fontWeight: 800, textTransform: 'uppercase', letterSpacing: '0.5px', marginBottom: '12px' }}>
                 <span>🇩🇪 Germany dMAT Guidance</span>
               </div>
               <h2 style={{ fontSize: '2.2rem', fontWeight: 800, color: '#ffffff', lineHeight: 1.25, marginBottom: '14px' }}>
@@ -185,9 +185,7 @@ export function Home({ onOpenCounselling, onOpenEvaluation }) {
             {/* Pillar 1 */}
             <div className="why-pillar-card">
               <div className="why-pillar-num">01</div>
-              <div className="why-pillar-icon-wrap" style={{ background: '#f8fafc', color: '#1c2a4f' }}>
-                <GraduationCap size={26} />
-              </div>
+              <div style={{ width: "100%", height: "180px", overflow: "hidden", borderRadius: "12px", marginBottom: "8px", border: "1px solid #e2e8f0" }}><img src="/images/why/1.jpg" alt="Public University Focus" style={{ width: "100%", height: "100%", objectFit: "contain", padding: "16px" }} /></div>
               <h3 className="why-pillar-title">Public University Focus</h3>
               <p className="why-pillar-desc">
                 We specialise in guiding students into government-funded public universities across Europe — where tuition is free or near-zero, quality is world-class, and degrees are globally recognised.
@@ -202,9 +200,7 @@ export function Home({ onOpenCounselling, onOpenEvaluation }) {
             {/* Pillar 2 */}
             <div className="why-pillar-card">
               <div className="why-pillar-num">02</div>
-              <div className="why-pillar-icon-wrap" style={{ background: '#ffffff', color: '#475569' }}>
-                <UserCheck size={26} />
-              </div>
+              <div style={{ width: "100%", height: "180px", overflow: "hidden", borderRadius: "12px", marginBottom: "8px", border: "1px solid #e2e8f0" }}><img src="/images/why/2.jpg" alt="Personalised Guidance" style={{ width: "100%", height: "100%", objectFit: "contain", padding: "16px" }} /></div>
               <h3 className="why-pillar-title">Personalised Guidance</h3>
               <p className="why-pillar-desc">
                 No templates, no mass counselling. Every student gets individual attention — we evaluate your academic background, goals and budget before suggesting a single university or country.
@@ -219,9 +215,7 @@ export function Home({ onOpenCounselling, onOpenEvaluation }) {
             {/* Pillar 3 */}
             <div className="why-pillar-card">
               <div className="why-pillar-num">03</div>
-              <div className="why-pillar-icon-wrap" style={{ background: '#ffffff', color: '#1c2a4f' }}>
-                <Globe size={26} />
-              </div>
+              <div style={{ width: "100%", height: "180px", overflow: "hidden", borderRadius: "12px", marginBottom: "8px", border: "1px solid #e2e8f0" }}><img src="/images/why/3.jpg" alt="Germany &amp; Europe Expertise" style={{ width: "100%", height: "100%", objectFit: "contain", padding: "16px" }} /></div>
               <h3 className="why-pillar-title">Germany &amp; Europe Expertise</h3>
               <p className="why-pillar-desc">
                 Deep specialisation in Germany (dMAT, APS, TU9 universities), Finland, Ireland, Netherlands, France, Poland and 6 more destinations — not a generic global consultancy.
@@ -236,9 +230,7 @@ export function Home({ onOpenCounselling, onOpenEvaluation }) {
             {/* Pillar 4 */}
             <div className="why-pillar-card">
               <div className="why-pillar-num">04</div>
-              <div className="why-pillar-icon-wrap" style={{ background: '#f5f3ff', color: '#1c2a4f' }}>
-                <ShieldCheck size={26} />
-              </div>
+              <div style={{ width: "100%", height: "180px", overflow: "hidden", borderRadius: "12px", marginBottom: "8px", border: "1px solid #e2e8f0" }}><img src="/images/why/4.jpg" alt="End-to-End Support" style={{ width: "100%", height: "100%", objectFit: "contain", padding: "16px" }} /></div>
               <h3 className="why-pillar-title">End-to-End Support</h3>
               <p className="why-pillar-desc">
                 From your first profile evaluation to visa filing and pre-departure prep — we are with you at every step, ensuring nothing falls through the cracks in your international journey.
