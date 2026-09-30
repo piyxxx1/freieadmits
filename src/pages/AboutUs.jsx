@@ -26,27 +26,32 @@ export function AboutUs({ onOpenCounselling }) {
     {
       step: '01',
       title: 'Understand',
-      desc: 'We begin by understanding your academic background, interests, career goals and preferred destination.'
+      desc: 'We begin by understanding your academic background, interests, career goals and preferred destination.',
+      img: '/images/about-process/step1.jpg'
     },
     {
       step: '02',
       title: 'Explore',
-      desc: 'We identify relevant countries, courses and universities based on your profile.'
+      desc: 'We identify relevant countries, courses and universities based on your profile.',
+      img: '/images/about-process/step2.jpg'
     },
     {
       step: '03',
       title: 'Plan',
-      desc: 'We create a practical application strategy and explain the requirements involved.'
+      desc: 'We create a practical application strategy and explain the requirements involved.',
+      img: '/images/about-process/step3.jpg'
     },
     {
       step: '04',
       title: 'Apply',
-      desc: 'We assist you through the application and documentation process.'
+      desc: 'We assist you through the application and documentation process.',
+      img: '/images/about-process/step4.jpg'
     },
     {
       step: '05',
       title: 'Prepare',
-      desc: 'After admission, we guide you through the next stages, including visa preparation and pre-departure planning.'
+      desc: 'After admission, we guide you through the next stages, including visa preparation and pre-departure planning.',
+      img: '/images/about-process/step5.jpg'
     }
   ];
 
@@ -73,7 +78,7 @@ export function AboutUs({ onOpenCounselling }) {
     <div>
       {/* 1. HERO HEADER */}
       <section style={{
-        background: 'linear-gradient(180deg, #eff6ff 0%, #ffffff 100%)',
+        background: 'linear-gradient(180deg, #f8fafc 0%, #ffffff 100%)',
         padding: '60px 0 65px 0'
       }}>
         <div className="container">
@@ -82,8 +87,8 @@ export function AboutUs({ onOpenCounselling }) {
               <span className="badge-pill badge-primary">
                 <Sparkles size={14} /> About FREIE ADMITS
               </span>
-              <h1 style={{ fontSize: '2.85rem', fontWeight: 800, color: '#0f172a', lineHeight: 1.18, marginBottom: '20px', letterSpacing: '-0.02em' }}>
-                Helping Students Make <span style={{ color: '#1d4ed8' }}>Informed</span> Global Education Decisions
+              <h1 style={{ fontSize: '2.85rem', fontWeight: 800, color: '#1c2a4f', lineHeight: 1.18, marginBottom: '20px', letterSpacing: '-0.02em' }}>
+                Helping Students Make <span style={{ color: '#1c2a4f' }}>Informed</span> Global Education Decisions
               </h1>
               <p style={{ fontSize: '1.15rem', color: '#475569', lineHeight: 1.65, marginBottom: '20px' }}>
                 Choosing to study abroad is one of the most important decisions in a student's academic journey. 
@@ -96,15 +101,15 @@ export function AboutUs({ onOpenCounselling }) {
 
               <div style={{
                 background: '#f8fafc',
-                borderLeft: '4px solid #1d4ed8',
+                borderLeft: '4px solid #1c2a4f',
                 padding: '16px 20px',
                 borderRadius: '0 10px 10px 0',
                 marginBottom: '28px'
               }}>
-                <div style={{ fontSize: '0.82rem', fontWeight: 700, color: '#1d4ed8', textTransform: 'uppercase', letterSpacing: '0.5px', marginBottom: '4px' }}>
+                <div style={{ fontSize: '0.82rem', fontWeight: 700, color: '#1c2a4f', textTransform: 'uppercase', letterSpacing: '0.5px', marginBottom: '4px' }}>
                   Our Core Approach
                 </div>
-                <div style={{ fontSize: '1.15rem', fontWeight: 700, color: '#0f172a' }}>
+                <div style={{ fontSize: '1.15rem', fontWeight: 700, color: '#1c2a4f' }}>
                   Understand the student first. Recommend the pathway second.
                 </div>
               </div>
@@ -150,10 +155,10 @@ export function AboutUs({ onOpenCounselling }) {
                   transition: 'all 0.2s ease'
                 }}
               >
-                <div style={{ width: '32px', height: '32px', borderRadius: '50%', background: '#eff6ff', color: '#1d4ed8', display: 'flex', alignItems: 'center', justifyContent: 'center', flexShrink: 0 }}>
+                <div style={{ width: '32px', height: '32px', borderRadius: '50%', background: '#f8fafc', color: '#1c2a4f', display: 'flex', alignItems: 'center', justifyContent: 'center', flexShrink: 0 }}>
                   <CheckCircle2 size={18} />
                 </div>
-                <span style={{ fontSize: '1.02rem', fontWeight: 700, color: '#0f172a' }}>
+                <span style={{ fontSize: '1.02rem', fontWeight: 700, color: '#1c2a4f' }}>
                   {item}
                 </span>
               </div>
@@ -164,52 +169,26 @@ export function AboutUs({ onOpenCounselling }) {
 
       {/* 3. OUR APPROACH (5 STAGES) */}
       <section className="section-py" style={{ background: '#f8fafc', borderTop: '1px solid #e2e8f0', borderBottom: '1px solid #e2e8f0' }}>
-        <div className="container" style={{ maxWidth: '900px' }}>
+        <div className="container">
           <div className="section-header">
-            <span className="badge-pill badge-amber">Structured Methodology</span>
+            <span className="badge-pill badge-primary">Structured Methodology</span>
             <h2 className="section-title">
-              Our <span className="text-gold">Approach</span>
+              Our <span>Approach</span>
             </h2>
             <p className="section-desc">
               A 5-stage framework designed to give clarity, avoid common application errors, and keep you confident.
             </p>
           </div>
 
-          <div style={{ display: 'flex', flexDirection: 'column', gap: '20px' }}>
+          <div className="milestone-grid">
             {approachSteps.map((st, i) => (
-              <div
-                key={i}
-                className="card-white"
-                style={{
-                  display: 'grid',
-                  gridTemplateColumns: '80px 1fr',
-                  gap: '24px',
-                  alignItems: 'center',
-                  padding: '24px 28px'
-                }}
-              >
-                <div style={{
-                  fontSize: '1.8rem',
-                  fontWeight: 800,
-                  color: '#1d4ed8',
-                  fontFamily: 'var(--font-heading)',
-                  background: '#eff6ff',
-                  width: '64px',
-                  height: '64px',
-                  borderRadius: '16px',
-                  display: 'flex',
-                  alignItems: 'center',
-                  justifyContent: 'center'
-                }}>
-                  {st.step}
+              <div key={i} className="milestone-card">
+                <div className="milestone-img-wrap">
+                  <img src={st.img} alt={st.title} className="milestone-img" loading="lazy" />
                 </div>
-                <div>
-                  <h3 style={{ fontSize: '1.35rem', fontWeight: 800, color: '#0f172a', marginBottom: '6px' }}>
-                    {st.title}
-                  </h3>
-                  <p style={{ color: '#475569', fontSize: '0.98rem', lineHeight: 1.6, margin: 0 }}>
-                    {st.desc}
-                  </p>
+                <div className="milestone-content">
+                  <h3 className="milestone-title">{st.title}</h3>
+                  <p className="milestone-desc">{st.desc}</p>
                 </div>
               </div>
             ))}
@@ -217,16 +196,89 @@ export function AboutUs({ onOpenCounselling }) {
         </div>
       </section>
 
+      <style>{`
+        /* ====== MILESTONE TIMELINE ====== */
+        .milestone-grid {
+          display: flex;
+          flex-wrap: wrap;
+          justify-content: center;
+          gap: 24px;
+        }
+        .milestone-card {
+          background: #ffffff;
+          border: 1px solid #e2e8f0;
+          border-radius: 16px;
+          width: calc(33.333% - 16px);
+          min-width: 280px;
+          overflow: hidden;
+          transition: transform 0.25s ease, box-shadow 0.25s ease;
+          display: flex;
+          flex-direction: column;
+        }
+        .milestone-card:hover {
+          transform: translateY(-4px);
+          box-shadow: 0 12px 32px rgba(28, 42, 79, 0.08);
+        }
+        .milestone-img-wrap {
+          position: relative;
+          width: 100%;
+          padding-top: 70%;
+          background: #ffffff;
+          overflow: hidden;
+          border-bottom: 1px solid #e2e8f0;
+        }
+        .milestone-img {
+          position: absolute;
+          top: 0;
+          left: 0;
+          width: 100%;
+          height: 100%;
+          object-fit: contain;
+          padding: 16px;
+          box-sizing: border-box;
+          transition: transform 0.5s ease;
+        }
+        .milestone-card:hover .milestone-img {
+          transform: scale(1.05);
+        }
+        .milestone-content {
+          padding: 32px 24px 24px;
+          display: flex;
+          flex-direction: column;
+          flex: 1;
+        }
+        .milestone-title {
+          font-size: 1.25rem;
+          font-weight: 700;
+          color: #1c2a4f;
+          margin: 0 0 10px 0;
+          line-height: 1.3;
+        }
+        .milestone-desc {
+          font-size: 0.95rem;
+          color: #475569;
+          line-height: 1.6;
+          margin: 0;
+        }
+        
+        @media (max-width: 992px) {
+          .milestone-card { width: calc(50% - 12px); }
+        }
+        @media (max-width: 640px) {
+          .milestone-card { width: 100%; }
+        }
+      `}</style>
+
       {/* 4. MISSION & VISION */}
       <section className="section-py" style={{ background: '#ffffff' }}>
         <div className="container">
           <div style={{ display: 'grid', gridTemplateColumns: 'repeat(2, 1fr)', gap: '32px' }} className="mission-grid">
             {/* Mission */}
-            <div className="card-white" style={{ borderTop: '5px solid #1d4ed8', padding: '36px' }}>
-              <div style={{ width: '56px', height: '56px', borderRadius: '14px', background: '#eff6ff', color: '#1d4ed8', display: 'flex', alignItems: 'center', justifyContent: 'center', marginBottom: '20px' }}>
+            <div className="card-white" style={{ borderTop: '5px solid #1c2a4f', padding: '36px' }}>
+              <div style={{ width: '56px', height: '56px', borderRadius: '14px', background: '#f8fafc', color: '#1c2a4f', display: 'flex', alignItems: 'center', justifyContent: 'center', marginBottom: '20px' }}>
                 <Target size={30} />
               </div>
-              <h3 style={{ fontSize: '1.6rem', fontWeight: 800, color: '#0f172a', marginBottom: '12px' }}>
+              <h3 style={{ fontSize: '1.6rem', fontWeight: 800, color: '#1c2a4f', marginBottom: '12px' }}>
                 Our Mission
               </h3>
               <p style={{ color: '#475569', fontSize: '1.08rem', lineHeight: 1.7, margin: 0 }}>
@@ -235,11 +287,11 @@ export function AboutUs({ onOpenCounselling }) {
             </div>
 
             {/* Vision */}
-            <div className="card-white" style={{ borderTop: '5px solid #d97706', padding: '36px' }}>
-              <div style={{ width: '56px', height: '56px', borderRadius: '14px', background: '#fef3c7', color: '#d97706', display: 'flex', alignItems: 'center', justifyContent: 'center', marginBottom: '20px' }}>
+            <div className="card-white" style={{ borderTop: '5px solid #475569', padding: '36px' }}>
+              <div style={{ width: '56px', height: '56px', borderRadius: '14px', background: '#f8fafc', color: '#475569', display: 'flex', alignItems: 'center', justifyContent: 'center', marginBottom: '20px' }}>
                 <Compass size={30} />
               </div>
-              <h3 style={{ fontSize: '1.6rem', fontWeight: 800, color: '#0f172a', marginBottom: '12px' }}>
+              <h3 style={{ fontSize: '1.6rem', fontWeight: 800, color: '#1c2a4f', marginBottom: '12px' }}>
                 Our Vision
               </h3>
               <p style={{ color: '#475569', fontSize: '1.08rem', lineHeight: 1.7, margin: 0 }}>
@@ -267,8 +319,8 @@ export function AboutUs({ onOpenCounselling }) {
             {whyStudentsChoose.map((item, idx) => (
               <div key={idx} className="card-white" style={{ padding: '32px' }}>
                 <div style={{ display: 'flex', alignItems: 'center', gap: '10px', marginBottom: '12px' }}>
-                  <ShieldCheck size={24} color="#1d4ed8" />
-                  <h3 style={{ fontSize: '1.3rem', fontWeight: 700, color: '#0f172a' }}>
+                  <ShieldCheck size={24} color="#1c2a4f" />
+                  <h3 style={{ fontSize: '1.3rem', fontWeight: 700, color: '#1c2a4f' }}>
                     {item.title}
                   </h3>
                 </div>
@@ -282,9 +334,9 @@ export function AboutUs({ onOpenCounselling }) {
       </section>
 
       {/* 6. START WITH A CONVERSATION CTA */}
-      <section className="section-py" style={{ background: '#0a1128', color: '#ffffff', textAlign: 'center' }}>
+      <section className="section-py" style={{ background: '#1c2a4f', color: '#ffffff', textAlign: 'center' }}>
         <div className="container" style={{ maxWidth: '760px' }}>
-          <span style={{ background: 'rgba(217, 119, 6, 0.25)', color: '#fbbf24', padding: '4px 12px', borderRadius: '50px', fontSize: '0.8rem', fontWeight: 700, textTransform: 'uppercase', letterSpacing: '0.5px' }}>
+          <span style={{ background: 'rgba(217, 119, 6, 0.25)', color: '#94a3b8', padding: '4px 12px', borderRadius: '50px', fontSize: '0.8rem', fontWeight: 700, textTransform: 'uppercase', letterSpacing: '0.5px' }}>
             Get in Touch
           </span>
           <h2 style={{ fontSize: '2.5rem', fontWeight: 800, color: '#ffffff', margin: '16px 0 14px 0' }}>

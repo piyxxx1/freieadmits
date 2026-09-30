@@ -11,25 +11,25 @@ export function HeroIllustration({ className = '' }) {
       >
         <defs>
           <linearGradient id="heroBgGrad" x1="0%" y1="0%" x2="100%" y2="100%">
-            <stop offset="0%" stopColor="#eff6ff" />
-            <stop offset="50%" stopColor="#dbeafe" />
+            <stop offset="0%" stopColor="#f8fafc" />
+            <stop offset="50%" stopColor="#f8fafc" />
             <stop offset="100%" stopColor="#bfdbfe" />
           </linearGradient>
           <linearGradient id="blueGrad" x1="0%" y1="0%" x2="100%" y2="100%">
-            <stop offset="0%" stopColor="#3b82f6" />
-            <stop offset="100%" stopColor="#1d4ed8" />
+            <stop offset="0%" stopColor="#1c2a4f" />
+            <stop offset="100%" stopColor="#1c2a4f" />
           </linearGradient>
           <linearGradient id="orangeGrad" x1="0%" y1="0%" x2="100%" y2="100%">
             <stop offset="0%" stopColor="#fb923c" />
             <stop offset="100%" stopColor="#ea580c" />
           </linearGradient>
           <linearGradient id="goldGrad" x1="0%" y1="0%" x2="100%" y2="100%">
-            <stop offset="0%" stopColor="#fde047" />
+            <stop offset="0%" stopColor="#e2e8f0" />
             <stop offset="100%" stopColor="#eab308" />
           </linearGradient>
           <linearGradient id="greenGrad" x1="0%" y1="0%" x2="100%" y2="100%">
             <stop offset="0%" stopColor="#34d399" />
-            <stop offset="100%" stopColor="#059669" />
+            <stop offset="100%" stopColor="#1c2a4f" />
           </linearGradient>
           <filter id="shadowFilter" x="-10%" y="-10%" width="120%" height="120%">
             <feDropShadow dx="0" dy="8" stdDeviation="12" floodOpacity="0.12" />
@@ -38,7 +38,7 @@ export function HeroIllustration({ className = '' }) {
 
         {/* Abstract Floating Backdrop Blobs */}
         <circle cx="300" cy="270" r="230" fill="url(#heroBgGrad)" opacity="0.8" />
-        <circle cx="480" cy="120" r="45" fill="#fef3c7" opacity="0.7" />
+        <circle cx="480" cy="120" r="45" fill="#f8fafc" opacity="0.7" />
         <circle cx="80" cy="380" r="60" fill="#fee2e2" opacity="0.6" />
 
         {/* Orbit Path & Flying Paper Airplane */}
@@ -64,16 +64,16 @@ export function HeroIllustration({ className = '' }) {
           <rect x="30" y="162" width="180" height="16" fill="#94a3b8" rx="4" />
           {/* Clock or Crest */}
           <circle cx="120" cy="65" r="10" fill="#ffffff" />
-          <path d="M120 58 L120 65 L125 65" stroke="#1d4ed8" strokeWidth="2" strokeLinecap="round" />
+          <path d="M120 58 L120 65 L125 65" stroke="#1c2a4f" strokeWidth="2" strokeLinecap="round" />
         </g>
 
         {/* Globe / World Sphere Illustration */}
         <g transform="translate(360, 240)">
-          <circle cx="80" cy="80" r="75" fill="#3b82f6" />
+          <circle cx="80" cy="80" r="75" fill="#1c2a4f" />
           {/* Continents in stylized green */}
-          <path d="M50 35 Q70 25 90 40 Q105 55 95 70 Q80 80 65 65 Q50 85 40 75 Q35 55 50 35 Z" fill="#10b981" />
-          <path d="M85 90 Q110 85 125 105 Q115 130 95 135 Q75 125 85 90 Z" fill="#10b981" />
-          <path d="M30 95 Q45 90 55 105 Q45 120 25 115 Z" fill="#10b981" />
+          <path d="M50 35 Q70 25 90 40 Q105 55 95 70 Q80 80 65 65 Q50 85 40 75 Q35 55 50 35 Z" fill="#1c2a4f" />
+          <path d="M85 90 Q110 85 125 105 Q115 130 95 135 Q75 125 85 90 Z" fill="#1c2a4f" />
+          <path d="M30 95 Q45 90 55 105 Q45 120 25 115 Z" fill="#1c2a4f" />
           {/* Meridian lines */}
           <ellipse cx="80" cy="80" rx="75" ry="30" stroke="#ffffff" strokeWidth="1.5" strokeOpacity="0.4" fill="none" />
           <ellipse cx="80" cy="80" rx="35" ry="75" stroke="#ffffff" strokeWidth="1.5" strokeOpacity="0.4" fill="none" />
@@ -98,11 +98,11 @@ export function HeroIllustration({ className = '' }) {
           {/* Head & Face */}
           <circle cx="130" cy="190" r="32" fill="#fed7aa" />
           {/* Hair */}
-          <path d="M98 185 C98 155 115 145 135 145 C155 145 168 160 165 185 C158 175 145 170 130 170 C115 170 105 175 98 185 Z" fill="#1e293b" />
+          <path d="M98 185 C98 155 115 145 135 145 C155 145 168 160 165 185 C158 175 145 170 130 170 C115 170 105 175 98 185 Z" fill="#1c2a4f" />
           {/* Glasses */}
-          <rect x="110" y="180" width="16" height="12" rx="4" stroke="#0f172a" strokeWidth="2.5" fill="#ffffff" fillOpacity="0.2" />
-          <rect x="134" y="180" width="16" height="12" rx="4" stroke="#0f172a" strokeWidth="2.5" fill="#ffffff" fillOpacity="0.2" />
-          <line x1="126" y1="186" x2="134" y2="186" stroke="#0f172a" strokeWidth="2.5" />
+          <rect x="110" y="180" width="16" height="12" rx="4" stroke="#1c2a4f" strokeWidth="2.5" fill="#ffffff" fillOpacity="0.2" />
+          <rect x="134" y="180" width="16" height="12" rx="4" stroke="#1c2a4f" strokeWidth="2.5" fill="#ffffff" fillOpacity="0.2" />
+          <line x1="126" y1="186" x2="134" y2="186" stroke="#1c2a4f" strokeWidth="2.5" />
           {/* Cheerful Smile */}
           <path d="M124 205 Q130 212 136 205" stroke="#9a3412" strokeWidth="2" strokeLinecap="round" fill="none" />
 
@@ -121,18 +121,18 @@ export function HeroIllustration({ className = '' }) {
 
           {/* Arms & Laptop / Folder */}
           {/* Right Arm holding laptop */}
-          <path d="M160 250 L195 295 L160 315" stroke="#1d4ed8" strokeWidth="18" strokeLinecap="round" strokeLinejoin="round" fill="none" />
+          <path d="M160 250 L195 295 L160 315" stroke="#1c2a4f" strokeWidth="18" strokeLinecap="round" strokeLinejoin="round" fill="none" />
           {/* Hand */}
           <circle cx="158" cy="316" r="10" fill="#fed7aa" />
           {/* Laptop */}
           <g transform="translate(135, 290) rotate(-10)">
             <rect x="0" y="0" width="60" height="42" rx="5" fill="#334155" />
-            <rect x="4" y="4" width="52" height="34" rx="3" fill="#38bdf8" />
+            <rect x="4" y="4" width="52" height="34" rx="3" fill="#eef2fa" />
             <path d="M18 20 L25 26 L42 12" stroke="#ffffff" strokeWidth="3" strokeLinecap="round" strokeLinejoin="round" fill="none" />
           </g>
 
           {/* Left Arm holding Degree Scroll */}
-          <path d="M100 250 L75 300 L95 320" stroke="#1d4ed8" strokeWidth="18" strokeLinecap="round" strokeLinejoin="round" fill="none" />
+          <path d="M100 250 L75 300 L95 320" stroke="#1c2a4f" strokeWidth="18" strokeLinecap="round" strokeLinejoin="round" fill="none" />
           <circle cx="95" cy="320" r="10" fill="#fed7aa" />
           {/* Rolled Diploma Scroll */}
           <g transform="translate(68, 305) rotate(20)">
@@ -141,8 +141,8 @@ export function HeroIllustration({ className = '' }) {
           </g>
 
           {/* Legs / Jeans */}
-          <rect x="98" y="370" width="28" height="60" fill="#1e293b" rx="6" />
-          <rect x="134" y="370" width="28" height="60" fill="#0f172a" rx="6" />
+          <rect x="98" y="370" width="28" height="60" fill="#1c2a4f" rx="6" />
+          <rect x="134" y="370" width="28" height="60" fill="#1c2a4f" rx="6" />
           {/* Sneakers */}
           <ellipse cx="110" cy="434" rx="18" ry="8" fill="#ffffff" stroke="#e2e8f0" strokeWidth="2" />
           <ellipse cx="150" cy="434" rx="18" ry="8" fill="#ffffff" stroke="#e2e8f0" strokeWidth="2" />
@@ -151,19 +151,19 @@ export function HeroIllustration({ className = '' }) {
         {/* Floating Achievement Card 1: 1,200+ Universities */}
         <g transform="translate(40, 290)" filter="url(#shadowFilter)">
           <rect x="0" y="0" width="165" height="64" rx="14" fill="#ffffff" />
-          <circle cx="28" cy="32" r="18" fill="#eff6ff" />
-          <path d="M28 22 L37 27 L28 32 L19 27 Z" fill="#2563eb" />
-          <path d="M22 30 L22 36 Q28 40 34 36 L34 30" stroke="#2563eb" strokeWidth="2" fill="none" />
-          <text x="56" y="28" fill="#0f172a" fontSize="13" fontWeight="bold" fontFamily="system-ui">1,200+ Partners</text>
+          <circle cx="28" cy="32" r="18" fill="#f8fafc" />
+          <path d="M28 22 L37 27 L28 32 L19 27 Z" fill="#1c2a4f" />
+          <path d="M22 30 L22 36 Q28 40 34 36 L34 30" stroke="#1c2a4f" strokeWidth="2" fill="none" />
+          <text x="56" y="28" fill="#1c2a4f" fontSize="13" fontWeight="bold" fontFamily="system-ui">1,200+ Partners</text>
           <text x="56" y="44" fill="#64748b" fontSize="10.5" fontFamily="system-ui">Top Global Unis</text>
         </g>
 
         {/* Floating Achievement Card 2: 98.4% Visa Success */}
         <g transform="translate(390, 80)" filter="url(#shadowFilter)">
           <rect x="0" y="0" width="170" height="64" rx="14" fill="#ffffff" />
-          <circle cx="30" cy="32" r="18" fill="#ecfdf5" />
-          <path d="M24 32 L28 36 L36 27" stroke="#10b981" strokeWidth="3" strokeLinecap="round" strokeLinejoin="round" fill="none" />
-          <text x="58" y="28" fill="#0f172a" fontSize="13" fontWeight="bold" fontFamily="system-ui">98.4% Visa Rate</text>
+          <circle cx="30" cy="32" r="18" fill="#ffffff" />
+          <path d="M24 32 L28 36 L36 27" stroke="#1c2a4f" strokeWidth="3" strokeLinecap="round" strokeLinejoin="round" fill="none" />
+          <text x="58" y="28" fill="#1c2a4f" fontSize="13" fontWeight="bold" fontFamily="system-ui">98.4% Visa Rate</text>
           <text x="58" y="44" fill="#64748b" fontSize="10.5" fontFamily="system-ui">Consulate Mock Drills</text>
         </g>
 

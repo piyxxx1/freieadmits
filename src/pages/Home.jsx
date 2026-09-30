@@ -3,124 +3,56 @@ import { useRouter } from '../context/RouterContext';
 import { HeroIllustration } from '../components/illustrations/HeroIllustration';
 import { CountryFlag } from '../components/CountryFlag';
 import { destinationsData } from '../data/destinationsData';
-import { IllustratedAvatar } from '../components/illustrations/AvatarIllustrations';
+import { UniversitySlider } from '../components/UniversitySlider';
 import { 
   Sparkles, 
   ArrowRight, 
-  GraduationCap, 
   Globe, 
-  BookOpen, 
-  FileText, 
-  ShieldCheck, 
-  PlaneTakeoff, 
-  ChevronRight,
-  UserCheck,
-  Laptop
+  GraduationCap,
+  ShieldCheck,
+  UserCheck
 } from 'lucide-react';
+
+const getFlagUrl = (id) => { 
+  const map = { germany: 'de', finland: 'fi', ireland: 'ie', netherlands: 'nl', france: 'fr', spain: 'es', italy: 'it', poland: 'pl', austria: 'at', sweden: 'se', denmark: 'dk' }; 
+  return `https://flagcdn.com/w640/${map[id] || 'eu'}.png`; 
+};
 
 export function Home({ onOpenCounselling, onOpenEvaluation }) {
   const { navigate } = useRouter();
 
-  const whyChooseUs = [
-    {
-      icon: GraduationCap,
-      color: '#1d4ed8',
-      title: 'Profile-Based Guidance',
-      desc: 'We understand your academic background, interests and career goals before recommending study options.',
-      image: '/images/features/profile_guidance.jpg'
-    },
-    {
-      icon: Globe,
-      color: '#d97706',
-      title: 'Europe-Focused Opportunities',
-      desc: 'Explore quality education opportunities across Germany, Netherlands, France, Spain, Poland, Italy, Austria and other European destinations.',
-      image: '/images/features/europe_opportunities.jpg'
-    },
-    {
-      icon: BookOpen,
-      color: '#059669',
-      title: 'Course & University Selection',
-      desc: 'Find programs that match your academic profile, career aspirations and preferred budget.',
-      image: '/images/features/course_selection.jpg'
-    },
-    {
-      icon: FileText,
-      color: '#7c3aed',
-      title: 'Application Support',
-      desc: 'Get structured assistance with university applications and required documentation.',
-      image: '/images/features/application_support.jpg'
-    },
-    {
-      icon: ShieldCheck,
-      color: '#16a34a',
-      title: 'Visa Guidance',
-      desc: 'We help you understand visa requirements, documentation and the application process.',
-      image: '/images/features/visa_guidance.jpg'
-    },
-    {
-      icon: PlaneTakeoff,
-      color: '#0284c7',
-      title: 'Pre-Departure Support',
-      desc: 'Our assistance continues beyond admission, helping you prepare for your international student journey.',
-      image: '/images/features/pre_departure.jpg'
-    }
-  ];
 
   const processSteps = [
-    { number: '01', title: 'Profile Evaluation', desc: 'We understand your academic profile, goals and preferences.' },
-    { number: '02', title: 'Course & University Selection', desc: 'We identify suitable programs and institutions.' },
-    { number: '03', title: 'Application Preparation', desc: 'We assist with documentation and application requirements.' },
-    { number: '04', title: 'Admission Support', desc: 'We guide you through the admission process and next steps.' },
-    { number: '05', title: 'Visa Guidance', desc: 'We help you prepare for the student visa application.' },
-    { number: '06', title: 'Pre-Departure', desc: 'Prepare for your new academic and international experience.' },
-  ];
-
-  const studyLevels = [
-    {
-      title: "Bachelor's",
-      desc: 'Start your international academic journey after Class 12 with direct or pathway programs across top European faculties.',
-      tag: 'After 12th',
-      action: () => navigate('/courses')
+    { 
+      number: '01', 
+      title: 'Career Counselling', 
+      desc: 'Get personalised guidance to choose the right course and destination based on your profile and goals.',
+      img: '/images/process/step1.jpg'
     },
-    {
-      title: "Master's",
-      desc: 'Advance your qualifications with an international Master’s degree in science, engineering, tech, or business.',
-      tag: 'High Demand',
-      featured: true,
-      action: () => navigate('/courses')
+    { 
+      number: '02', 
+      title: 'University Applications', 
+      desc: 'We assist with application preparation, document review and submission to your chosen universities.',
+      img: '/images/process/step2.jpg'
     },
-    {
-      title: 'MBA & Management',
-      desc: 'Build business and management expertise in a global environment with international corporate linkages.',
-      tag: 'Global Careers',
-      action: () => navigate('/courses')
+    { 
+      number: '03', 
+      title: 'Visa Assistance', 
+      desc: 'Step-by-step support for your student visa documentation and application process.',
+      img: '/images/process/step3.jpg'
     },
-    {
-      title: 'Engineering & Technology',
-      desc: 'Explore programs in engineering, computer science, AI, data and emerging technologies in industrial hubs.',
-      tag: 'TU9 & Tech',
-      featured: true,
-      action: () => navigate('/courses')
+    { 
+      number: '04', 
+      title: 'Language & Funding', 
+      desc: 'Prepare for your future with structured language training and guidance on scholarships and funding.',
+      img: '/images/process/step4.jpg'
     },
-    {
-      title: 'Computer Science & IT',
-      desc: 'Explore the rapidly expanding world of digital technology, AI, cybersecurity, and software architecture.',
-      tag: 'High ROI',
-      action: () => navigate('/courses')
+    { 
+      number: '05', 
+      title: 'Pre-Departure Support', 
+      desc: 'From accommodation and travel to essential guidance, we prepare you for a smooth transition abroad.',
+      img: '/images/process/step5.jpg'
     },
-    {
-      title: 'Nursing & Healthcare',
-      desc: 'Explore study and career pathways in healthcare-related fields across Germany, Poland, and Europe.',
-      tag: 'Career Direct',
-      action: () => navigate('/courses')
-    },
-    {
-      title: 'Ausbildung & Vocational Programs',
-      desc: 'Explore Germany’s dual vocational education and training pathways with monthly paid stipends from month 1.',
-      tag: 'Stipend Included 🇩🇪',
-      highlight: true,
-      action: () => navigate('/courses')
-    }
   ];
 
   return (
@@ -147,63 +79,14 @@ export function Home({ onOpenCounselling, onOpenEvaluation }) {
               </div>
 
               <h1 className="hero-headline">
-                Study Abroad with{' '}
-                <span className="hero-gradient-text-blue">Clarity</span>,{' '}
-                <span className="hero-headline-dark">Confidence</span>
+                Where Academic <span className="hero-headline-dark">Ambition</span>
                 <br className="hero-br-hide-sm" />
-                {' '}&amp; <span className="hero-gradient-text-amber">The Right Guidance</span>
+                Meets <span className="hero-gradient-text-blue">European Opportunity</span>
               </h1>
 
               <p className="hero-subtext">
-                Your international education journey starts with profile-driven alignment. We help students get into top public universities across <strong>Germany &amp; Europe</strong> — with zero tuition fees, tailored dMAT prep, and end-to-end visa support.
+                Personalised guidance for ambitious students seeking the right university and programme across <strong>Germany and Europe</strong>.
               </p>
-
-              {/* 2x2 Bento Feature Highlights — Glassmorphism */}
-              <div className="hero-bento-grid">
-                <div className="hero-bento-card">
-                  <div className="bento-icon-box bento-blue">
-                    <GraduationCap size={20} />
-                  </div>
-                  <div>
-                    <div className="bento-title">€0 Tuition Public Unis</div>
-                    <div className="bento-sub">Top German &amp; EU faculties</div>
-                  </div>
-                  <div className="bento-shimmer" />
-                </div>
-
-                <div className="hero-bento-card">
-                  <div className="bento-icon-box bento-amber">
-                    <Laptop size={20} />
-                  </div>
-                  <div>
-                    <div className="bento-title">dMAT Prep &amp; APS</div>
-                    <div className="bento-sub">Master's test prep support</div>
-                  </div>
-                  <div className="bento-shimmer" />
-                </div>
-
-                <div className="hero-bento-card">
-                  <div className="bento-icon-box bento-green">
-                    <ShieldCheck size={20} />
-                  </div>
-                  <div>
-                    <div className="bento-title">Profile-First Advisory</div>
-                    <div className="bento-sub">100% transparent &amp; unbiased</div>
-                  </div>
-                  <div className="bento-shimmer" />
-                </div>
-
-                <div className="hero-bento-card">
-                  <div className="bento-icon-box bento-purple">
-                    <PlaneTakeoff size={20} />
-                  </div>
-                  <div>
-                    <div className="bento-title">Visa &amp; Pre-Departure</div>
-                    <div className="bento-sub">Complete roadmap assistance</div>
-                  </div>
-                  <div className="bento-shimmer" />
-                </div>
-              </div>
 
               {/* Action Buttons */}
               <div className="hero-cta-row">
@@ -216,45 +99,6 @@ export function Home({ onOpenCounselling, onOpenEvaluation }) {
                   <UserCheck size={18} />
                   <span>Get Profile Evaluation</span>
                 </button>
-              </div>
-
-              {/* Social Proof & Quick Destination Shortcuts */}
-              <div className="hero-trust-bar">
-                <div className="hero-trust-rating-box">
-                  <div className="hero-avatar-stack">
-                    <div className="hero-avatar-ring" style={{ background: '#dbeafe' }}>
-                      <IllustratedAvatar type="student1" size={34} />
-                    </div>
-                    <div className="hero-avatar-ring" style={{ background: '#ffedd5', marginLeft: '-10px' }}>
-                      <IllustratedAvatar type="student2" size={34} />
-                    </div>
-                    <div className="hero-avatar-ring" style={{ background: '#ecfdf5', marginLeft: '-10px' }}>
-                      <IllustratedAvatar type="student3" size={34} />
-                    </div>
-                  </div>
-                  <div className="hero-rating-text-wrap">
-                    <div className="hero-rating-stars-row">
-                      <span className="hero-rating-stars">★★★★★</span>
-                      <span className="hero-rating-score">5.0 Rating</span>
-                    </div>
-                    <div className="hero-rating-subtext">100+ Profiles Evaluated</div>
-                  </div>
-                </div>
-
-                <div className="hero-quick-destinations">
-                  <span className="hero-quick-label">Top Destinations:</span>
-                  <div className="hero-quick-flags-row">
-                    <button onClick={() => navigate('/destinations')} className="hero-flag-btn">
-                      <CountryFlag countryId="germany" size={15} /> <span>Germany</span>
-                    </button>
-                    <button onClick={() => navigate('/destinations')} className="hero-flag-btn">
-                      <CountryFlag countryId="finland" size={15} /> <span>Finland</span>
-                    </button>
-                    <button onClick={() => navigate('/destinations')} className="hero-flag-btn">
-                      <CountryFlag countryId="ireland" size={15} /> <span>Ireland</span>
-                    </button>
-                  </div>
-                </div>
               </div>
             </div>
 
@@ -270,15 +114,15 @@ export function Home({ onOpenCounselling, onOpenEvaluation }) {
       </section>
 
       {/* 2. SPECIAL GERMANY & dMAT HIGHLIGHT BANNER */}
-      <section style={{ background: '#0a1128', color: '#ffffff', padding: '48px 0', borderTop: '1px solid #1e293b', borderBottom: '1px solid #1e293b' }}>
+      <section style={{ background: '#1c2a4f', color: '#ffffff', padding: '48px 0', borderTop: '1px solid #1c2a4f', borderBottom: '1px solid #1c2a4f' }}>
         <div className="container">
           <div style={{ display: 'grid', gridTemplateColumns: '1.2fr 0.8fr', gap: '36px', alignItems: 'center' }} className="dmat-banner-grid">
             <div>
-              <div style={{ display: 'inline-flex', alignItems: 'center', gap: '6px', background: 'rgba(245, 158, 11, 0.2)', color: '#fbbf24', padding: '4px 12px', borderRadius: '4px', fontSize: '0.78rem', fontWeight: 800, textTransform: 'uppercase', letterSpacing: '0.5px', marginBottom: '12px' }}>
+              <div style={{ display: 'inline-flex', alignItems: 'center', gap: '6px', background: 'rgba(245, 158, 11, 0.2)', color: '#94a3b8', padding: '4px 12px', borderRadius: '4px', fontSize: '0.78rem', fontWeight: 800, textTransform: 'uppercase', letterSpacing: '0.5px', marginBottom: '12px' }}>
                 <span>🇩🇪 Germany dMAT Guidance</span>
               </div>
               <h2 style={{ fontSize: '2.2rem', fontWeight: 800, color: '#ffffff', lineHeight: 1.25, marginBottom: '14px' }}>
-                Planning to Study a <span style={{ color: '#38bdf8' }}>Master's in Germany?</span>
+                Planning to Study a <span style={{ color: '#eef2fa' }}>Master's in Germany?</span>
               </h2>
               <p style={{ color: '#cbd5e1', fontSize: '1.05rem', lineHeight: 1.6, marginBottom: '24px' }}>
                 FREIE ADMITS provides structured guidance for students preparing for the <strong>Digital Master's Assessment Test (dMAT)</strong>. Understand the process, prepare effectively and move forward with greater confidence.
@@ -288,33 +132,33 @@ export function Home({ onOpenCounselling, onOpenEvaluation }) {
                   <span>Explore dMAT Germany</span>
                   <ArrowRight size={16} />
                 </button>
-                <button onClick={() => navigate('/destinations')} className="btn btn-secondary" style={{ background: '#1e293b', color: '#ffffff', borderColor: '#334155' }}>
+                <button onClick={() => navigate('/destinations')} className="btn btn-secondary" style={{ background: '#1c2a4f', color: '#ffffff', borderColor: '#334155' }}>
                   <span>Why Germany?</span>
                 </button>
               </div>
             </div>
 
             {/* Quick Spec Box for Germany */}
-            <div style={{ background: '#111c38', border: '1px solid #2a3a5e', borderRadius: '16px', padding: '28px' }}>
-              <div style={{ fontSize: '0.82rem', fontWeight: 700, color: '#38bdf8', textTransform: 'uppercase', letterSpacing: '0.5px', marginBottom: '14px' }}>
+            <div style={{ background: '#1c2a4f', border: '1px solid #eef2fa', borderRadius: '16px', padding: '28px' }}>
+              <div style={{ fontSize: '0.82rem', fontWeight: 700, color: '#eef2fa', textTransform: 'uppercase', letterSpacing: '0.5px', marginBottom: '14px' }}>
                 German Higher Education Highlights
               </div>
               <div style={{ display: 'flex', flexDirection: 'column', gap: '12px', fontSize: '0.9rem' }}>
-                <div style={{ display: 'flex', justifyContent: 'space-between', borderBottom: '1px solid #1e293b', paddingBottom: '8px' }}>
+                <div style={{ display: 'flex', justifyContent: 'space-between', borderBottom: '1px solid #334155', paddingBottom: '8px' }}>
                   <span style={{ color: '#94a3b8' }}>Tuition at Public Unis:</span>
-                  <strong style={{ color: '#10b981' }}>€0 (Tuition-Free)</strong>
+                  <strong style={{ color: '#ffffff' }}>€0 (Tuition-Free)</strong>
                 </div>
-                <div style={{ display: 'flex', justifyContent: 'space-between', borderBottom: '1px solid #1e293b', paddingBottom: '8px' }}>
+                <div style={{ display: 'flex', justifyContent: 'space-between', borderBottom: '1px solid #334155', paddingBottom: '8px' }}>
                   <span style={{ color: '#94a3b8' }}>Post-Study Work Visa:</span>
                   <strong style={{ color: '#ffffff' }}>18 Months Job Seeker</strong>
                 </div>
-                <div style={{ display: 'flex', justifyContent: 'space-between', borderBottom: '1px solid #1e293b', paddingBottom: '8px' }}>
+                <div style={{ display: 'flex', justifyContent: 'space-between', borderBottom: '1px solid #334155', paddingBottom: '8px' }}>
                   <span style={{ color: '#94a3b8' }}>Target Programs:</span>
                   <strong style={{ color: '#ffffff' }}>Master's, IT &amp; Engineering</strong>
                 </div>
                 <div style={{ display: 'flex', justifyContent: 'space-between' }}>
                   <span style={{ color: '#94a3b8' }}>Vocational Training:</span>
-                  <strong style={{ color: '#fbbf24' }}>Ausbildung with Stipend</strong>
+                  <strong style={{ color: '#ffffff' }}>Ausbildung with Stipend</strong>
                 </div>
               </div>
             </div>
@@ -322,54 +166,89 @@ export function Home({ onOpenCounselling, onOpenEvaluation }) {
         </div>
       </section>
 
+      <UniversitySlider />
+      
       {/* 3. WHY CHOOSE FREIE ADMITS */}
       <section className="section-py" style={{ background: '#ffffff' }}>
         <div className="container">
           <div className="section-header">
-            <span className="badge-pill badge-primary">Guiding Principles</span>
+            <span className="badge-pill badge-primary">Why FREIE ADMITS?</span>
             <h2 className="section-title">
-              Why Choose <span className="text-highlight">FREIE ADMITS?</span>
+              The Difference That <span className="text-highlight">Actually Matters</span>
             </h2>
             <p className="section-desc">
-              We focus on profile-based alignment rather than generic sales pitches. Understand the student first, recommend the pathway second.
+              Not every consultancy is the same. Here is what sets FREIE ADMITS apart.
             </p>
           </div>
 
-          <div className="grid-3">
-            {whyChooseUs.map((item, index) => (
-              <div 
-                key={index} 
-                style={{ 
-                  background: '#ffffff',
-                  border: '1px solid #e2e8f0',
-                  borderRadius: '16px',
-                  overflow: 'hidden',
-                  display: 'flex', 
-                  flexDirection: 'column',
-                  transition: 'all 0.25s ease',
-                  boxShadow: '0 2px 8px rgba(0, 0, 0, 0.04)'
-                }}
-              >
-                {item.image && (
-                  <div style={{ height: '190px', width: '100%', overflow: 'hidden', background: '#f8fafc', borderBottom: '1px solid #f1f5f9' }}>
-                    <img 
-                      src={item.image} 
-                      alt={item.title} 
-                      style={{ width: '100%', height: '100%', objectFit: 'cover' }} 
-                      loading="lazy"
-                    />
-                  </div>
-                )}
-                <div style={{ padding: '24px', flex: 1, display: 'flex', flexDirection: 'column' }}>
-                  <h3 style={{ fontSize: '1.2rem', fontWeight: 700, color: '#0f172a', marginBottom: '8px' }}>
-                    {item.title}
-                  </h3>
-                  <p style={{ color: '#64748b', fontSize: '0.92rem', lineHeight: 1.6, margin: 0 }}>
-                    {item.desc}
-                  </p>
-                </div>
+          <div className="why-pillars-grid">
+            {/* Pillar 1 */}
+            <div className="why-pillar-card">
+              <div className="why-pillar-num">01</div>
+              <div className="why-pillar-icon-wrap" style={{ background: '#f8fafc', color: '#1c2a4f' }}>
+                <GraduationCap size={26} />
               </div>
-            ))}
+              <h3 className="why-pillar-title">Public University Focus</h3>
+              <p className="why-pillar-desc">
+                We specialise in guiding students into government-funded public universities across Europe — where tuition is free or near-zero, quality is world-class, and degrees are globally recognised.
+              </p>
+              <div className="why-pillar-tags">
+                <span>€0 Tuition</span>
+                <span>World Rankings</span>
+                <span>No Capitation</span>
+              </div>
+            </div>
+
+            {/* Pillar 2 */}
+            <div className="why-pillar-card">
+              <div className="why-pillar-num">02</div>
+              <div className="why-pillar-icon-wrap" style={{ background: '#ffffff', color: '#475569' }}>
+                <UserCheck size={26} />
+              </div>
+              <h3 className="why-pillar-title">Personalised Guidance</h3>
+              <p className="why-pillar-desc">
+                No templates, no mass counselling. Every student gets individual attention — we evaluate your academic background, goals and budget before suggesting a single university or country.
+              </p>
+              <div className="why-pillar-tags">
+                <span>Profile-First</span>
+                <span>1-on-1 Sessions</span>
+                <span>Honest Advisory</span>
+              </div>
+            </div>
+
+            {/* Pillar 3 */}
+            <div className="why-pillar-card">
+              <div className="why-pillar-num">03</div>
+              <div className="why-pillar-icon-wrap" style={{ background: '#ffffff', color: '#1c2a4f' }}>
+                <Globe size={26} />
+              </div>
+              <h3 className="why-pillar-title">Germany &amp; Europe Expertise</h3>
+              <p className="why-pillar-desc">
+                Deep specialisation in Germany (dMAT, APS, TU9 universities), Finland, Ireland, Netherlands, France, Poland and 6 more destinations — not a generic global consultancy.
+              </p>
+              <div className="why-pillar-tags">
+                <span>dMAT Prep</span>
+                <span>11+ Destinations</span>
+                <span>APS Guidance</span>
+              </div>
+            </div>
+
+            {/* Pillar 4 */}
+            <div className="why-pillar-card">
+              <div className="why-pillar-num">04</div>
+              <div className="why-pillar-icon-wrap" style={{ background: '#f5f3ff', color: '#1c2a4f' }}>
+                <ShieldCheck size={26} />
+              </div>
+              <h3 className="why-pillar-title">End-to-End Support</h3>
+              <p className="why-pillar-desc">
+                From your first profile evaluation to visa filing and pre-departure prep — we are with you at every step, ensuring nothing falls through the cracks in your international journey.
+              </p>
+              <div className="why-pillar-tags">
+                <span>Visa Support</span>
+                <span>Documentation</span>
+                <span>Pre-Departure</span>
+              </div>
+            </div>
           </div>
         </div>
       </section>
@@ -387,63 +266,8 @@ export function Home({ onOpenCounselling, onOpenEvaluation }) {
             </p>
           </div>
 
-          {/* Featured Primary Card: GERMANY */}
-          <div className="germany-featured-box" style={{
-            background: 'linear-gradient(135deg, #ffffff 0%, #fffbeb 100%)',
-            border: '2px solid #fde68a',
-            borderRadius: '20px',
-            padding: '36px',
-            boxShadow: '0 10px 28px rgba(217, 119, 6, 0.1)',
-            marginBottom: '32px'
-          }}>
-            <div style={{ display: 'grid', gridTemplateColumns: '1.2fr 0.8fr', gap: '32px', alignItems: 'center' }} className="germany-card-grid">
-              <div>
-                <div style={{ display: 'flex', alignItems: 'center', gap: '12px', marginBottom: '12px' }}>
-                  <CountryFlag countryId="germany" size={26} />
-                  <div>
-                    <h3 style={{ fontSize: '1.8rem', fontWeight: 800, color: '#0f172a', margin: 0 }}>
-                      Germany
-                    </h3>
-                    <span style={{ fontSize: '0.78rem', background: '#f59e0b', color: '#ffffff', padding: '2px 8px', borderRadius: '4px', fontWeight: 700 }}>
-                      PRIMARY DESTINATION FOCUS
-                    </span>
-                  </div>
-                </div>
-                <p style={{ color: '#475569', fontSize: '1.05rem', lineHeight: 1.65, marginBottom: '20px' }}>
-                  Study at public and private universities and explore Bachelor's, Master's and vocational pathways. Home to Europe’s strongest economy, zero-tuition universities, and world-leading engineering ecosystems.
-                </p>
-                <div style={{ display: 'flex', flexWrap: 'wrap', gap: '8px', marginBottom: '24px' }}>
-                  {['Engineering & Mechatronics', 'Computer Science & AI', 'Data Science', 'Automotive', 'Ausbildung Programs'].map((field, i) => (
-                    <span key={i} style={{ background: '#ffffff', border: '1px solid #fde68a', color: '#92400e', padding: '4px 10px', borderRadius: '6px', fontSize: '0.82rem', fontWeight: 600 }}>
-                      {field}
-                    </span>
-                  ))}
-                </div>
-                <div style={{ display: 'flex', gap: '12px', flexWrap: 'wrap' }}>
-                  <button onClick={() => navigate('/destinations')} className="btn btn-gold">
-                    <span>Explore Germany In Detail</span>
-                    <ArrowRight size={16} />
-                  </button>
-                  <button onClick={() => navigate('/dmat-germany')} className="btn btn-secondary">
-                    <span>dMAT Test Guidance</span>
-                  </button>
-                </div>
-              </div>
-
-              {/* Germany Visual Illustration */}
-              <div style={{ height: '240px', borderRadius: '14px', overflow: 'hidden', border: '1px solid #fed7aa', position: 'relative' }}>
-                <img
-                  src="/images/destinations/germany.jpg"
-                  alt="Study in Germany"
-                  style={{ width: '100%', height: '100%', objectFit: 'cover' }}
-                />
-              </div>
-            </div>
-          </div>
-
-          {/* Grid of Other European Destinations */}
           <div className="grid-3" style={{ marginBottom: '36px' }}>
-            {destinationsData.filter(d => d.id !== 'germany').slice(0, 6).map((dest) => (
+            {destinationsData.slice(0, 6).map((dest) => (
               <div
                 key={dest.id}
                 className="dest-card"
@@ -460,48 +284,17 @@ export function Home({ onOpenCounselling, onOpenEvaluation }) {
               >
                 <div style={{ position: 'relative', width: '100%', height: '160px', overflow: 'hidden', background: '#f8fafc', borderBottom: '1px solid #f1f5f9' }}>
                   <img
-                    src={dest.image}
+                    src={getFlagUrl(dest.id)}
                     alt={`Study in ${dest.name}`}
-                    style={{ width: '100%', height: '100%', objectFit: 'cover' }}
+                    style={{ width: '100%', height: '100%', objectFit: 'contain', padding: '20px' }}
                     className="dest-img-hover"
                   />
-                  <div style={{
-                    position: 'absolute',
-                    top: '10px',
-                    left: '10px',
-                    display: 'flex',
-                    alignItems: 'center',
-                    gap: '6px',
-                    background: '#ffffff',
-                    border: '1px solid #e2e8f0',
-                    padding: '4px 10px',
-                    borderRadius: '20px',
-                    fontSize: '0.84rem',
-                    fontWeight: 700,
-                    color: '#0f172a'
-                  }}>
-                    <CountryFlag countryId={dest.id} size={14} />
-                    <span>{dest.name}</span>
-                  </div>
-                  <div style={{
-                    position: 'absolute',
-                    bottom: '8px',
-                    right: '10px',
-                    background: '#ffffff',
-                    border: '1px solid #e2e8f0',
-                    color: '#0f172a',
-                    padding: '3px 8px',
-                    borderRadius: '6px',
-                    fontSize: '0.72rem',
-                    fontWeight: 700
-                  }}>
-                    {dest.tuitionRange.split('(')[0].trim()}
-                  </div>
+                  
                 </div>
 
                 <div style={{ padding: '20px', flexGrow: 1, display: 'flex', flexDirection: 'column', justifyContent: 'space-between' }}>
                   <div>
-                    <div style={{ fontSize: '0.82rem', fontWeight: 700, color: '#1d4ed8', marginBottom: '4px' }}>
+                    <div style={{ fontSize: '0.82rem', fontWeight: 700, color: '#1c2a4f', marginBottom: '4px' }}>
                       {dest.headline}
                     </div>
                     <p style={{ color: '#64748b', fontSize: '0.88rem', lineHeight: 1.5, marginBottom: '14px' }}>
@@ -537,115 +330,34 @@ export function Home({ onOpenCounselling, onOpenEvaluation }) {
         </div>
       </section>
 
-      {/* 5. FIND THE RIGHT PROGRAM (STUDY LEVELS & AUSBILDUNG) */}
-      <section className="section-py" style={{ background: '#ffffff' }}>
-        <div className="container">
-          <div className="section-header">
-            <span className="badge-pill badge-primary">Academic Offerings</span>
-            <h2 className="section-title">
-              Find the <span className="text-highlight">Right Program</span>
-            </h2>
-            <p className="section-desc">
-              Choose a qualification that builds your future, matched to your previous education, interests and long-term career goals.
-            </p>
-          </div>
 
-          <div className="grid-3" style={{ marginBottom: '36px' }}>
-            {studyLevels.map((lvl, idx) => (
-              <div
-                key={idx}
-                className="card-white"
-                style={{
-                  display: 'flex',
-                  flexDirection: 'column',
-                  justifyContent: 'space-between',
-                  border: lvl.highlight ? '2px solid #f59e0b' : lvl.featured ? '1.5px solid #93c5fd' : '1px solid #e2e8f0',
-                  background: lvl.highlight ? '#fffbeb' : '#ffffff'
-                }}
-              >
-                <div>
-                  <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', marginBottom: '12px' }}>
-                    <span style={{
-                      background: lvl.highlight ? '#fef3c7' : '#eff6ff',
-                      color: lvl.highlight ? '#92400e' : '#1d4ed8',
-                      padding: '3px 9px',
-                      borderRadius: '6px',
-                      fontSize: '0.76rem',
-                      fontWeight: 700
-                    }}>
-                      {lvl.tag}
-                    </span>
-                  </div>
-                  <h3 style={{ fontSize: '1.25rem', fontWeight: 700, color: '#0f172a', marginBottom: '10px' }}>
-                    {lvl.title}
-                  </h3>
-                  <p style={{ color: '#64748b', fontSize: '0.92rem', lineHeight: 1.6, marginBottom: '20px' }}>
-                    {lvl.desc}
-                  </p>
-                </div>
-
-                <button
-                  onClick={lvl.action}
-                  className="btn btn-secondary"
-                  style={{ width: '100%', borderRadius: '8px', fontSize: '0.88rem' }}
-                >
-                  <span>Explore Courses</span>
-                  <ChevronRight size={16} />
-                </button>
-              </div>
-            ))}
-          </div>
-
-          <div style={{ textAlign: 'center' }}>
-            <button onClick={() => navigate('/courses')} className="btn btn-primary btn-lg">
-              <span>Explore All Courses &amp; Programs</span>
-              <ArrowRight size={18} />
-            </button>
-          </div>
-        </div>
-      </section>
-
-      {/* 6. OUR 6-STEP PROCESS */}
+      {/* 5. STRUCTURED METHODOLOGY */}
       <section className="section-py" style={{ background: '#f8fafc', borderTop: '1px solid #e2e8f0' }}>
         <div className="container">
           <div className="section-header">
-            <span className="badge-pill badge-primary">Clear &amp; Structured</span>
+            <span className="badge-pill badge-primary">Structured Methodology</span>
             <h2 className="section-title">
-              Our <span className="text-highlight">Process</span>
+              Our <span className="text-highlight">Approach</span>
             </h2>
             <p className="section-desc">
-              From your initial profile evaluation to pre-departure, our structured assistance guides you with transparency.
+              A 5-stage framework designed to give clarity, avoid common application errors, and keep you confident.
             </p>
           </div>
 
-          <div className="grid-3" style={{ marginBottom: '36px' }}>
+          <div className="milestone-grid">
             {processSteps.map((step, idx) => (
-              <div key={idx} className="card-white" style={{ position: 'relative', overflow: 'hidden' }}>
-                <span style={{
-                  position: 'absolute',
-                  top: '14px',
-                  right: '18px',
-                  fontSize: '2rem',
-                  fontWeight: 900,
-                  color: '#e2e8f0',
-                  fontFamily: 'var(--font-heading)'
-                }}>
-                  {step.number}
-                </span>
-                <div style={{ fontSize: '0.85rem', fontWeight: 800, color: '#1d4ed8', marginBottom: '6px' }}>
-                  STAGE {step.number}
+              <div key={idx} className="milestone-card">
+                <div className="milestone-img-wrap">
+                  <img src={step.img} alt={step.title} className="milestone-img" loading="lazy" />
                 </div>
-                <h3 style={{ fontSize: '1.2rem', fontWeight: 700, color: '#0f172a', marginBottom: '8px' }}>
-                  {step.title}
-                </h3>
-                <p style={{ color: '#64748b', fontSize: '0.92rem', lineHeight: 1.55 }}>
-                  {step.desc}
-                </p>
+                <div className="milestone-content">
+                  <h3 className="milestone-title">{step.title}</h3>
+                  <p className="milestone-desc">{step.desc}</p>
+                </div>
               </div>
             ))}
           </div>
-
-          <div style={{ textAlign: 'center' }}>
+          <div style={{ textAlign: 'center', marginTop: '16px' }}>
             <button onClick={() => navigate('/services')} className="btn btn-secondary btn-lg">
               <span>View Full Services Breakdown</span>
               <ArrowRight size={18} />
@@ -655,9 +367,9 @@ export function Home({ onOpenCounselling, onOpenEvaluation }) {
       </section>
 
       {/* 7. FINAL INSPIRATIONAL CTA SECTION */}
-      <section className="section-py" style={{ background: '#0a1128', color: '#ffffff', textAlign: 'center' }}>
+      <section className="section-py" style={{ background: '#1c2a4f', color: '#ffffff', textAlign: 'center' }}>
         <div className="container" style={{ maxWidth: '800px' }}>
-          <span style={{ background: 'rgba(245, 158, 11, 0.2)', color: '#fbbf24', padding: '4px 14px', borderRadius: '50px', fontSize: '0.82rem', fontWeight: 700, textTransform: 'uppercase', letterSpacing: '0.5px' }}>
+          <span style={{ background: 'rgba(245, 158, 11, 0.2)', color: '#94a3b8', padding: '4px 14px', borderRadius: '50px', fontSize: '0.82rem', fontWeight: 700, textTransform: 'uppercase', letterSpacing: '0.5px' }}>
             FREIE ADMITS
           </span>
           <h2 style={{ fontSize: '2.6rem', fontWeight: 800, color: '#ffffff', margin: '18px 0 14px 0' }}>
@@ -719,8 +431,11 @@ export function Home({ onOpenCounselling, onOpenEvaluation }) {
         .hero-section-premium {
           position: relative;
           overflow: hidden;
-          padding: 68px 0 76px 0;
-          background: linear-gradient(160deg, #f0f7ff 0%, #f8faff 40%, #fffbf0 100%);
+          padding: 140px 0 160px 0;
+          min-height: 85vh;
+          display: flex;
+          align-items: center;
+          background: #ffffff;
         }
 
         /* Animated mesh/orb background */
@@ -738,25 +453,25 @@ export function Home({ onOpenCounselling, onOpenEvaluation }) {
         .hero-orb-1 {
           width: 540px; height: 540px;
           top: -15%; right: -8%;
-          background: radial-gradient(circle, rgba(191, 219, 254, 0.55) 0%, rgba(147, 197, 253, 0.2) 60%, transparent 100%);
+          background: radial-gradient(circle, rgba(28, 42, 79, 0.05) 0%, rgba(28, 42, 79, 0.02) 60%, transparent 100%);
           animation: orbFloat1 14s ease-in-out infinite;
         }
         .hero-orb-2 {
           width: 420px; height: 420px;
           bottom: -10%; left: -6%;
-          background: radial-gradient(circle, rgba(254, 243, 199, 0.6) 0%, rgba(252, 211, 77, 0.15) 60%, transparent 100%);
+          background: radial-gradient(circle, rgba(148, 163, 184, 0.1) 0%, rgba(148, 163, 184, 0.03) 60%, transparent 100%);
           animation: orbFloat2 18s ease-in-out infinite;
         }
         .hero-orb-3 {
           width: 280px; height: 280px;
           top: 40%; left: 40%;
-          background: radial-gradient(circle, rgba(221, 214, 254, 0.35) 0%, transparent 70%);
+          background: radial-gradient(circle, rgba(28, 42, 79, 0.04) 0%, transparent 70%);
           animation: orbFloat3 10s ease-in-out infinite;
         }
         .hero-grid-dots {
           position: absolute;
           inset: 0;
-          background-image: radial-gradient(rgba(30, 64, 175, 0.07) 1.5px, transparent 1.5px);
+          background-image: radial-gradient(rgba(28, 42, 79, 0.05) 1.5px, transparent 1.5px);
           background-size: 28px 28px;
           animation: dotScroll 6s linear infinite;
           opacity: 0.7;
@@ -785,7 +500,7 @@ export function Home({ onOpenCounselling, onOpenEvaluation }) {
           padding: 6px 14px 6px 10px;
           font-size: 0.78rem;
           font-weight: 700;
-          color: #1d4ed8;
+          color: #1c2a4f;
           margin-bottom: 20px;
           backdrop-filter: blur(8px);
           box-shadow: 0 2px 12px rgba(59, 130, 246, 0.12);
@@ -803,22 +518,22 @@ export function Home({ onOpenCounselling, onOpenEvaluation }) {
         /* ====== HEADLINE ====== */
         .hero-headline {
           font-size: clamp(2.3rem, 3.8vw, 3.35rem);
-          font-weight: 800;
-          color: #0f172a;
+          font-weight: 700;
+          color: #1c2a4f;
           line-height: 1.14;
           margin-bottom: 20px;
           letter-spacing: -0.03em;
           font-family: var(--font-heading);
         }
-        .hero-headline-dark { color: #0f172a; }
+        .hero-headline-dark { color: #1c2a4f; }
         .hero-gradient-text-blue {
-          background: linear-gradient(135deg, #1d4ed8 0%, #2563eb 50%, #0ea5e9 100%);
+          background: linear-gradient(135deg, #1c2a4f 0%, #1c2a4f 50%, #0ea5e9 100%);
           -webkit-background-clip: text;
           -webkit-text-fill-color: transparent;
           background-clip: text;
         }
         .hero-gradient-text-amber {
-          background: linear-gradient(135deg, #b45309 0%, #d97706 40%, #f59e0b 100%);
+          background: linear-gradient(135deg, #334155 0%, #475569 40%, #475569 100%);
           -webkit-background-clip: text;
           -webkit-text-fill-color: transparent;
           background-clip: text;
@@ -877,12 +592,167 @@ export function Home({ onOpenCounselling, onOpenEvaluation }) {
           display: flex; align-items: center; justify-content: center;
           flex-shrink: 0;
         }
-        .bento-blue { background: #eff6ff; color: #1d4ed8; }
-        .bento-amber { background: #fffbeb; color: #d97706; }
-        .bento-green { background: #ecfdf5; color: #059669; }
-        .bento-purple { background: #f5f3ff; color: #7c3aed; }
-        .bento-title { font-size: 0.875rem; font-weight: 700; color: #0f172a; }
+        .bento-blue { background: #f8fafc; color: #1c2a4f; }
+        .bento-amber { background: #ffffff; color: #475569; }
+        .bento-green { background: #ffffff; color: #1c2a4f; }
+        .bento-purple { background: #f5f3ff; color: #1c2a4f; }
+        .bento-title { font-size: 0.875rem; font-weight: 700; color: #1c2a4f; }
         .bento-sub { font-size: 0.775rem; color: #64748b; margin-top: 1px; }
+
+        /* ====== WHY PILLARS ====== */
+        .why-pillars-grid {
+          display: grid;
+          grid-template-columns: repeat(2, 1fr);
+          gap: 20px;
+        }
+        .why-pillar-card {
+          position: relative;
+          background: #ffffff;
+          border: 1.5px solid #e2e8f0;
+          border-radius: 18px;
+          padding: 28px 28px 24px 28px;
+          display: flex;
+          flex-direction: column;
+          gap: 14px;
+          transition: transform 0.22s ease, box-shadow 0.22s ease, border-color 0.22s ease;
+          overflow: hidden;
+        }
+        .why-pillar-card::before {
+          content: '';
+          position: absolute;
+          top: 0; left: 0; right: 0;
+          height: 3px;
+          background: linear-gradient(90deg, #1c2a4f, #0ea5e9);
+          opacity: 0;
+          transition: opacity 0.22s ease;
+        }
+        .why-pillar-card:hover {
+          transform: translateY(-4px);
+          box-shadow: 0 12px 32px rgba(15, 23, 42, 0.09);
+          border-color: #bfdbfe;
+        }
+        .why-pillar-card:hover::before { opacity: 1; }
+        .why-pillar-num {
+          font-size: 0.72rem;
+          font-weight: 600;
+          color: #94a3b8;
+          letter-spacing: 0.08em;
+          text-transform: uppercase;
+        }
+        .why-pillar-icon-wrap {
+          width: 52px;
+          height: 52px;
+          border-radius: 14px;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          flex-shrink: 0;
+        }
+        .why-pillar-title {
+          font-size: 1.15rem;
+          font-weight: 700;
+          color: #1c2a4f;
+          margin: 0;
+          letter-spacing: -0.01em;
+        }
+        .why-pillar-desc {
+          font-size: 0.9rem;
+          color: #475569;
+          line-height: 1.65;
+          margin: 0;
+          flex: 1;
+        }
+        .why-pillar-tags {
+          display: flex;
+          flex-wrap: wrap;
+          gap: 6px;
+          margin-top: 4px;
+        }
+        .why-pillar-tags span {
+          background: #f1f5f9;
+          color: #334155;
+          font-size: 0.75rem;
+          font-weight: 600;
+          padding: 3px 10px;
+          border-radius: 100px;
+          border: 1px solid #e2e8f0;
+        }
+        @media (max-width: 640px) {
+          .why-pillars-grid { grid-template-columns: 1fr; }
+          .why-pillar-card { padding: 22px 18px; }
+        }
+
+        /* ====== MILESTONE TIMELINE ====== */
+        .milestone-grid {
+          display: flex;
+          flex-wrap: wrap;
+          justify-content: center;
+          gap: 24px;
+          margin-bottom: 36px;
+        }
+        .milestone-card {
+          background: #ffffff;
+          border: 1px solid #e2e8f0;
+          border-radius: 16px;
+          width: calc(33.333% - 16px);
+          min-width: 280px;
+          overflow: hidden;
+          transition: transform 0.25s ease, box-shadow 0.25s ease;
+          display: flex;
+          flex-direction: column;
+        }
+        .milestone-card:hover {
+          transform: translateY(-4px);
+          box-shadow: 0 12px 32px rgba(15, 23, 42, 0.08);
+        }
+        .milestone-img-wrap {
+          position: relative;
+          width: 100%;
+          padding-top: 70%; /* Better aspect ratio for uncropped */
+          background: #ffffff;
+          overflow: hidden;
+          border-bottom: 1px solid #e2e8f0;
+        }
+        .milestone-img {
+          position: absolute;
+          top: 0;
+          left: 0;
+          width: 100%;
+          height: 100%;
+          object-fit: contain;
+          padding: 16px;
+          box-sizing: border-box;
+          transition: transform 0.5s ease;
+        }
+        .milestone-card:hover .milestone-img {
+          transform: scale(1.05);
+        }
+        .milestone-content {
+          padding: 32px 24px 24px;
+          display: flex;
+          flex-direction: column;
+          flex: 1;
+        }
+        .milestone-title {
+          font-size: 1.25rem;
+          font-weight: 700;
+          color: #1c2a4f;
+          margin: 0 0 10px 0;
+          line-height: 1.3;
+        }
+        .milestone-desc {
+          font-size: 0.95rem;
+          color: #64748b;
+          line-height: 1.6;
+          margin: 0;
+        }
+        
+        @media (max-width: 992px) {
+          .milestone-card { width: calc(50% - 12px); }
+        }
+        @media (max-width: 640px) {
+          .milestone-card { width: 100%; }
+        }
 
         /* ====== CTA ROW ====== */
         .hero-cta-row {
@@ -905,14 +775,14 @@ export function Home({ onOpenCounselling, onOpenEvaluation }) {
           background: rgba(255,255,255,0.9);
           border: 1.5px solid #cbd5e1;
           padding: 14px 24px;
-          color: #0f172a;
+          color: #1c2a4f;
           backdrop-filter: blur(8px);
           transition: border-color 0.2s ease, background 0.2s ease, transform 0.2s ease;
         }
         .hero-btn-outline:hover {
           background: #f8faff;
           border-color: #93c5fd;
-          color: #1d4ed8;
+          color: #1c2a4f;
           transform: translateY(-2px);
         }
 
@@ -947,10 +817,10 @@ export function Home({ onOpenCounselling, onOpenEvaluation }) {
         .hero-rating-text-wrap { display: flex; flex-direction: column; }
         .hero-rating-stars-row {
           display: flex; align-items: center; gap: 5px;
-          font-size: 0.84rem; font-weight: 700; color: #0f172a;
+          font-size: 0.84rem; font-weight: 700; color: #1c2a4f;
         }
-        .hero-rating-stars { color: #f59e0b; letter-spacing: 1px; }
-        .hero-rating-score { font-weight: 800; color: #0f172a; }
+        .hero-rating-stars { color: #475569; letter-spacing: 1px; }
+        .hero-rating-score { font-weight: 600; color: #1c2a4f; }
         .hero-rating-subtext { font-size: 0.75rem; color: #64748b; font-weight: 500; }
         .hero-quick-destinations { display: flex; align-items: center; gap: 8px; }
         .hero-quick-label {
@@ -964,11 +834,11 @@ export function Home({ onOpenCounselling, onOpenEvaluation }) {
           padding: 6px 12px;
           display: inline-flex; align-items: center; gap: 6px;
           cursor: pointer;
-          font-size: 0.8rem; font-weight: 700; color: #1e293b;
+          font-size: 0.8rem; font-weight: 700; color: #1c2a4f;
           transition: all 0.2s ease; white-space: nowrap;
         }
         .hero-flag-btn:hover {
-          background: #eff6ff; border-color: #93c5fd; color: #1d4ed8;
+          background: #f8fafc; border-color: #93c5fd; color: #1c2a4f;
           transform: translateY(-1px);
         }
 
@@ -1021,7 +891,7 @@ export function Home({ onOpenCounselling, onOpenEvaluation }) {
           animation-delay: 0.55s;
         }
         .hero-stat-icon { font-size: 1.4rem; line-height: 1; }
-        .hero-stat-number { font-size: 1.05rem; font-weight: 800; color: #0f172a; line-height: 1.2; }
+        .hero-stat-number { font-size: 1.05rem; font-weight: 800; color: #1c2a4f; line-height: 1.2; }
         .hero-stat-label { font-size: 0.72rem; color: #64748b; font-weight: 600; }
 
         /* ====== RESPONSIVE ====== */
@@ -1041,7 +911,7 @@ export function Home({ onOpenCounselling, onOpenEvaluation }) {
           .germany-card-grid { grid-template-columns: 1fr !important; gap: 24px !important; }
         }
         @media (max-width: 640px) {
-          .hero-section-premium { padding: 48px 0 56px 0; }
+          .hero-section-premium { padding: 100px 0 120px 0; min-height: 80vh; }
           .hero-headline { font-size: clamp(2rem, 7.5vw, 2.5rem); }
           .hero-br-hide-sm { display: none; }
           .hero-bento-grid { grid-template-columns: 1fr; gap: 10px; margin-bottom: 22px; }

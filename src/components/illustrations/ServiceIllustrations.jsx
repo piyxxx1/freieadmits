@@ -5,15 +5,15 @@ export function ServiceIllustration({ serviceId, width = '80px', height = '80px'
     case 'counseling':
       return (
         <svg viewBox="0 0 100 100" fill="none" xmlns="http://www.w3.org/2000/svg" style={{ width, height }}>
-          <circle cx="50" cy="50" r="46" fill="#eff6ff" />
+          <circle cx="50" cy="50" r="46" fill="#f8fafc" />
           {/* Clipboard & Checklist */}
-          <rect x="28" y="24" width="44" height="54" rx="6" fill="#ffffff" stroke="#2563eb" strokeWidth="2.5" />
-          <rect x="40" y="18" width="20" height="10" rx="3" fill="#2563eb" />
+          <rect x="28" y="24" width="44" height="54" rx="6" fill="#ffffff" stroke="#1c2a4f" strokeWidth="2.5" />
+          <rect x="40" y="18" width="20" height="10" rx="3" fill="#1c2a4f" />
           <line x1="38" y1="38" x2="62" y2="38" stroke="#93c5fd" strokeWidth="3" strokeLinecap="round" />
           <line x1="38" y1="48" x2="62" y2="48" stroke="#93c5fd" strokeWidth="3" strokeLinecap="round" />
           <line x1="38" y1="58" x2="52" y2="58" stroke="#93c5fd" strokeWidth="3" strokeLinecap="round" />
           {/* Checkmark */}
-          <circle cx="68" cy="68" r="14" fill="#10b981" />
+          <circle cx="68" cy="68" r="14" fill="#1c2a4f" />
           <path d="M63 68 L67 72 L74 64" stroke="#ffffff" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round" />
         </svg>
       );
@@ -37,10 +37,10 @@ export function ServiceIllustration({ serviceId, width = '80px', height = '80px'
     case 'university-selection':
       return (
         <svg viewBox="0 0 100 100" fill="none" xmlns="http://www.w3.org/2000/svg" style={{ width, height }}>
-          <circle cx="50" cy="50" r="46" fill="#ecfdf5" />
+          <circle cx="50" cy="50" r="46" fill="#ffffff" />
           {/* Target Bullseye & Compass Pin */}
-          <circle cx="50" cy="50" r="32" stroke="#059669" strokeWidth="3" strokeDasharray="4 4" fill="none" />
-          <circle cx="50" cy="50" r="20" stroke="#10b981" strokeWidth="2.5" fill="none" />
+          <circle cx="50" cy="50" r="32" stroke="#1c2a4f" strokeWidth="3" strokeDasharray="4 4" fill="none" />
+          <circle cx="50" cy="50" r="20" stroke="#1c2a4f" strokeWidth="2.5" fill="none" />
           {/* Academic Shield */}
           <path d="M42 36 L58 36 L58 48 Q50 62 42 48 Z" fill="#047857" />
           <circle cx="50" cy="44" r="4" fill="#fef08a" />
@@ -52,21 +52,21 @@ export function ServiceIllustration({ serviceId, width = '80px', height = '80px'
         <svg viewBox="0 0 100 100" fill="none" xmlns="http://www.w3.org/2000/svg" style={{ width, height }}>
           <circle cx="50" cy="50" r="46" fill="#f5f3ff" />
           {/* Document with Quill Pen */}
-          <rect x="26" y="24" width="40" height="52" rx="5" fill="#ffffff" stroke="#7c3aed" strokeWidth="2.5" />
+          <rect x="26" y="24" width="40" height="52" rx="5" fill="#ffffff" stroke="#1c2a4f" strokeWidth="2.5" />
           <line x1="34" y1="36" x2="56" y2="36" stroke="#c4b5fd" strokeWidth="2.5" strokeLinecap="round" />
           <line x1="34" y1="44" x2="56" y2="44" stroke="#c4b5fd" strokeWidth="2.5" strokeLinecap="round" />
           <line x1="34" y1="52" x2="48" y2="52" stroke="#c4b5fd" strokeWidth="2.5" strokeLinecap="round" />
           {/* Golden Seal */}
-          <circle cx="38" cy="62" r="6" fill="#f59e0b" />
+          <circle cx="38" cy="62" r="6" fill="#475569" />
           {/* Quill feather */}
-          <path d="M74 22 Q58 42 56 64 L54 62 Q66 42 74 22 Z" fill="#7c3aed" />
+          <path d="M74 22 Q58 42 56 64 L54 62 Q66 42 74 22 Z" fill="#1c2a4f" />
         </svg>
       );
 
     case 'scholarships':
       return (
         <svg viewBox="0 0 100 100" fill="none" xmlns="http://www.w3.org/2000/svg" style={{ width, height }}>
-          <circle cx="50" cy="50" r="46" fill="#fefce8" />
+          <circle cx="50" cy="50" r="46" fill="#ffffff" />
           {/* Trophy Cup */}
           <path d="M34 32 L66 32 L60 54 Q50 64 40 54 Z" fill="#eab308" />
           <rect x="47" y="58" width="6" height="12" fill="#ca8a04" />
@@ -84,14 +84,14 @@ export function ServiceIllustration({ serviceId, width = '80px', height = '80px'
         <svg viewBox="0 0 100 100" fill="none" xmlns="http://www.w3.org/2000/svg" style={{ width, height }}>
           <circle cx="50" cy="50" r="46" fill="#f0f9ff" />
           {/* Bank / Vault & Coin */}
-          <polygon points="50,22 28,34 72,34" fill="#0284c7" />
+          <polygon points="50,22 28,34 72,34" fill="#1c2a4f" />
           <rect x="32" y="36" width="36" height="6" fill="#0369a1" />
-          <rect x="34" y="42" width="6" height="24" fill="#38bdf8" />
-          <rect x="47" y="42" width="6" height="24" fill="#38bdf8" />
-          <rect x="60" y="42" width="6" height="24" fill="#38bdf8" />
+          <rect x="34" y="42" width="6" height="24" fill="#eef2fa" />
+          <rect x="47" y="42" width="6" height="24" fill="#eef2fa" />
+          <rect x="60" y="42" width="6" height="24" fill="#eef2fa" />
           <rect x="28" y="66" width="44" height="8" rx="2" fill="#0369a1" />
           {/* Coin Badge */}
-          <circle cx="68" cy="40" r="14" fill="#f59e0b" stroke="#ffffff" strokeWidth="2" />
+          <circle cx="68" cy="40" r="14" fill="#475569" stroke="#ffffff" strokeWidth="2" />
           <text x="63" y="45" fill="#ffffff" fontSize="12" fontWeight="bold">₹</text>
         </svg>
       );
@@ -99,13 +99,13 @@ export function ServiceIllustration({ serviceId, width = '80px', height = '80px'
     case 'visa-processing':
       return (
         <svg viewBox="0 0 100 100" fill="none" xmlns="http://www.w3.org/2000/svg" style={{ width, height }}>
-          <circle cx="50" cy="50" r="46" fill="#ecfdf5" />
+          <circle cx="50" cy="50" r="46" fill="#ffffff" />
           {/* Passport Booklet with Approved Stamp */}
-          <rect x="28" y="24" width="40" height="52" rx="4" fill="#1e3a8a" />
-          <circle cx="48" cy="42" r="10" stroke="#fde047" strokeWidth="1.5" fill="none" />
+          <rect x="28" y="24" width="40" height="52" rx="4" fill="#1c2a4f" />
+          <circle cx="48" cy="42" r="10" stroke="#e2e8f0" strokeWidth="1.5" fill="none" />
           {/* Approved Green Stamp */}
           <g transform="translate(42, 48) rotate(-15)">
-            <rect x="0" y="0" width="36" height="18" rx="3" fill="#10b981" />
+            <rect x="0" y="0" width="36" height="18" rx="3" fill="#1c2a4f" />
             <text x="4" y="13" fill="#ffffff" fontSize="8" fontWeight="bold">APPROVED</text>
           </g>
         </svg>

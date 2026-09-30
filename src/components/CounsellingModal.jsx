@@ -49,7 +49,7 @@ export function CounsellingModal({ isOpen, onClose, initialType = 'counselling' 
               <span className="badge-pill badge-primary" style={{ marginBottom: '8px' }}>
                 <Sparkles size={14} /> Profile-Based Guidance
               </span>
-              <h3 style={{ fontSize: '1.55rem', fontWeight: 800, color: '#0f172a', marginBottom: '6px' }}>
+              <h3 style={{ fontSize: '1.55rem', fontWeight: 800, color: '#1c2a4f', marginBottom: '6px' }}>
                 {initialType === 'evaluation' ? 'Get Your Profile Evaluated' : 'Book Free Counselling'}
               </h3>
               <p style={{ color: '#64748b', fontSize: '0.9rem' }}>
@@ -195,16 +195,16 @@ export function CounsellingModal({ isOpen, onClose, initialType = 'counselling' 
               width: '72px',
               height: '72px',
               borderRadius: '50%',
-              background: '#ecfdf5',
+              background: '#ffffff',
               display: 'flex',
               alignItems: 'center',
               justifyContent: 'center',
               margin: '0 auto 18px auto',
-              color: '#10b981'
+              color: '#1c2a4f'
             }}>
               <CheckCircle size={40} />
             </div>
-            <h3 style={{ fontSize: '1.7rem', fontWeight: 800, color: '#0f172a', marginBottom: '8px' }}>
+            <h3 style={{ fontSize: '1.7rem', fontWeight: 800, color: '#1c2a4f', marginBottom: '8px' }}>
               Enquiry Submitted Successfully!
             </h3>
             <p style={{ color: '#475569', fontSize: '0.98rem', marginBottom: '24px', lineHeight: 1.6 }}>
@@ -214,7 +214,7 @@ export function CounsellingModal({ isOpen, onClose, initialType = 'counselling' 
             {/* 4 Steps Roadmap */}
             <div style={{ background: '#f8fafc', padding: '20px', borderRadius: '14px', border: '1px solid #e2e8f0', textAlign: 'left', marginBottom: '24px' }}>
               <div style={{ display: 'flex', gap: '14px', marginBottom: '14px' }}>
-                <span style={{ background: '#1d4ed8', color: '#fff', width: '26px', height: '26px', borderRadius: '50%', display: 'flex', alignItems: 'center', justifyContent: 'center', fontSize: '0.8rem', fontWeight: 800, flexShrink: 0 }}>
+                <span style={{ background: '#1c2a4f', color: '#fff', width: '26px', height: '26px', borderRadius: '50%', display: 'flex', alignItems: 'center', justifyContent: 'center', fontSize: '0.8rem', fontWeight: 800, flexShrink: 0 }}>
                   01
                 </span>
                 <div style={{ fontSize: '0.88rem', color: '#334155' }}>
@@ -223,7 +223,7 @@ export function CounsellingModal({ isOpen, onClose, initialType = 'counselling' 
               </div>
 
               <div style={{ display: 'flex', gap: '14px', marginBottom: '14px' }}>
-                <span style={{ background: '#1d4ed8', color: '#fff', width: '26px', height: '26px', borderRadius: '50%', display: 'flex', alignItems: 'center', justifyContent: 'center', fontSize: '0.8rem', fontWeight: 800, flexShrink: 0 }}>
+                <span style={{ background: '#1c2a4f', color: '#fff', width: '26px', height: '26px', borderRadius: '50%', display: 'flex', alignItems: 'center', justifyContent: 'center', fontSize: '0.8rem', fontWeight: 800, flexShrink: 0 }}>
                   02
                 </span>
                 <div style={{ fontSize: '0.88rem', color: '#334155' }}>
@@ -232,7 +232,7 @@ export function CounsellingModal({ isOpen, onClose, initialType = 'counselling' 
               </div>
 
               <div style={{ display: 'flex', gap: '14px', marginBottom: '14px' }}>
-                <span style={{ background: '#1d4ed8', color: '#fff', width: '26px', height: '26px', borderRadius: '50%', display: 'flex', alignItems: 'center', justifyContent: 'center', fontSize: '0.8rem', fontWeight: 800, flexShrink: 0 }}>
+                <span style={{ background: '#1c2a4f', color: '#fff', width: '26px', height: '26px', borderRadius: '50%', display: 'flex', alignItems: 'center', justifyContent: 'center', fontSize: '0.8rem', fontWeight: 800, flexShrink: 0 }}>
                   03
                 </span>
                 <div style={{ fontSize: '0.88rem', color: '#334155' }}>
@@ -241,7 +241,7 @@ export function CounsellingModal({ isOpen, onClose, initialType = 'counselling' 
               </div>
 
               <div style={{ display: 'flex', gap: '14px' }}>
-                <span style={{ background: '#1d4ed8', color: '#fff', width: '26px', height: '26px', borderRadius: '50%', display: 'flex', alignItems: 'center', justifyContent: 'center', fontSize: '0.8rem', fontWeight: 800, flexShrink: 0 }}>
+                <span style={{ background: '#1c2a4f', color: '#fff', width: '26px', height: '26px', borderRadius: '50%', display: 'flex', alignItems: 'center', justifyContent: 'center', fontSize: '0.8rem', fontWeight: 800, flexShrink: 0 }}>
                   04
                 </span>
                 <div style={{ fontSize: '0.88rem', color: '#334155' }}>

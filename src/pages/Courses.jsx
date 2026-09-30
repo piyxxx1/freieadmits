@@ -80,7 +80,7 @@ export function Courses({ onOpenCounselling }) {
     <div>
       {/* 1. HERO HEADER */}
       <section style={{
-        background: 'linear-gradient(180deg, #eff6ff 0%, #ffffff 100%)',
+        background: 'linear-gradient(180deg, #f8fafc 0%, #ffffff 100%)',
         padding: '54px 0 44px 0',
         textAlign: 'center'
       }}>
@@ -88,10 +88,10 @@ export function Courses({ onOpenCounselling }) {
           <span className="badge-pill badge-primary">
             <BookOpen size={14} /> Programs &amp; Study Areas
           </span>
-          <h1 style={{ fontSize: '2.8rem', fontWeight: 800, color: '#0f172a', marginBottom: '12px' }}>
+          <h1 style={{ fontSize: '2.8rem', fontWeight: 800, color: '#1c2a4f', marginBottom: '12px' }}>
             Find Your Course
           </h1>
-          <div style={{ fontSize: '1.25rem', fontWeight: 700, color: '#d97706', marginBottom: '16px' }}>
+          <div style={{ fontSize: '1.25rem', fontWeight: 700, color: '#475569', marginBottom: '16px' }}>
             Choose a Course That Builds Your Future
           </div>
           <p style={{ fontSize: '1.08rem', color: '#475569', lineHeight: 1.65, marginBottom: '28px' }}>
@@ -110,7 +110,7 @@ export function Courses({ onOpenCounselling }) {
             alignItems: 'center',
             padding: '6px 14px'
           }}>
-            <Search size={22} color="#1d4ed8" style={{ marginLeft: '6px' }} />
+            <Search size={22} color="#1c2a4f" style={{ marginLeft: '6px' }} />
             <input
               type="text"
               placeholder="Search by course title, discipline, or university (e.g. AI, Mechatronics, Ausbildung)..."
@@ -122,7 +122,7 @@ export function Courses({ onOpenCounselling }) {
                 outline: 'none',
                 padding: '12px 14px',
                 fontSize: '0.98rem',
-                color: '#0f172a',
+                color: '#1c2a4f',
                 fontFamily: 'inherit'
               }}
             />
@@ -140,7 +140,7 @@ export function Courses({ onOpenCounselling }) {
         <div className="container">
           <div style={{ display: 'flex', alignItems: 'center', gap: '8px', overflowX: 'auto', paddingBottom: '4px' }}>
             <span style={{ fontSize: '0.85rem', fontWeight: 700, color: '#475569', whiteSpace: 'nowrap', display: 'flex', alignItems: 'center', gap: '6px', marginRight: '6px' }}>
-              <Filter size={15} color="#1d4ed8" /> Category:
+              <Filter size={15} color="#1c2a4f" /> Category:
             </span>
             {courseCategories.map((cat) => (
               <button
@@ -149,11 +149,11 @@ export function Courses({ onOpenCounselling }) {
                 style={{
                   padding: '7px 14px',
                   borderRadius: '8px',
-                  border: selectedCategory === cat ? '1px solid #1d4ed8' : '1px solid #e2e8f0',
+                  border: selectedCategory === cat ? '1px solid #1c2a4f' : '1px solid #e2e8f0',
                   fontSize: '0.86rem',
                   fontWeight: 600,
                   cursor: 'pointer',
-                  background: selectedCategory === cat ? '#1d4ed8' : '#ffffff',
+                  background: selectedCategory === cat ? '#1c2a4f' : '#ffffff',
                   color: selectedCategory === cat ? '#ffffff' : '#334155',
                   whiteSpace: 'nowrap',
                   transition: 'all 0.2s'
@@ -178,15 +178,15 @@ export function Courses({ onOpenCounselling }) {
                   display: 'flex',
                   flexDirection: 'column',
                   justifyContent: 'space-between',
-                  border: course.category === 'Germany Ausbildung' ? '2px solid #fde68a' : course.featured ? '1.5px solid #bfdbfe' : '1px solid #e2e8f0',
-                  background: course.category === 'Germany Ausbildung' ? '#fffbeb' : '#ffffff'
+                  border: course.category === 'Germany Ausbildung' ? '2px solid #e2e8f0' : course.featured ? '1.5px solid #bfdbfe' : '1px solid #e2e8f0',
+                  background: course.category === 'Germany Ausbildung' ? '#ffffff' : '#ffffff'
                 }}
               >
                 <div>
                   <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', marginBottom: '12px' }}>
                     <span style={{
-                      background: course.category === 'Germany Ausbildung' ? '#fef3c7' : '#eff6ff',
-                      color: course.category === 'Germany Ausbildung' ? '#92400e' : '#1d4ed8',
+                      background: course.category === 'Germany Ausbildung' ? '#f8fafc' : '#f8fafc',
+                      color: course.category === 'Germany Ausbildung' ? '#92400e' : '#1c2a4f',
                       padding: '3px 8px',
                       borderRadius: '6px',
                       fontSize: '0.74rem',
@@ -199,11 +199,11 @@ export function Courses({ onOpenCounselling }) {
                     </span>
                   </div>
 
-                  <h3 style={{ fontSize: '1.25rem', fontWeight: 700, color: '#0f172a', marginBottom: '8px', lineHeight: 1.35 }}>
+                  <h3 style={{ fontSize: '1.25rem', fontWeight: 700, color: '#1c2a4f', marginBottom: '8px', lineHeight: 1.35 }}>
                     {course.title}
                   </h3>
 
-                  <div style={{ fontSize: '0.88rem', color: '#1d4ed8', fontWeight: 600, marginBottom: '14px' }}>
+                  <div style={{ fontSize: '0.88rem', color: '#1c2a4f', fontWeight: 600, marginBottom: '14px' }}>
                     🏛️ {course.university}
                   </div>
 
@@ -214,7 +214,7 @@ export function Courses({ onOpenCounselling }) {
                   <div style={{ background: '#f8fafc', padding: '12px', borderRadius: '10px', fontSize: '0.82rem', marginBottom: '16px' }}>
                     <div style={{ display: 'flex', justifyContent: 'space-between', marginBottom: '4px' }}>
                       <span style={{ color: '#64748b' }}>Tuition:</span>
-                      <strong style={{ color: '#0f172a' }}>{course.tuition}</strong>
+                      <strong style={{ color: '#1c2a4f' }}>{course.tuition}</strong>
                     </div>
                     <div style={{ display: 'flex', justifyContent: 'space-between' }}>
                       <span style={{ color: '#64748b' }}>Duration:</span>
@@ -265,12 +265,12 @@ export function Courses({ onOpenCounselling }) {
                   gap: '32px',
                   alignItems: 'center',
                   padding: '32px',
-                  border: item.highlight ? '2px solid #f59e0b' : '1px solid #e2e8f0',
-                  background: item.highlight ? '#fffbeb' : '#ffffff'
+                  border: item.highlight ? '2px solid #475569' : '1px solid #e2e8f0',
+                  background: item.highlight ? '#ffffff' : '#ffffff'
                 }}
               >
                 <div>
-                  <h3 style={{ fontSize: '1.5rem', fontWeight: 800, color: '#0f172a', marginBottom: '8px' }}>
+                  <h3 style={{ fontSize: '1.5rem', fontWeight: 800, color: '#1c2a4f', marginBottom: '8px' }}>
                     {item.title}
                   </h3>
                   <p style={{ color: '#475569', fontSize: '0.98rem', lineHeight: 1.6, marginBottom: '20px' }}>
@@ -288,7 +288,7 @@ export function Courses({ onOpenCounselling }) {
                   </div>
                   <div style={{ display: 'flex', flexWrap: 'wrap', gap: '8px' }}>
                     {item.areas.map((a, i) => (
-                      <span key={i} style={{ background: '#f1f5f9', color: '#1e293b', padding: '4px 10px', borderRadius: '6px', fontSize: '0.84rem', fontWeight: 500 }}>
+                      <span key={i} style={{ background: '#f1f5f9', color: '#1c2a4f', padding: '4px 10px', borderRadius: '6px', fontSize: '0.84rem', fontWeight: 500 }}>
                         {a}
                       </span>
                     ))}
@@ -300,7 +300,7 @@ export function Courses({ onOpenCounselling }) {
 
           {/* 5. NEED HELP CHOOSING A COURSE? */}
           <div style={{
-            background: 'linear-gradient(135deg, #1d4ed8 0%, #1e40af 100%)',
+            background: 'linear-gradient(135deg, #1c2a4f 0%, #293d73 100%)',
             borderRadius: '20px',
             padding: '40px',
             color: '#ffffff',
@@ -318,7 +318,7 @@ export function Courses({ onOpenCounselling }) {
               <h3 style={{ fontSize: '1.85rem', fontWeight: 800, color: '#ffffff', margin: '14px 0 8px 0' }}>
                 Need Help Choosing a Course?
               </h3>
-              <p style={{ color: '#dbeafe', fontSize: '1.02rem', lineHeight: 1.6, margin: 0 }}>
+              <p style={{ color: '#f8fafc', fontSize: '1.02rem', lineHeight: 1.6, margin: 0 }}>
                 You don't need to know everything before contacting us. Share your academic background and career interests with our counsellors.
               </p>
             </div>
@@ -339,13 +339,13 @@ export function Courses({ onOpenCounselling }) {
             </button>
 
             <div style={{ padding: '36px 32px' }}>
-              <span style={{ background: '#eff6ff', color: '#1d4ed8', padding: '3px 10px', borderRadius: '6px', fontSize: '0.78rem', fontWeight: 700 }}>
+              <span style={{ background: '#f8fafc', color: '#1c2a4f', padding: '3px 10px', borderRadius: '6px', fontSize: '0.78rem', fontWeight: 700 }}>
                 {activeCourseModal.category}
               </span>
-              <h2 style={{ fontSize: '1.65rem', fontWeight: 800, color: '#0f172a', margin: '10px 0 4px 0' }}>
+              <h2 style={{ fontSize: '1.65rem', fontWeight: 800, color: '#1c2a4f', margin: '10px 0 4px 0' }}>
                 {activeCourseModal.title}
               </h2>
-              <div style={{ color: '#1d4ed8', fontWeight: 600, fontSize: '0.94rem', marginBottom: '18px' }}>
+              <div style={{ color: '#1c2a4f', fontWeight: 600, fontSize: '0.94rem', marginBottom: '18px' }}>
                 🏛️ {activeCourseModal.university} ({activeCourseModal.country})
               </div>
 
@@ -354,7 +354,7 @@ export function Courses({ onOpenCounselling }) {
               </p>
 
               <div style={{ background: '#f8fafc', padding: '16px', borderRadius: '12px', border: '1px solid #e2e8f0', marginBottom: '20px' }}>
-                <div style={{ fontSize: '0.82rem', fontWeight: 700, color: '#1d4ed8', marginBottom: '4px' }}>
+                <div style={{ fontSize: '0.82rem', fontWeight: 700, color: '#1c2a4f', marginBottom: '4px' }}>
                   ELIGIBILITY &amp; ADMISSION CRITERIA
                 </div>
                 <div style={{ color: '#334155', fontSize: '0.88rem', lineHeight: 1.55 }}>
@@ -363,12 +363,12 @@ export function Courses({ onOpenCounselling }) {
               </div>
 
               <div style={{ marginBottom: '24px' }}>
-                <div style={{ fontSize: '0.86rem', fontWeight: 700, color: '#0f172a', marginBottom: '8px' }}>
+                <div style={{ fontSize: '0.86rem', fontWeight: 700, color: '#1c2a4f', marginBottom: '8px' }}>
                   Target Career Roles:
                 </div>
                 <div style={{ display: 'flex', flexWrap: 'wrap', gap: '8px' }}>
                   {activeCourseModal.targetRoles.map((role, i) => (
-                    <span key={i} style={{ background: '#ecfdf5', color: '#065f46', border: '1px solid #a7f3d0', padding: '4px 10px', borderRadius: '6px', fontSize: '0.82rem', fontWeight: 600 }}>
+                    <span key={i} style={{ background: '#ffffff', color: '#065f46', border: '1px solid #e2e8f0', padding: '4px 10px', borderRadius: '6px', fontSize: '0.82rem', fontWeight: 600 }}>
                       ✓ {role}
                     </span>
                   ))}

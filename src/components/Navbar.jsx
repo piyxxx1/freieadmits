@@ -13,12 +13,12 @@ import {
   GraduationCap,
   Users,
   Globe,
-  BookOpen,
   Wrench,
   Phone,
   Laptop,
   ArrowRight,
-  CheckCircle2
+  CheckCircle2,
+  Handshake
 } from 'lucide-react';
 
 export function Navbar({ onOpenCounselling, onOpenEvaluation }) {
@@ -43,10 +43,10 @@ export function Navbar({ onOpenCounselling, onOpenEvaluation }) {
     { name: 'Home', path: '/', icon: GraduationCap },
     { name: 'About Us', path: '/about', icon: Users },
     { name: 'Destinations', path: '/destinations', icon: Globe, hasDropdown: true },
-    { name: 'Courses', path: '/courses', icon: BookOpen },
     { name: 'Services', path: '/services', icon: Wrench },
-    { name: 'dMAT Germany', path: '/dmat-germany', icon: Laptop, isSpecial: true },
+    { name: 'dMAT', path: '/dmat-germany', icon: Laptop, isSpecial: true },
     { name: 'Contact', path: '/contact', icon: Phone },
+    { name: 'B2B Partner', path: '/b2b', icon: Handshake, isB2B: true },
   ];
 
   const handleDestinationSelect = (_slug) => {
@@ -189,7 +189,7 @@ export function Navbar({ onOpenCounselling, onOpenEvaluation }) {
                           {/* Footer */}
                           <div className="mega-footer">
                             <div className="mega-footer-left">
-                              <CheckCircle2 size={16} color="#10b981" />
+                              <CheckCircle2 size={16} color="#1c2a4f" />
                               <span>Not sure which destination fits your GPA, budget &amp; career goals?</span>
                             </div>
                             <button
@@ -213,9 +213,10 @@ export function Navbar({ onOpenCounselling, onOpenEvaluation }) {
                 <Link
                   key={item.path}
                   to={item.path}
-                  className={`nav-link ${isActive ? 'active' : ''} ${item.isSpecial ? 'special-link' : ''}`}
+                  className={`nav-link ${isActive ? 'active' : ''} ${item.isSpecial ? 'special-link' : ''} ${item.isB2B ? 'b2b-link' : ''}`}
                 >
                   {item.isSpecial && <CountryFlag countryId="germany" size={14} />}
+                  {item.isB2B && <Handshake size={14} />}
                   <span>{item.name}</span>
                 </Link>
               );
@@ -373,7 +374,7 @@ export function Navbar({ onOpenCounselling, onOpenEvaluation }) {
         }
 
         .top-pill {
-          background: #d97706;
+          background: #475569;
           color: #ffffff;
           padding: 2px 8px;
           border-radius: 4px;
@@ -399,7 +400,7 @@ export function Navbar({ onOpenCounselling, onOpenEvaluation }) {
         .top-eval-btn {
           background: rgba(56, 189, 248, 0.12);
           border: 1px solid rgba(56, 189, 248, 0.35);
-          color: #38bdf8;
+          color: #eef2fa;
           padding: 2px 9px;
           border-radius: 6px;
           font-size: 0.72rem;
@@ -409,7 +410,7 @@ export function Navbar({ onOpenCounselling, onOpenEvaluation }) {
         }
 
         .top-eval-btn:hover {
-          background: #38bdf8;
+          background: #eef2fa;
           color: #090e1a;
         }
 
@@ -428,7 +429,7 @@ export function Navbar({ onOpenCounselling, onOpenEvaluation }) {
         }
 
         .top-phone:hover {
-          color: #38bdf8;
+          color: #eef2fa;
         }
 
         /* Main Navigation */
@@ -459,7 +460,7 @@ export function Navbar({ onOpenCounselling, onOpenEvaluation }) {
           width: 40px;
           height: 40px;
           border-radius: 10px;
-          background: linear-gradient(135deg, #0f172a 0%, #1e293b 100%);
+          background: linear-gradient(135deg, #1c2a4f 0%, #1c2a4f 100%);
           display: flex;
           align-items: center;
           justify-content: center;
@@ -475,7 +476,7 @@ export function Navbar({ onOpenCounselling, onOpenEvaluation }) {
           font-family: var(--font-heading, sans-serif);
           font-size: 1.25rem;
           font-weight: 800;
-          color: #0f172a;
+          color: #1c2a4f;
           line-height: 1.1;
           letter-spacing: -0.01em;
           white-space: nowrap;
@@ -484,7 +485,7 @@ export function Navbar({ onOpenCounselling, onOpenEvaluation }) {
         .logo-tagline {
           font-size: 0.64rem;
           font-weight: 700;
-          color: #d97706;
+          color: #475569;
           text-transform: uppercase;
           letter-spacing: 0.05em;
           margin-top: 2px;
@@ -525,13 +526,13 @@ export function Navbar({ onOpenCounselling, onOpenEvaluation }) {
         }
 
         .nav-link:hover, .nav-link-btn:hover, .nav-link-btn.hovered {
-          color: #1d4ed8;
+          color: #1c2a4f;
           background: #f8fafc;
         }
 
         .nav-link.active, .nav-link-btn.active {
-          color: #1d4ed8;
-          background: #eff6ff;
+          color: #1c2a4f;
+          background: #f8fafc;
           font-weight: 700;
         }
 
@@ -540,8 +541,26 @@ export function Navbar({ onOpenCounselling, onOpenEvaluation }) {
         }
 
         .nav-link.special-link:hover {
-          background: #fffbeb;
-          color: #b45309;
+          background: #ffffff;
+          color: #334155;
+        }
+
+        .nav-link.b2b-link {
+          color: #047857;
+          background: #ffffff;
+          border: 1px solid #e2e8f0;
+          font-weight: 700;
+        }
+
+        .nav-link.b2b-link:hover {
+          background: #d1fae5;
+          border-color: #6ee7b7;
+          color: #065f46;
+        }
+
+        .nav-link.b2b-link.active {
+          background: #d1fae5;
+          color: #065f46;
         }
 
         .chevron-icon {
@@ -551,7 +570,7 @@ export function Navbar({ onOpenCounselling, onOpenEvaluation }) {
 
         .chevron-icon.open {
           transform: rotate(180deg);
-          color: #1d4ed8;
+          color: #1c2a4f;
         }
 
         /* MEGA DROPDOWN BOX - 3-Column Layout */
@@ -598,7 +617,7 @@ export function Navbar({ onOpenCounselling, onOpenEvaluation }) {
         .mega-title {
           font-size: 1rem;
           font-weight: 800;
-          color: #0f172a;
+          color: #1c2a4f;
           margin: 0;
         }
 
@@ -614,9 +633,9 @@ export function Navbar({ onOpenCounselling, onOpenEvaluation }) {
           gap: 6px;
           font-size: 0.82rem;
           font-weight: 700;
-          color: #1d4ed8;
+          color: #1c2a4f;
           text-decoration: none;
-          background: #eff6ff;
+          background: #f8fafc;
           padding: 6px 14px;
           border-radius: 7px;
           transition: background 0.2s;
@@ -624,7 +643,7 @@ export function Navbar({ onOpenCounselling, onOpenEvaluation }) {
         }
 
         .mega-view-all-btn:hover {
-          background: #dbeafe;
+          background: #f8fafc;
         }
 
         /* 3-Column Clean Grid (3-3-3-2) */
@@ -656,13 +675,13 @@ export function Navbar({ onOpenCounselling, onOpenEvaluation }) {
         }
 
         .germany-card-item {
-          background: #fffbeb;
-          border-color: #fde68a;
+          background: #ffffff;
+          border-color: #e2e8f0;
         }
 
         .germany-card-item:hover {
-          background: #fef3c7;
-          border-color: #f59e0b;
+          background: #f8fafc;
+          border-color: #475569;
         }
 
         .mega-card-thumb {
@@ -672,7 +691,7 @@ export function Navbar({ onOpenCounselling, onOpenEvaluation }) {
           border-radius: 6px;
           overflow: hidden;
           flex-shrink: 0;
-          background: #0f172a;
+          background: #1c2a4f;
         }
 
         .mega-card-thumb img {
@@ -705,18 +724,18 @@ export function Navbar({ onOpenCounselling, onOpenEvaluation }) {
         .mega-card-name {
           font-size: 0.88rem;
           font-weight: 700;
-          color: #0f172a;
+          color: #1c2a4f;
           white-space: nowrap;
           overflow: hidden;
           text-overflow: ellipsis;
         }
 
         .mega-card-item:hover .mega-card-name {
-          color: #1d4ed8;
+          color: #1c2a4f;
         }
 
         .badge-focus {
-          background: #d97706;
+          background: #475569;
           color: #ffffff;
           font-size: 0.62rem;
           font-weight: 700;
@@ -726,7 +745,7 @@ export function Navbar({ onOpenCounselling, onOpenEvaluation }) {
         }
 
         .badge-hot {
-          background: #10b981;
+          background: #1c2a4f;
           color: #ffffff;
           font-size: 0.62rem;
           font-weight: 700;
@@ -766,7 +785,7 @@ export function Navbar({ onOpenCounselling, onOpenEvaluation }) {
         .mega-footer-action-btn {
           background: transparent;
           border: none;
-          color: #1d4ed8;
+          color: #1c2a4f;
           font-weight: 700;
           font-size: 0.84rem;
           cursor: pointer;
@@ -777,7 +796,7 @@ export function Navbar({ onOpenCounselling, onOpenEvaluation }) {
         }
 
         .mega-footer-action-btn:hover {
-          background: #eff6ff;
+          background: #f8fafc;
         }
 
         /* Right Actions */
@@ -791,7 +810,7 @@ export function Navbar({ onOpenCounselling, onOpenEvaluation }) {
           display: inline-flex;
           align-items: center;
           gap: 7px;
-          background: linear-gradient(135deg, #1d4ed8 0%, #2563eb 100%);
+          background: linear-gradient(135deg, #1c2a4f 0%, #1c2a4f 100%);
           color: #ffffff;
           padding: 9px 16px;
           border-radius: 9px;
@@ -805,7 +824,7 @@ export function Navbar({ onOpenCounselling, onOpenEvaluation }) {
         }
 
         .counselling-cta-btn:hover {
-          background: linear-gradient(135deg, #1e40af 0%, #1d4ed8 100%);
+          background: linear-gradient(135deg, #293d73 0%, #1c2a4f 100%);
           transform: translateY(-1px);
           box-shadow: 0 6px 16px rgba(29, 78, 216, 0.35);
         }
@@ -820,7 +839,7 @@ export function Navbar({ onOpenCounselling, onOpenEvaluation }) {
           background: #f1f5f9;
           border: none;
           cursor: pointer;
-          color: #0f172a;
+          color: #1c2a4f;
           transition: background 0.2s;
         }
 
@@ -864,13 +883,13 @@ export function Navbar({ onOpenCounselling, onOpenEvaluation }) {
         }
 
         .mobile-row.active {
-          background: #eff6ff;
-          color: #1d4ed8;
+          background: #f8fafc;
+          color: #1c2a4f;
           font-weight: 700;
         }
 
         .mobile-row.special-mobile {
-          background: #fffbeb;
+          background: #ffffff;
           color: #92400e;
         }
 
@@ -885,7 +904,7 @@ export function Navbar({ onOpenCounselling, onOpenEvaluation }) {
         }
 
         .mobile-row.active .mobile-icon {
-          color: #1d4ed8;
+          color: #1c2a4f;
         }
 
         .mobile-badge-count {
@@ -897,7 +916,7 @@ export function Navbar({ onOpenCounselling, onOpenEvaluation }) {
         }
 
         .m-tag-focus {
-          background: #fef3c7;
+          background: #f8fafc;
           color: #92400e;
           font-size: 0.68rem;
           padding: 2px 6px;
@@ -930,7 +949,7 @@ export function Navbar({ onOpenCounselling, onOpenEvaluation }) {
           display: block;
           font-size: 0.82rem;
           font-weight: 700;
-          color: #1d4ed8;
+          color: #1c2a4f;
           text-decoration: none;
           margin-bottom: 8px;
           padding-bottom: 6px;
@@ -954,7 +973,7 @@ export function Navbar({ onOpenCounselling, onOpenEvaluation }) {
           text-decoration: none;
           font-size: 0.8rem;
           font-weight: 600;
-          color: #0f172a;
+          color: #1c2a4f;
         }
 
         .mobile-drawer-bottom {
@@ -972,7 +991,7 @@ export function Navbar({ onOpenCounselling, onOpenEvaluation }) {
           align-items: center;
           justify-content: center;
           gap: 8px;
-          background: #1d4ed8;
+          background: #1c2a4f;
           color: #ffffff;
           padding: 11px;
           border-radius: 9px;
@@ -988,7 +1007,7 @@ export function Navbar({ onOpenCounselling, onOpenEvaluation }) {
           align-items: center;
           justify-content: center;
           background: #ffffff;
-          color: #0f172a;
+          color: #1c2a4f;
           border: 1.5px solid #cbd5e1;
           padding: 10px;
           border-radius: 9px;
@@ -1052,7 +1071,7 @@ export function Navbar({ onOpenCounselling, onOpenEvaluation }) {
           }
           .top-phone {
             font-size: 0.76rem;
-            color: #38bdf8;
+            color: #eef2fa;
           }
           .counselling-cta-btn {
             display: none;

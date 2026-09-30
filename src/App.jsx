@@ -9,10 +9,11 @@ import { MobileQuickBar } from './components/MobileQuickBar';
 import { Home } from './pages/Home';
 import { AboutUs } from './pages/AboutUs';
 import { Destinations } from './pages/Destinations';
-import { Courses } from './pages/Courses';
+
 import { Services } from './pages/Services';
 import { DmatGermany } from './pages/DmatGermany';
 import { Contact } from './pages/Contact';
+import { B2B } from './pages/B2B';
 
 function App() {
   const { currentPath, navigate } = useRouter();
@@ -31,8 +32,6 @@ function App() {
         return <AboutUs onOpenCounselling={openCounselling} />;
       case '/destinations':
         return <Destinations onOpenCounselling={openCounselling} onOpenEvaluation={openEvaluation} />;
-      case '/courses':
-        return <Courses onOpenCounselling={openCounselling} onOpenEvaluation={openEvaluation} />;
       case '/services':
         return <Services onOpenCounselling={openCounselling} onOpenEvaluation={openEvaluation} />;
       case '/dmat-germany':
@@ -40,10 +39,12 @@ function App() {
         return <DmatGermany onOpenCounselling={openCounselling} />;
       case '/contact':
         return <Contact onOpenCounselling={openCounselling} />;
+      case '/b2b':
+        return <B2B onOpenCounselling={openCounselling} />;
       default:
         return (
           <div style={{ textAlign: 'center', padding: '100px 20px', minHeight: '60vh' }}>
-            <h2 style={{ fontSize: '2rem', fontWeight: 800, color: '#0f172a', marginBottom: '12px' }}>
+            <h2 style={{ fontSize: '2rem', fontWeight: 800, color: '#1c2a4f', marginBottom: '12px' }}>
               Page Not Found
             </h2>
             <p style={{ color: '#64748b', marginBottom: '24px' }}>

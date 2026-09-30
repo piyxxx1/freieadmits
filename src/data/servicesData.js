@@ -12,7 +12,7 @@ export const servicesData = [
       'Budget mapping across tuition-free public vs private universities'
     ],
     iconName: 'UserCheck',
-    color: '#2563eb'
+    color: '#1c2a4f'
   },
   {
     id: 'course-selection',
@@ -27,7 +27,7 @@ export const servicesData = [
       'Intake scheduling (Winter / Summer or Fall / Spring)'
     ],
     iconName: 'BookOpen',
-    color: '#d97706'
+    color: '#475569'
   },
   {
     id: 'university-selection',
@@ -42,7 +42,7 @@ export const servicesData = [
       'Timeline scheduling according to strict intake deadlines'
     ],
     iconName: 'Building2',
-    color: '#059669'
+    color: '#1c2a4f'
   },
   {
     id: 'application-assistance',
@@ -57,7 +57,7 @@ export const servicesData = [
       'Direct tracking of admission statuses and university correspondence'
     ],
     iconName: 'FileCheck',
-    color: '#7c3aed'
+    color: '#1c2a4f'
   },
   {
     id: 'sop-lor-guidance',
@@ -72,7 +72,7 @@ export const servicesData = [
       'Zero-plagiarism review and personalized narrative structuring'
     ],
     iconName: 'FileText',
-    color: '#4f46e5'
+    color: '#1c2a4f'
   },
   {
     id: 'scholarship-financial',
@@ -87,7 +87,7 @@ export const servicesData = [
       'Financial affidavit and sponsor proof-of-funds structuring'
     ],
     iconName: 'Banknote',
-    color: '#0284c7'
+    color: '#1c2a4f'
   },
   {
     id: 'visa-guidance',
@@ -102,7 +102,7 @@ export const servicesData = [
       'Realistic mock consulate interview rounds and communication practice'
     ],
     iconName: 'ShieldCheck',
-    color: '#16a34a',
+    color: '#1c2a4f',
     disclaimer: 'Visa decisions are made solely by the relevant immigration authorities and consulates. FREIE ADMITS provides guidance and application assistance.'
   },
   {
@@ -118,6 +118,6 @@ export const servicesData = [
       'Student checklist: Forex cards, international SIM, packing and winter clothing'
     ],
     iconName: 'PlaneTakeoff',
-    color: '#0f766e'
+    color: '#1c2a4f'
   }
 ];

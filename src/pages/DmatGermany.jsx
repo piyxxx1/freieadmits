@@ -23,31 +23,31 @@ export function DmatGermany({ onOpenCounselling }) {
   const whatWeHelpWith = [
     {
       icon: Target,
-      color: '#1d4ed8',
+      color: '#1c2a4f',
       title: 'Understanding the Process',
       desc: 'Understand how the assessment fits into the broader German Master’s application and university admissions process.'
     },
     {
       icon: BookOpen,
-      color: '#d97706',
+      color: '#475569',
       title: 'Preparation Guidance',
       desc: 'Get structured guidance for preparing for the specific analytical, logical, and disciplinary subject modules.'
     },
     {
       icon: Laptop,
-      color: '#059669',
+      color: '#1c2a4f',
       title: 'Test Preparation',
       desc: 'Become familiar with the computer-based assessment environment, timed question formats, and strategic approach.'
     },
     {
       icon: FileText,
-      color: '#7c3aed',
+      color: '#1c2a4f',
       title: 'Application Guidance',
       desc: 'Understand how dMAT results relate to your overall Master’s application, transcripts, and Uni-Assist submission.'
     },
     {
       icon: Calendar,
-      color: '#0284c7',
+      color: '#1c2a4f',
       title: 'Timeline Planning',
       desc: 'Plan your preparation around German university application deadlines for Winter and Summer intake rounds.'
     }
@@ -57,22 +57,22 @@ export function DmatGermany({ onOpenCounselling }) {
     <div>
       {/* 1. HERO HEADER */}
       <section style={{
-        background: 'linear-gradient(180deg, #eff6ff 0%, #ffffff 100%)',
+        background: 'linear-gradient(180deg, #f8fafc 0%, #ffffff 100%)',
         padding: '54px 0 60px 0'
       }}>
         <div className="container">
           <div style={{ display: 'grid', gridTemplateColumns: '1.15fr 0.85fr', gap: '44px', alignItems: 'center' }} className="dmat-hero-grid">
             <div>
-              <div style={{ display: 'inline-flex', alignItems: 'center', gap: '6px', background: '#fef3c7', color: '#92400e', border: '1px solid #fde68a', padding: '4px 12px', borderRadius: '50px', fontSize: '0.78rem', fontWeight: 800, textTransform: 'uppercase', marginBottom: '14px' }}>
+              <div style={{ display: 'inline-flex', alignItems: 'center', gap: '6px', background: '#f8fafc', color: '#92400e', border: '1px solid #e2e8f0', padding: '4px 12px', borderRadius: '50px', fontSize: '0.78rem', fontWeight: 800, textTransform: 'uppercase', marginBottom: '14px' }}>
                 <span>🇩🇪 Germany Higher Education Pathway</span>
               </div>
-              <h1 style={{ fontSize: '3rem', fontWeight: 800, color: '#0f172a', lineHeight: 1.15, marginBottom: '12px' }}>
+              <h1 style={{ fontSize: '3rem', fontWeight: 800, color: '#1c2a4f', lineHeight: 1.15, marginBottom: '12px' }}>
                 dMAT Germany
               </h1>
-              <div style={{ fontSize: '1.4rem', fontWeight: 700, color: '#1d4ed8', marginBottom: '16px' }}>
+              <div style={{ fontSize: '1.4rem', fontWeight: 700, color: '#1c2a4f', marginBottom: '16px' }}>
                 Digital Master's Assessment Test
               </div>
-              <div style={{ fontSize: '1.15rem', fontWeight: 600, color: '#d97706', marginBottom: '20px' }}>
+              <div style={{ fontSize: '1.15rem', fontWeight: 600, color: '#475569', marginBottom: '20px' }}>
                 Prepare. Assess. Move Forward.
               </div>
 
@@ -113,8 +113,8 @@ export function DmatGermany({ onOpenCounselling }) {
             </h2>
           </div>
 
-          <div className="card-white" style={{ borderLeft: '5px solid #1d4ed8', padding: '36px' }}>
-            <p style={{ fontSize: '1.12rem', color: '#1e293b', lineHeight: 1.7, marginBottom: '18px' }}>
+          <div className="card-white" style={{ borderLeft: '5px solid #1c2a4f', padding: '36px' }}>
+            <p style={{ fontSize: '1.12rem', color: '#1c2a4f', lineHeight: 1.7, marginBottom: '18px' }}>
               The <strong>Digital Master's Assessment Test (dMAT)</strong> is a computer-based assessment associated with certain Master's admission processes in Germany.
             </p>
             <p style={{ fontSize: '1rem', color: '#475569', lineHeight: 1.65, marginBottom: '18px' }}>
@@ -122,7 +122,7 @@ export function DmatGermany({ onOpenCounselling }) {
               Students should always verify the specific requirements of their chosen university and program.
             </p>
             <div style={{ background: '#f8fafc', padding: '16px 20px', borderRadius: '10px', border: '1px solid #e2e8f0', fontSize: '0.92rem', color: '#334155', display: 'flex', alignItems: 'center', gap: '10px' }}>
-              <CheckCircle2 size={20} color="#1d4ed8" style={{ flexShrink: 0 }} />
+              <CheckCircle2 size={20} color="#1c2a4f" style={{ flexShrink: 0 }} />
               <span>FREIE ADMITS helps students understand university-specific prerequisites and prepares them for the test environment.</span>
             </div>
           </div>
@@ -158,8 +158,8 @@ export function DmatGermany({ onOpenCounselling }) {
                   width: '32px',
                   height: '32px',
                   borderRadius: '50%',
-                  background: '#eff6ff',
-                  color: '#1d4ed8',
+                  background: '#f8fafc',
+                  color: '#1c2a4f',
                   display: 'flex',
                   alignItems: 'center',
                   justifyContent: 'center',
@@ -168,7 +168,7 @@ export function DmatGermany({ onOpenCounselling }) {
                 }}>
                   <Check size={18} />
                 </div>
-                <div style={{ fontSize: '1.02rem', color: '#1e293b', fontWeight: 600, lineHeight: 1.6 }}>
+                <div style={{ fontSize: '1.02rem', color: '#1c2a4f', fontWeight: 600, lineHeight: 1.6 }}>
                   {point}
                 </div>
               </div>
@@ -199,7 +199,7 @@ export function DmatGermany({ onOpenCounselling }) {
                     <div style={{ width: '48px', height: '48px', borderRadius: '12px', background: `${item.color}15`, color: item.color, display: 'flex', alignItems: 'center', justifyContent: 'center', marginBottom: '18px' }}>
                       <Icon size={24} />
                     </div>
-                    <h3 style={{ fontSize: '1.25rem', fontWeight: 700, color: '#0f172a', marginBottom: '8px' }}>
+                    <h3 style={{ fontSize: '1.25rem', fontWeight: 700, color: '#1c2a4f', marginBottom: '8px' }}>
                       {item.title}
                     </h3>
                     <p style={{ color: '#64748b', fontSize: '0.94rem', lineHeight: 1.6 }}>
@@ -213,15 +213,15 @@ export function DmatGermany({ onOpenCounselling }) {
 
           {/* 5. IMPORTANT TRANSPARENCY NOTICE (MANDATED COPY) */}
           <div style={{
-            background: '#fffbeb',
-            border: '2px solid #fde68a',
+            background: '#ffffff',
+            border: '2px solid #e2e8f0',
             borderRadius: '16px',
             padding: '32px',
             maxWidth: '900px',
             margin: '0 auto'
           }}>
             <div style={{ display: 'flex', alignItems: 'center', gap: '10px', color: '#92400e', marginBottom: '14px' }}>
-              <AlertTriangle size={24} color="#d97706" />
+              <AlertTriangle size={24} color="#475569" />
               <h3 style={{ fontSize: '1.3rem', fontWeight: 800, margin: 0 }}>
                 Important Information &amp; Disclaimer
               </h3>
@@ -242,9 +242,9 @@ export function DmatGermany({ onOpenCounselling }) {
       </section>
 
       {/* 6. YOUR MASTER'S JOURNEY STARTS WITH PREPARATION */}
-      <section className="section-py" style={{ background: '#0a1128', color: '#ffffff', textAlign: 'center' }}>
+      <section className="section-py" style={{ background: '#1c2a4f', color: '#ffffff', textAlign: 'center' }}>
         <div className="container" style={{ maxWidth: '800px' }}>
-          <span style={{ background: 'rgba(245, 158, 11, 0.25)', color: '#fbbf24', padding: '4px 12px', borderRadius: '50px', fontSize: '0.8rem', fontWeight: 700, textTransform: 'uppercase', letterSpacing: '0.5px' }}>
+          <span style={{ background: 'rgba(245, 158, 11, 0.25)', color: '#94a3b8', padding: '4px 12px', borderRadius: '50px', fontSize: '0.8rem', fontWeight: 700, textTransform: 'uppercase', letterSpacing: '0.5px' }}>
             FREIE ADMITS
           </span>
           <h2 style={{ fontSize: '2.5rem', fontWeight: 800, color: '#ffffff', margin: '16px 0 12px 0' }}>

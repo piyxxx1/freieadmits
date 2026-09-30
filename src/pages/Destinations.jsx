@@ -10,27 +10,14 @@ import {
   Filter
 } from 'lucide-react';
 
+const getFlagUrl = (id) => { 
+  const map = { germany: 'de', finland: 'fi', ireland: 'ie', netherlands: 'nl', france: 'fr', spain: 'es', italy: 'it', poland: 'pl', austria: 'at', sweden: 'se', denmark: 'dk' }; 
+  return `https://flagcdn.com/w640/${map[id] || 'eu'}.png`; 
+};
+
 export function Destinations({ onOpenCounselling, onOpenEvaluation }) {
   const [activeCountryModal, setActiveCountryModal] = useState(null);
-  const [selectedFilter, setSelectedFilter] = useState('all');
-
-  const filteredDestinations = selectedFilter === 'all'
-    ? destinationsData.filter(d => d.id !== 'germany')
-    : destinationsData.filter(d => d.id === selectedFilter && d.id !== 'germany');
-
-  const filterOptions = [
-    { id: 'all', label: 'All Countries' },
-    { id: 'netherlands', label: 'Netherlands', flag: '🇳🇱' },
-    { id: 'france', label: 'France', flag: '🇫🇷' },
-    { id: 'ireland', label: 'Ireland', flag: '🇮🇪' },
-    { id: 'finland', label: 'Finland', flag: '🇫🇮' },
-    { id: 'spain', label: 'Spain', flag: '🇪🇸' },
-    { id: 'italy', label: 'Italy', flag: '🇮🇹' },
-    { id: 'poland', label: 'Poland', flag: '🇵🇱' },
-    { id: 'austria', label: 'Austria', flag: '🇦🇹' },
-    { id: 'sweden', label: 'Sweden', flag: '🇸🇪' },
-    { id: 'denmark', label: 'Denmark', flag: '🇩🇰' },
-  ];
+  const filteredDestinations = destinationsData;
 
   return (
     <div>
@@ -56,114 +43,8 @@ export function Destinations({ onOpenCounselling, onOpenEvaluation }) {
         </div>
       </section>
 
-      {/* Quick Filter Horizontal Scroll Bar for Mobile & Desktop */}
-      <div className="dest-filter-bar">
-        <div className="container">
-          <div className="dest-filter-scroll horizontal-scroll-touch">
-            <span className="dest-filter-label">
-              <Filter size={14} color="#1d4ed8" /> Filter:
-            </span>
-            {filterOptions.map((opt) => (
-              <button
-                key={opt.id}
-                onClick={() => setSelectedFilter(opt.id)}
-                className={`dest-filter-btn ${selectedFilter === opt.id ? 'active' : ''}`}
-              >
-                {opt.flag && <span>{opt.flag}</span>}
-                <span>{opt.label}</span>
-              </button>
-            ))}
-          </div>
-        </div>
-      </div>
-
-      {/* 2. GERMANY SPOTLIGHT SHOWCASE */}
       <section style={{ background: '#ffffff', paddingBottom: '32px' }}>
         <div className="container">
-          {destinationsData.filter(d => d.id === 'germany').map((germany) => (
-            <div
-              key={germany.id}
-              className="germany-spotlight-card"
-            >
-              <div className="germany-dest-grid">
-                <div>
-                  <div className="germany-card-header">
-                    <CountryFlag countryId="germany" size={32} />
-                    <div>
-                      <div style={{ display: 'flex', alignItems: 'center', gap: '8px', flexWrap: 'wrap' }}>
-                        <h2 style={{ fontSize: 'clamp(1.7rem, 2.5vw, 2.2rem)', fontWeight: 800, color: '#0f172a', margin: 0 }}>
-                          Germany
-                        </h2>
-                        <span style={{ fontSize: '0.72rem', background: '#f59e0b', color: '#ffffff', padding: '3px 8px', borderRadius: '4px', fontWeight: 700 }}>
-                          CORE SPECIALIZATION
-                        </span>
-                      </div>
-                      <span className="germany-spec-sub">
-                        TUITION-FREE PUBLIC UNIVERSITIES • dMAT ASSESSMENTS • AUSBILDUNG
-                      </span>
-                    </div>
-                  </div>
-
-                  <p style={{ color: '#475569', fontSize: '1rem', lineHeight: 1.65, marginBottom: '18px' }}>
-                    {germany.overview}
-                  </p>
-
-                  <div className="germany-specs-grid">
-                    <div className="germany-spec-box">
-                      <div className="germany-spec-lbl">Tuition at Public Unis:</div>
-                      <div className="germany-spec-val-green">€0 (Tuition-Free)</div>
-                    </div>
-                    <div className="germany-spec-box">
-                      <div className="germany-spec-lbl">Post-Study Work Permit:</div>
-                      <div className="germany-spec-val">18 Months Job Seeker</div>
-                    </div>
-                  </div>
-
-                  <div style={{ marginBottom: '20px' }}>
-                    <div style={{ fontSize: '0.82rem', fontWeight: 700, color: '#0f172a', textTransform: 'uppercase', marginBottom: '8px' }}>
-                      Popular Study Areas:
-                    </div>
-                    <div style={{ display: 'flex', flexWrap: 'wrap', gap: '6px' }}>
-                      {germany.popularStudyAreas.map((area, i) => (
-                        <span key={i} className="study-area-pill">
-                          {area}
-                        </span>
-                      ))}
-                    </div>
-                  </div>
-
-                  <div className="dest-btn-group">
-                    <button
-                      onClick={() => setActiveCountryModal(germany)}
-                      className="btn btn-gold btn-lg dest-action-btn"
-                    >
-                      <span>Explore Germany Details</span>
-                      <ArrowRight size={17} />
-                    </button>
-                    <button
-                      onClick={onOpenEvaluation}
-                      className="btn btn-secondary btn-lg dest-action-btn"
-                    >
-                      <span>Check Germany Eligibility</span>
-                    </button>
-                  </div>
-                </div>
-
-                <div className="germany-dest-img-box">
-                  <img
-                    src={germany.image}
-                    alt="Study in Germany"
-                    style={{ width: '100%', height: '100%', objectFit: 'cover' }}
-                  />
-                  <div className="germany-img-caption">
-                    <CountryFlag countryId="germany" size={14} />
-                    <span>Brandenburg Gate &amp; Berlin</span>
-                  </div>
-                </div>
-              </div>
-            </div>
-          ))}
-
           {/* 3. ALL EUROPEAN DESTINATIONS GRID WITH CLEAN PHOTOS */}
           <div className="section-header" style={{ marginBottom: '32px' }}>
             <span className="badge-pill badge-primary">Continental Europe &amp; Nordics</span>
@@ -184,27 +65,18 @@ export function Destinations({ onOpenCounselling, onOpenEvaluation }) {
                 {/* Clean Destination Photo Header without dark shadows */}
                 <div className="dest-card-img-wrap">
                   <img
-                    src={dest.image}
+                    src={getFlagUrl(dest.id)}
                     alt={`Study abroad in ${dest.name}`}
                     className="dest-img-hover"
                   />
 
-                  {/* Flag & Name Pill */}
-                  <div className="dest-card-flag-pill">
-                    <CountryFlag countryId={dest.id} size={15} />
-                    <span>{dest.name}</span>
-                  </div>
 
-                  {/* Tuition Badge */}
-                  <div className="dest-card-tuition-pill">
-                    {dest.tuitionRange.split('(')[0].trim()}
-                  </div>
                 </div>
 
                 {/* Card Content Body */}
                 <div className="dest-card-body">
                   <div>
-                    <div style={{ fontSize: '0.85rem', fontWeight: 700, color: '#1d4ed8', marginBottom: '6px' }}>
+                    <div style={{ fontSize: '0.85rem', fontWeight: 700, color: '#1c2a4f', marginBottom: '6px' }}>
                       {dest.headline}
                     </div>
 
@@ -216,11 +88,11 @@ export function Destinations({ onOpenCounselling, onOpenEvaluation }) {
                     <div className="dest-specs-row">
                       <div>
                         <div style={{ fontSize: '0.7rem', color: '#64748b', textTransform: 'uppercase' }}>Work Rights</div>
-                        <div style={{ fontSize: '0.78rem', fontWeight: 700, color: '#16a34a' }}>{dest.workRights.split(';')[0]}</div>
+                        <div style={{ fontSize: '0.78rem', fontWeight: 700, color: '#1c2a4f' }}>{dest.workRights.split(';')[0]}</div>
                       </div>
                       <div>
                         <div style={{ fontSize: '0.7rem', color: '#64748b', textTransform: 'uppercase' }}>Living Cost</div>
-                        <div style={{ fontSize: '0.78rem', fontWeight: 700, color: '#0f172a' }}>{dest.livingCost.split('(')[0]}</div>
+                        <div style={{ fontSize: '0.78rem', fontWeight: 700, color: '#1c2a4f' }}>{dest.livingCost.split('(')[0]}</div>
                       </div>
                     </div>
 
@@ -263,7 +135,7 @@ export function Destinations({ onOpenCounselling, onOpenEvaluation }) {
           <div className="profile-callout-box">
             <div className="profile-callout-grid">
               <div>
-                <span style={{ background: 'rgba(59, 130, 246, 0.25)', color: '#60a5fa', padding: '4px 12px', borderRadius: '4px', fontSize: '0.76rem', fontWeight: 700, textTransform: 'uppercase', letterSpacing: '0.5px' }}>
+                <span style={{ background: 'rgba(59, 130, 246, 0.25)', color: '#eef2fa', padding: '4px 12px', borderRadius: '4px', fontSize: '0.76rem', fontWeight: 700, textTransform: 'uppercase', letterSpacing: '0.5px' }}>
                   Profile-Based Guidance
                 </span>
                 <h3 className="profile-callout-title">
@@ -315,10 +187,10 @@ export function Destinations({ onOpenCounselling, onOpenEvaluation }) {
               <div className="dest-modal-banner-tag">
                 <CountryFlag countryId={activeCountryModal.id} size={22} />
                 <div>
-                  <h2 style={{ fontSize: '1.25rem', fontWeight: 800, color: '#0f172a', margin: 0 }}>
+                  <h2 style={{ fontSize: '1.25rem', fontWeight: 800, color: '#1c2a4f', margin: 0 }}>
                     Study in {activeCountryModal.name}
                   </h2>
-                  <div style={{ color: '#1d4ed8', fontWeight: 600, fontSize: '0.75rem' }}>
+                  <div style={{ color: '#1c2a4f', fontWeight: 600, fontSize: '0.75rem' }}>
                     {activeCountryModal.headline}
                   </div>
                 </div>
@@ -333,26 +205,26 @@ export function Destinations({ onOpenCounselling, onOpenEvaluation }) {
               <div className="dest-modal-specs-grid">
                 <div className="dest-modal-spec-cell">
                   <div style={{ fontSize: '0.74rem', color: '#64748b' }}>Estimated Tuition:</div>
-                  <strong style={{ fontSize: '0.88rem', color: '#0f172a' }}>{activeCountryModal.tuitionRange}</strong>
+                  <strong style={{ fontSize: '0.88rem', color: '#1c2a4f' }}>{activeCountryModal.tuitionRange}</strong>
                 </div>
                 <div className="dest-modal-spec-cell">
                   <div style={{ fontSize: '0.74rem', color: '#64748b' }}>Estimated Living Cost:</div>
-                  <strong style={{ fontSize: '0.88rem', color: '#0f172a' }}>{activeCountryModal.livingCost}</strong>
+                  <strong style={{ fontSize: '0.88rem', color: '#1c2a4f' }}>{activeCountryModal.livingCost}</strong>
                 </div>
                 <div className="dest-modal-spec-cell" style={{ gridColumn: 'span 2' }}>
                   <div style={{ fontSize: '0.74rem', color: '#64748b' }}>Post-Study Stay Back &amp; Work Rights:</div>
-                  <strong style={{ fontSize: '0.88rem', color: '#16a34a' }}>{activeCountryModal.workRights}</strong>
+                  <strong style={{ fontSize: '0.88rem', color: '#1c2a4f' }}>{activeCountryModal.workRights}</strong>
                 </div>
               </div>
 
               <div style={{ marginBottom: '20px' }}>
-                <div style={{ fontSize: '0.88rem', fontWeight: 700, color: '#0f172a', marginBottom: '8px' }}>
+                <div style={{ fontSize: '0.88rem', fontWeight: 700, color: '#1c2a4f', marginBottom: '8px' }}>
                   Key Highlights:
                 </div>
                 <div style={{ display: 'flex', flexDirection: 'column', gap: '7px' }}>
                   {activeCountryModal.highlights.map((h, i) => (
                     <div key={i} style={{ display: 'flex', alignItems: 'flex-start', gap: '8px', fontSize: '0.86rem', color: '#334155' }}>
-                      <CheckCircle2 size={15} color="#10b981" style={{ marginTop: '3px', flexShrink: 0 }} />
+                      <CheckCircle2 size={15} color="#1c2a4f" style={{ marginTop: '3px', flexShrink: 0 }} />
                       <span>{h}</span>
                     </div>
                   ))}
@@ -361,13 +233,13 @@ export function Destinations({ onOpenCounselling, onOpenEvaluation }) {
 
               {activeCountryModal.topUniversities && (
                 <div style={{ marginBottom: '22px' }}>
-                  <div style={{ fontSize: '0.88rem', fontWeight: 700, color: '#0f172a', marginBottom: '8px' }}>
+                  <div style={{ fontSize: '0.88rem', fontWeight: 700, color: '#1c2a4f', marginBottom: '8px' }}>
                     Top Ranked Universities:
                   </div>
                   <div className="dest-modal-unis-grid">
                     {activeCountryModal.topUniversities.map((uni, i) => (
                       <div key={i} style={{ background: '#f1f5f9', padding: '9px 11px', borderRadius: '8px', fontSize: '0.8rem' }}>
-                        <div style={{ fontWeight: 700, color: '#0f172a' }}>{uni.name}</div>
+                        <div style={{ fontWeight: 700, color: '#1c2a4f' }}>{uni.name}</div>
                         <div style={{ color: '#64748b', fontSize: '0.74rem' }}>{uni.city} • {uni.rank}</div>
                       </div>
                     ))}
@@ -393,21 +265,21 @@ export function Destinations({ onOpenCounselling, onOpenEvaluation }) {
 
       <style>{`
         .dest-hero-section {
-          background: linear-gradient(180deg, #eff6ff 0%, #ffffff 100%);
+          background: linear-gradient(180deg, #f8fafc 0%, #ffffff 100%);
           padding: 50px 0 38px 0;
           text-align: center;
         }
         .dest-hero-title {
           font-size: clamp(2rem, 3.5vw, 2.8rem);
           font-weight: 800;
-          color: #0f172a;
+          color: #1c2a4f;
           margin-bottom: 12px;
           letter-spacing: -0.02em;
         }
         .dest-hero-subtitle {
           font-size: 1.18rem;
           font-weight: 700;
-          color: #d97706;
+          color: #475569;
           margin-bottom: 14px;
         }
         .dest-hero-desc {
@@ -463,20 +335,20 @@ export function Destinations({ onOpenCounselling, onOpenEvaluation }) {
           transition: all 0.2s ease;
         }
         .dest-filter-btn.active {
-          background: #1d4ed8;
+          background: #1c2a4f;
           color: #ffffff;
-          border-color: #1d4ed8;
+          border-color: #1c2a4f;
         }
         .dest-filter-btn:hover:not(.active) {
-          background: #eff6ff;
+          background: #f8fafc;
           border-color: #bfdbfe;
-          color: #1d4ed8;
+          color: #1c2a4f;
         }
 
         /* Germany Spotlight Card */
         .germany-spotlight-card {
           background: #ffffff;
-          border: 1.5px solid #fde68a;
+          border: 1.5px solid #e2e8f0;
           border-radius: 20px;
           padding: 34px;
           margin-bottom: 44px;
@@ -520,17 +392,17 @@ export function Destinations({ onOpenCounselling, onOpenEvaluation }) {
         .germany-spec-val {
           font-size: 0.9rem;
           font-weight: 700;
-          color: #0f172a;
+          color: #1c2a4f;
         }
         .germany-spec-val-green {
           font-size: 0.9rem;
           font-weight: 700;
-          color: #16a34a;
+          color: #1c2a4f;
         }
         .study-area-pill {
           background: #f1f5f9;
           border: 1px solid #e2e8f0;
-          color: #0f172a;
+          color: #1c2a4f;
           padding: 4px 10px;
           border-radius: 6px;
           fontSize: 0.82rem;
@@ -557,7 +429,7 @@ export function Destinations({ onOpenCounselling, onOpenEvaluation }) {
           gap: 8px;
           background: #ffffff;
           border: 1px solid #e2e8f0;
-          color: #0f172a;
+          color: #1c2a4f;
           padding: 6px 12px;
           border-radius: 8px;
           font-size: 0.78rem;
@@ -577,7 +449,7 @@ export function Destinations({ onOpenCounselling, onOpenEvaluation }) {
         }
         .dest-card:hover {
           transform: translateY(-4px);
-          border-color: #3b82f6 !important;
+          border-color: #1c2a4f !important;
         }
         .dest-card-img-wrap {
           position: relative;
@@ -590,7 +462,8 @@ export function Destinations({ onOpenCounselling, onOpenEvaluation }) {
         .dest-img-hover {
           width: 100%;
           height: 100%;
-          object-fit: cover;
+          object-fit: contain;
+          padding: 24px;
           transition: transform 0.4s ease;
         }
         .dest-card:hover .dest-img-hover {
@@ -609,7 +482,7 @@ export function Destinations({ onOpenCounselling, onOpenEvaluation }) {
           border-radius: 20px;
           font-size: 0.84rem;
           font-weight: 700;
-          color: #0f172a;
+          color: #1c2a4f;
         }
         .dest-card-tuition-pill {
           position: absolute;
@@ -617,7 +490,7 @@ export function Destinations({ onOpenCounselling, onOpenEvaluation }) {
           right: 12px;
           background: #ffffff;
           border: 1px solid #e2e8f0;
-          color: #0f172a;
+          color: #1c2a4f;
           padding: 3px 8px;
           border-radius: 6px;
           font-size: 0.72rem;
@@ -642,7 +515,7 @@ export function Destinations({ onOpenCounselling, onOpenEvaluation }) {
         }
         .dest-area-chip {
           background: #f1f5f9;
-          color: #1e293b;
+          color: #1c2a4f;
           border: 1px solid #e2e8f0;
           padding: 3px 7px;
           border-radius: 5px;
@@ -657,7 +530,7 @@ export function Destinations({ onOpenCounselling, onOpenEvaluation }) {
 
         /* Profile Callout Box */
         .profile-callout-box {
-          background: linear-gradient(135deg, #0f172a 0%, #1e293b 100%);
+          background: linear-gradient(135deg, #1c2a4f 0%, #1c2a4f 100%);
           border-radius: 20px;
           padding: 40px 32px;
           color: #ffffff;

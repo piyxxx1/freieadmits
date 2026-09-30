@@ -26,7 +26,7 @@ export function BrandLogo({ size = 'default', theme = 'light', showTagline = tru
           style={{
             fontSize: taglineFontSize,
             fontWeight: 700,
-            color: '#d97706',
+            color: '#475569',
             textTransform: 'uppercase',
             letterSpacing: '0.08em',
             marginTop: '3px',
@@ -34,7 +34,7 @@ export function BrandLogo({ size = 'default', theme = 'light', showTagline = tru
             lineHeight: 1
           }}
         >
-          Study in Germany &amp; Europe
+          Dream. Study. Settle.
         </span>
       )}
     </div>

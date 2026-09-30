@@ -84,19 +84,19 @@ export function MobileQuickBar({ onOpenCounselling }) {
           }
 
           .mobile-quick-call {
-            background: #eff6ff;
-            color: #1d4ed8;
+            background: #f8fafc;
+            color: #1c2a4f;
             border: 1px solid #bfdbfe;
           }
 
           .mobile-quick-wa {
-            background: #ecfdf5;
-            color: #059669;
-            border: 1px solid #a7f3d0;
+            background: #ffffff;
+            color: #1c2a4f;
+            border: 1px solid #e2e8f0;
           }
 
           .mobile-quick-counsel {
-            background: #1d4ed8;
+            background: #1c2a4f;
             color: #ffffff;
             box-shadow: 0 2px 6px rgba(29, 78, 216, 0.25);
           }

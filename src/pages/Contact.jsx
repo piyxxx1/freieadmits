@@ -64,7 +64,7 @@ export function Contact({ onOpenCounselling }) {
     <div>
       {/* 1. HERO HEADER */}
       <section style={{
-        background: 'linear-gradient(180deg, #eff6ff 0%, #ffffff 100%)',
+        background: 'linear-gradient(180deg, #f8fafc 0%, #ffffff 100%)',
         padding: '54px 0 44px 0',
         textAlign: 'center'
       }}>
@@ -72,10 +72,10 @@ export function Contact({ onOpenCounselling }) {
           <span className="badge-pill badge-primary">
             <Sparkles size={14} /> Get in Touch
           </span>
-          <h1 style={{ fontSize: '2.8rem', fontWeight: 800, color: '#0f172a', marginBottom: '12px' }}>
+          <h1 style={{ fontSize: '2.8rem', fontWeight: 800, color: '#1c2a4f', marginBottom: '12px' }}>
             Contact FREIE ADMITS
           </h1>
-          <div style={{ fontSize: '1.25rem', fontWeight: 700, color: '#d97706', marginBottom: '16px' }}>
+          <div style={{ fontSize: '1.25rem', fontWeight: 700, color: '#475569', marginBottom: '16px' }}>
             Let's Start Your International Education Journey
           </div>
           <p style={{ fontSize: '1.08rem', color: '#475569', lineHeight: 1.65, marginBottom: '28px' }}>
@@ -86,21 +86,21 @@ export function Contact({ onOpenCounselling }) {
           {/* Quick Contact Cards */}
           <div style={{ display: 'grid', gridTemplateColumns: 'repeat(3, 1fr)', gap: '16px' }} className="contact-quick-strip">
             <div style={{ background: '#ffffff', padding: '18px', borderRadius: '12px', border: '1.5px solid #e2e8f0', boxShadow: '0 2px 8px rgba(0,0,0,0.04)' }}>
-              <div style={{ color: '#1d4ed8', marginBottom: '8px' }}><Phone size={22} /></div>
+              <div style={{ color: '#1c2a4f', marginBottom: '8px' }}><Phone size={22} /></div>
               <div style={{ fontSize: '0.8rem', color: '#64748b', fontWeight: 600 }}>Call Directly</div>
-              <a href="tel:+919220406733" style={{ fontSize: '0.98rem', fontWeight: 700, color: '#0f172a' }}>+91 92204 06733</a>
+              <a href="tel:+919220406733" style={{ fontSize: '0.98rem', fontWeight: 700, color: '#1c2a4f' }}>+91 92204 06733</a>
             </div>
 
             <div style={{ background: '#ffffff', padding: '18px', borderRadius: '12px', border: '1.5px solid #e2e8f0', boxShadow: '0 2px 8px rgba(0,0,0,0.04)' }}>
-              <div style={{ color: '#16a34a', marginBottom: '8px' }}><MessageSquare size={22} /></div>
+              <div style={{ color: '#1c2a4f', marginBottom: '8px' }}><MessageSquare size={22} /></div>
               <div style={{ fontSize: '0.8rem', color: '#64748b', fontWeight: 600 }}>WhatsApp Us</div>
-              <a href="https://wa.me/919220406733" target="_blank" rel="noreferrer" style={{ fontSize: '0.98rem', fontWeight: 700, color: '#0f172a' }}>+91 92204 06733</a>
+              <a href="https://wa.me/919220406733" target="_blank" rel="noreferrer" style={{ fontSize: '0.98rem', fontWeight: 700, color: '#1c2a4f' }}>+91 92204 06733</a>
             </div>
 
             <div style={{ background: '#ffffff', padding: '18px', borderRadius: '12px', border: '1.5px solid #e2e8f0', boxShadow: '0 2px 8px rgba(0,0,0,0.04)' }}>
-              <div style={{ color: '#d97706', marginBottom: '8px' }}><Mail size={22} /></div>
+              <div style={{ color: '#475569', marginBottom: '8px' }}><Mail size={22} /></div>
               <div style={{ fontSize: '0.8rem', color: '#64748b', fontWeight: 600 }}>Official Email</div>
-              <a href="mailto:freieadmits@gmail.com" style={{ fontSize: '0.92rem', fontWeight: 700, color: '#0f172a' }}>freieadmits@gmail.com</a>
+              <a href="mailto:freieadmits@gmail.com" style={{ fontSize: '0.92rem', fontWeight: 700, color: '#1c2a4f' }}>freieadmits@gmail.com</a>
             </div>
           </div>
         </div>
@@ -115,7 +115,7 @@ export function Contact({ onOpenCounselling }) {
               <span className="badge-pill badge-primary" style={{ marginBottom: '8px' }}>
                 <Sparkles size={14} /> Profile Intake Form
               </span>
-              <h2 style={{ fontSize: '1.75rem', fontWeight: 800, color: '#0f172a', marginBottom: '6px' }}>
+              <h2 style={{ fontSize: '1.75rem', fontWeight: 800, color: '#1c2a4f', marginBottom: '6px' }}>
                 Book a Counselling Session
               </h2>
               <p style={{ color: '#64748b', fontSize: '0.94rem', marginBottom: '24px' }}>
@@ -255,8 +255,8 @@ export function Contact({ onOpenCounselling }) {
                     width: '64px',
                     height: '64px',
                     borderRadius: '50%',
-                    background: '#ecfdf5',
-                    color: '#10b981',
+                    background: '#ffffff',
+                    color: '#1c2a4f',
                     display: 'flex',
                     alignItems: 'center',
                     justifyContent: 'center',
@@ -264,7 +264,7 @@ export function Contact({ onOpenCounselling }) {
                   }}>
                     <CheckCircle2 size={36} />
                   </div>
-                  <h4 style={{ fontSize: '1.4rem', fontWeight: 800, color: '#0f172a', marginBottom: '8px' }}>
+                  <h4 style={{ fontSize: '1.4rem', fontWeight: 800, color: '#1c2a4f', marginBottom: '8px' }}>
                     Enquiry Received!
                   </h4>
                   <p style={{ color: '#475569', fontSize: '0.96rem', lineHeight: 1.6, marginBottom: '20px' }}>
@@ -280,10 +280,10 @@ export function Contact({ onOpenCounselling }) {
             {/* Right: What Happens Next? (4 Steps) & Office Card */}
             <div>
               <div style={{ background: '#f8fafc', border: '1.5px solid #e2e8f0', borderRadius: '18px', padding: '32px', marginBottom: '24px' }}>
-                <div style={{ fontSize: '0.8rem', fontWeight: 800, color: '#1d4ed8', textTransform: 'uppercase', letterSpacing: '0.5px', marginBottom: '6px' }}>
+                <div style={{ fontSize: '0.8rem', fontWeight: 800, color: '#1c2a4f', textTransform: 'uppercase', letterSpacing: '0.5px', marginBottom: '6px' }}>
                   Transparent Process
                 </div>
-                <h3 style={{ fontSize: '1.5rem', fontWeight: 800, color: '#0f172a', marginBottom: '20px' }}>
+                <h3 style={{ fontSize: '1.5rem', fontWeight: 800, color: '#1c2a4f', marginBottom: '20px' }}>
                   What Happens Next?
                 </h3>
 
@@ -294,8 +294,8 @@ export function Contact({ onOpenCounselling }) {
                         width: '36px',
                         height: '36px',
                         borderRadius: '10px',
-                        background: '#eff6ff',
-                        color: '#1d4ed8',
+                        background: '#f8fafc',
+                        color: '#1c2a4f',
                         fontSize: '0.9rem',
                         fontWeight: 800,
                         display: 'flex',
@@ -306,7 +306,7 @@ export function Contact({ onOpenCounselling }) {
                         {step.num}
                       </div>
                       <div>
-                        <h4 style={{ fontSize: '1rem', fontWeight: 700, color: '#0f172a', marginBottom: '2px' }}>
+                        <h4 style={{ fontSize: '1rem', fontWeight: 700, color: '#1c2a4f', marginBottom: '2px' }}>
                           {step.title}
                         </h4>
                         <p style={{ fontSize: '0.86rem', color: '#64748b', lineHeight: 1.5, margin: 0 }}>
@@ -319,8 +319,8 @@ export function Contact({ onOpenCounselling }) {
               </div>
 
               {/* Office & Socials Card */}
-              <div style={{ background: '#0f172a', color: '#ffffff', borderRadius: '16px', padding: '28px' }}>
-                <div style={{ fontSize: '0.76rem', color: '#fbbf24', fontWeight: 800, letterSpacing: '0.5px', textTransform: 'uppercase', marginBottom: '6px' }}>
+              <div style={{ background: '#1c2a4f', color: '#ffffff', borderRadius: '16px', padding: '28px' }}>
+                <div style={{ fontSize: '0.76rem', color: '#94a3b8', fontWeight: 800, letterSpacing: '0.5px', textTransform: 'uppercase', marginBottom: '6px' }}>
                   FREIE ADMITS
                 </div>
                 <div style={{ fontSize: '1.25rem', fontWeight: 800, color: '#ffffff', marginBottom: '14px' }}>
@@ -328,15 +328,15 @@ export function Contact({ onOpenCounselling }) {
                 </div>
 
                 <div style={{ display: 'flex', flexDirection: 'column', gap: '10px', fontSize: '0.86rem', color: '#cbd5e1', marginBottom: '20px' }}>
-                  <div><strong>Phone:</strong> <a href="tel:+919220406733" style={{ color: '#60a5fa', textDecoration: 'none' }}>+91 92204 06733</a></div>
-                  <div><strong>WhatsApp:</strong> <a href="https://wa.me/919220406733" target="_blank" rel="noreferrer" style={{ color: '#60a5fa', textDecoration: 'none' }}>+91 92204 06733</a></div>
-                  <div><strong>Email:</strong> <a href="mailto:freieadmits@gmail.com" style={{ color: '#60a5fa', textDecoration: 'none' }}>freieadmits@gmail.com</a></div>
+                  <div><strong>Phone:</strong> <a href="tel:+919220406733" style={{ color: '#eef2fa', textDecoration: 'none' }}>+91 92204 06733</a></div>
+                  <div><strong>WhatsApp:</strong> <a href="https://wa.me/919220406733" target="_blank" rel="noreferrer" style={{ color: '#eef2fa', textDecoration: 'none' }}>+91 92204 06733</a></div>
+                  <div><strong>Email:</strong> <a href="mailto:freieadmits@gmail.com" style={{ color: '#eef2fa', textDecoration: 'none' }}>freieadmits@gmail.com</a></div>
                   <div><strong>Website:</strong> www.freieadmits.com</div>
                 </div>
 
-                <div style={{ borderTop: '1px solid #1e293b', paddingTop: '16px' }}>
+                <div style={{ borderTop: '1px solid #1c2a4f', paddingTop: '16px' }}>
                   <div style={{ fontSize: '0.78rem', color: '#94a3b8', marginBottom: '8px' }}>FOLLOW US:</div>
-                  <div style={{ display: 'flex', gap: '12px', fontSize: '0.84rem', color: '#60a5fa', fontWeight: 600 }}>
+                  <div style={{ display: 'flex', gap: '12px', fontSize: '0.84rem', color: '#eef2fa', fontWeight: 600 }}>
                     <span>Instagram</span> • <span>Facebook</span> • <span>LinkedIn</span> • <span>YouTube</span>
                   </div>
                 </div>
@@ -347,7 +347,7 @@ export function Contact({ onOpenCounselling }) {
       </section>
 
       {/* 3. READY TO EXPLORE OPTIONS? CTA */}
-      <section className="section-py" style={{ background: '#0a1128', color: '#ffffff', textAlign: 'center' }}>
+      <section className="section-py" style={{ background: '#1c2a4f', color: '#ffffff', textAlign: 'center' }}>
         <div className="container" style={{ maxWidth: '780px' }}>
           <h2 style={{ fontSize: '2.4rem', fontWeight: 800, color: '#ffffff', marginBottom: '14px' }}>
             Ready to Explore Your Options?
