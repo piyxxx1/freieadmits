@@ -15,7 +15,7 @@ import { Services } from './pages/Services';
 import { DmatGermany } from './pages/DmatGermany';
 import { Contact } from './pages/Contact';
 import { B2B } from './pages/B2B';
-import { PrivacyPolicy } from './pages/PrivacyPolicy';
+import { PrivacyPolicy } from './pages/DataProtection';
 import { TermsConditions } from './pages/TermsConditions';
 import { Disclaimer } from './pages/Disclaimer';
 import { RefundPolicy } from './pages/RefundPolicy';
