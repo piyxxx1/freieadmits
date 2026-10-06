@@ -55,7 +55,7 @@ const services = [
 
 export function Footer() {
   return (
-    <footer style={{ background: '#0a1633', color: '#cbd5e1', borderTop: '1px solid #1c2a4f' }}>
+    <footer style={{ background: '#ffffff', color: '#475569', borderTop: '1px solid #e2e8f0' }}>
       {/* Main 4-Column Footer Section */}
       <div style={{ padding: '60px 0 44px 0' }}>
         <div className="container">
@@ -69,31 +69,31 @@ export function Footer() {
             {/* Column 1 — FREIE ADMITS */}
             <div>
               <div style={{ marginBottom: '14px' }}>
-                <BrandLogo theme="dark" size="default" />
+                <BrandLogo theme="light" size="default" />
               </div>
-              <p style={{ fontSize: '0.92rem', color: '#ffffff', fontWeight: 700, margin: '12px 0 6px 0', lineHeight: 1.4 }}>
+              <p style={{ fontSize: '0.92rem', color: '#0a1633', fontWeight: 700, margin: '12px 0 6px 0', lineHeight: 1.4 }}>
                 Your Journey. Our Guidance.<br />Your Global Future.
               </p>
               <div style={{ width: '40px', height: '3px', background: '#3b82f6', marginBottom: '14px', borderRadius: '2px' }} />
-              <p style={{ fontSize: '0.84rem', color: '#94a3b8', lineHeight: 1.68, marginBottom: '22px' }}>
-                FREIE ADMITS is a study-abroad guidance brand of <strong style={{ color: '#e2e8f0' }}>EUROPA FUSION PRIVATE LIMITED</strong>, helping students explore international education opportunities through personalised counselling, university applications, language preparation, and visa guidance.
+              <p style={{ fontSize: '0.84rem', color: '#475569', lineHeight: 1.68, marginBottom: '22px' }}>
+                FREIE ADMITS is a study-abroad guidance brand of <strong style={{ color: '#1c2a4f' }}>EUROPA FUSION PRIVATE LIMITED</strong>, helping students explore international education opportunities through personalised counselling, university applications, language preparation, and visa guidance.
               </p>
 
               {/* Contact Us Direct Links */}
               <div style={{ display: 'flex', flexDirection: 'column', gap: '10px', marginBottom: '22px' }}>
-                <a href="tel:+919974798803" style={{ color: '#cbd5e1', fontSize: '0.84rem', display: 'flex', alignItems: 'center', gap: '10px', textDecoration: 'none' }}>
+                <a href="tel:+919974798803" style={{ color: '#475569', fontSize: '0.84rem', display: 'flex', alignItems: 'center', gap: '10px', textDecoration: 'none' }}>
                   <span style={{ width: '28px', height: '28px', background: 'rgba(59,130,246,0.18)', border: '1px solid rgba(59,130,246,0.3)', borderRadius: '6px', display: 'flex', alignItems: 'center', justifyContent: 'center', flexShrink: 0 }}>
                     <Phone size={13} color="#60a5fa" />
                   </span>
                   +91 99747 98803
                 </a>
-                <a href="https://www.freieadmits.io" target="_blank" rel="noopener noreferrer" style={{ color: '#cbd5e1', fontSize: '0.84rem', display: 'flex', alignItems: 'center', gap: '10px', textDecoration: 'none' }}>
+                <a href="https://www.freieadmits.io" target="_blank" rel="noopener noreferrer" style={{ color: '#475569', fontSize: '0.84rem', display: 'flex', alignItems: 'center', gap: '10px', textDecoration: 'none' }}>
                   <span style={{ width: '28px', height: '28px', background: 'rgba(59,130,246,0.18)', border: '1px solid rgba(59,130,246,0.3)', borderRadius: '6px', display: 'flex', alignItems: 'center', justifyContent: 'center', flexShrink: 0 }}>
                     <Globe size={13} color="#60a5fa" />
                   </span>
                   www.freieadmits.io
                 </a>
-                <a href="mailto:info@freieadmits.io" style={{ color: '#cbd5e1', fontSize: '0.84rem', display: 'flex', alignItems: 'center', gap: '10px', textDecoration: 'none' }}>
+                <a href="mailto:info@freieadmits.io" style={{ color: '#475569', fontSize: '0.84rem', display: 'flex', alignItems: 'center', gap: '10px', textDecoration: 'none' }}>
                   <span style={{ width: '28px', height: '28px', background: 'rgba(59,130,246,0.18)', border: '1px solid rgba(59,130,246,0.3)', borderRadius: '6px', display: 'flex', alignItems: 'center', justifyContent: 'center', flexShrink: 0 }}>
                     <Mail size={13} color="#60a5fa" />
                   </span>
@@ -103,7 +103,7 @@ export function Footer() {
 
               {/* Follow Us */}
               <div>
-                <div style={{ fontSize: '0.8rem', color: '#94a3b8', fontWeight: 600, textTransform: 'uppercase', letterSpacing: '0.5px', marginBottom: '10px' }}>
+                <div style={{ fontSize: '0.8rem', color: '#475569', fontWeight: 600, textTransform: 'uppercase', letterSpacing: '0.5px', marginBottom: '10px' }}>
                   Follow Us
                 </div>
                 <div style={{ display: 'flex', gap: '10px' }}>
@@ -121,11 +121,11 @@ export function Footer() {
                       title={s.title}
                       style={{
                         width: '36px', height: '36px',
-                        background: 'rgba(255,255,255,0.06)',
-                        border: '1px solid rgba(255,255,255,0.12)',
+                        background: '#f8fafc',
+                        border: '1px solid #e2e8f0',
                         borderRadius: '8px',
                         display: 'flex', alignItems: 'center', justifyContent: 'center',
-                        color: '#cbd5e1', textDecoration: 'none',
+                        color: '#475569', textDecoration: 'none',
                         transition: 'all 0.2s'
                       }}
                     >
@@ -138,13 +138,13 @@ export function Footer() {
 
             {/* Column 2 — Explore (Quick Links + Destinations) */}
             <div>
-              <h4 style={{ color: '#ffffff', fontSize: '1.02rem', fontWeight: 700, marginBottom: '16px', marginTop: 0, borderLeft: '3px solid #3b82f6', paddingLeft: '10px' }}>
+              <h4 style={{ color: '#0a1633', fontSize: '1.02rem', fontWeight: 700, marginBottom: '16px', marginTop: 0, borderLeft: '3px solid #3b82f6', paddingLeft: '10px' }}>
                 Quick Links
               </h4>
               <ul style={{ listStyle: 'none', padding: 0, margin: '0 0 28px 0', display: 'flex', flexDirection: 'column', gap: '9px' }}>
                 {quickLinks.map((lnk, i) => (
                   <li key={i}>
-                    <Link to={lnk.to} style={{ color: '#94a3b8', fontSize: '0.86rem', display: 'flex', alignItems: 'center', gap: '6px', textDecoration: 'none', transition: 'color 0.2s' }}>
+                    <Link to={lnk.to} style={{ color: '#475569', fontSize: '0.86rem', display: 'flex', alignItems: 'center', gap: '6px', textDecoration: 'none', transition: 'color 0.2s' }}>
                       <span style={{ color: '#60a5fa', fontSize: '0.72rem' }}>›</span>
                       {lnk.label}
                     </Link>
@@ -152,7 +152,7 @@ export function Footer() {
                 ))}
               </ul>
 
-              <h4 style={{ color: '#ffffff', fontSize: '1.02rem', fontWeight: 700, marginBottom: '14px', marginTop: 0, borderLeft: '3px solid #3b82f6', paddingLeft: '10px' }}>
+              <h4 style={{ color: '#0a1633', fontSize: '1.02rem', fontWeight: 700, marginBottom: '14px', marginTop: 0, borderLeft: '3px solid #3b82f6', paddingLeft: '10px' }}>
                 Study Destinations
               </h4>
               <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: '8px 10px' }}>
@@ -161,7 +161,7 @@ export function Footer() {
                     key={i}
                     to="/destinations"
                     style={{
-                      color: '#94a3b8',
+                      color: '#475569',
                       fontSize: '0.82rem',
                       display: 'flex',
                       alignItems: 'center',
@@ -184,7 +184,7 @@ export function Footer() {
 
             {/* Column 3 — Services */}
             <div>
-              <h4 style={{ color: '#ffffff', fontSize: '1.02rem', fontWeight: 700, marginBottom: '16px', marginTop: 0, borderLeft: '3px solid #3b82f6', paddingLeft: '10px' }}>
+              <h4 style={{ color: '#0a1633', fontSize: '1.02rem', fontWeight: 700, marginBottom: '16px', marginTop: 0, borderLeft: '3px solid #3b82f6', paddingLeft: '10px' }}>
                 Our Services
               </h4>
               <div style={{ display: 'flex', flexDirection: 'column', gap: '11px' }}>
@@ -200,7 +200,7 @@ export function Footer() {
                     }}>
                       {svc.icon}
                     </span>
-                    <span style={{ color: '#94a3b8', fontSize: '0.85rem' }}>{svc.label}</span>
+                    <span style={{ color: '#475569', fontSize: '0.85rem' }}>{svc.label}</span>
                   </div>
                 ))}
               </div>
@@ -208,162 +208,115 @@ export function Footer() {
 
             {/* Column 4 — Branch Offices */}
             <div>
-              <h4 style={{ color: '#ffffff', fontSize: '1.02rem', fontWeight: 700, marginBottom: '16px', marginTop: 0, borderLeft: '3px solid #3b82f6', paddingLeft: '10px' }}>
+              <h4 style={{ color: '#0a1633', fontSize: '1.02rem', fontWeight: 700, marginBottom: '16px', marginTop: 0, borderLeft: '3px solid #3b82f6', paddingLeft: '10px' }}>
                 Our Offices
               </h4>
 
               {/* Noida Office */}
               <div style={{
-                background: 'rgba(255,255,255,0.03)',
-                border: '1px solid rgba(255,255,255,0.08)',
+                background: '#f8fafc',
+                border: '1px solid #e2e8f0',
                 borderRadius: '10px',
                 padding: '14px 16px',
                 marginBottom: '12px'
               }}>
                 <div style={{ display: 'flex', alignItems: 'center', gap: '6px', marginBottom: '4px' }}>
                   <MapPin size={14} color="#60a5fa" style={{ flexShrink: 0 }} />
-                  <span style={{ color: '#ffffff', fontWeight: 700, fontSize: '0.88rem' }}>Noida Office</span>
+                  <span style={{ color: '#0a1633', fontWeight: 700, fontSize: '0.88rem' }}>Noida Office</span>
                 </div>
-                <p style={{ color: '#94a3b8', fontSize: '0.8rem', lineHeight: 1.5, margin: '4px 0 8px 0' }}>
+                <p style={{ color: '#475569', fontSize: '0.8rem', lineHeight: 1.5, margin: '4px 0 8px 0' }}>
                   B-1A/06, Sector 51, Noida<br />
                   Landmark: Above CSB Bank<br />
                   Uttar Pradesh – 201301
                 </p>
-                <div style={{ display: 'flex', alignItems: 'center', gap: '6px', color: '#cbd5e1', fontSize: '0.8rem' }}>
+                <div style={{ display: 'flex', alignItems: 'center', gap: '6px', color: '#475569', fontSize: '0.8rem' }}>
                   <Phone size={12} color="#60a5fa" />
-                  <a href="tel:+919974798803" style={{ color: '#cbd5e1', textDecoration: 'none' }}>+91 99747 98803</a>
+                  <a href="tel:+919974798803" style={{ color: '#475569', textDecoration: 'none' }}>+91 99747 98803</a>
                   <span>/</span>
-                  <a href="tel:+919220406733" style={{ color: '#cbd5e1', textDecoration: 'none' }}>+91 92204 06733</a>
+                  <a href="tel:+919220406733" style={{ color: '#475569', textDecoration: 'none' }}>+91 92204 06733</a>
                 </div>
               </div>
 
               {/* Kochi Office */}
               <div style={{
-                background: 'rgba(255,255,255,0.03)',
-                border: '1px solid rgba(255,255,255,0.08)',
+                background: '#f8fafc',
+                border: '1px solid #e2e8f0',
                 borderRadius: '10px',
                 padding: '14px 16px',
                 marginBottom: '12px'
               }}>
                 <div style={{ display: 'flex', alignItems: 'center', gap: '6px', marginBottom: '4px' }}>
                   <MapPin size={14} color="#60a5fa" style={{ flexShrink: 0 }} />
-                  <span style={{ color: '#ffffff', fontWeight: 700, fontSize: '0.88rem' }}>Kochi Office</span>
+                  <span style={{ color: '#0a1633', fontWeight: 700, fontSize: '0.88rem' }}>Kochi Office</span>
                 </div>
-                <p style={{ color: '#94a3b8', fontSize: '0.8rem', lineHeight: 1.5, margin: '4px 0 8px 0' }}>
+                <p style={{ color: '#475569', fontSize: '0.8rem', lineHeight: 1.5, margin: '4px 0 8px 0' }}>
                   2nd Floor, Rameesha Building<br />
                   Opp. Nirmala Shishu Bhavan, SRM Road<br />
                   Kaloor, Ernakulam North – 682018
                 </p>
-                <div style={{ display: 'flex', alignItems: 'center', gap: '6px', color: '#cbd5e1', fontSize: '0.8rem' }}>
+                <div style={{ display: 'flex', alignItems: 'center', gap: '6px', color: '#475569', fontSize: '0.8rem' }}>
                   <Phone size={12} color="#60a5fa" />
-                  <a href="tel:+917593066771" style={{ color: '#cbd5e1', textDecoration: 'none' }}>+91 75930 66771</a>
+                  <a href="tel:+917593066771" style={{ color: '#475569', textDecoration: 'none' }}>+91 75930 66771</a>
                   <span>/</span>
-                  <a href="tel:+917593066776" style={{ color: '#cbd5e1', textDecoration: 'none' }}>+91 75930 66776</a>
+                  <a href="tel:+917593066776" style={{ color: '#475569', textDecoration: 'none' }}>+91 75930 66776</a>
                 </div>
               </div>
 
               {/* South Junction Office – Kochi */}
               <div style={{
-                background: 'rgba(255,255,255,0.03)',
-                border: '1px solid rgba(255,255,255,0.08)',
+                background: '#f8fafc',
+                border: '1px solid #e2e8f0',
                 borderRadius: '10px',
                 padding: '14px 16px'
               }}>
                 <div style={{ display: 'flex', alignItems: 'center', gap: '6px', marginBottom: '4px' }}>
                   <MapPin size={14} color="#60a5fa" style={{ flexShrink: 0 }} />
-                  <span style={{ color: '#ffffff', fontWeight: 700, fontSize: '0.88rem' }}>South Junction Office – Kochi</span>
+                  <span style={{ color: '#0a1633', fontWeight: 700, fontSize: '0.88rem' }}>South Junction Office – Kochi</span>
                 </div>
-                <p style={{ color: '#94a3b8', fontSize: '0.8rem', lineHeight: 1.5, margin: '4px 0 8px 0' }}>
+                <p style={{ color: '#475569', fontSize: '0.8rem', lineHeight: 1.5, margin: '4px 0 8px 0' }}>
                   63/3115 G, Karshaka Road<br />
                   Near South Railway Station<br />
                   Ernakulam – 682016, Kerala
                 </p>
-                <div style={{ display: 'flex', alignItems: 'center', gap: '6px', color: '#cbd5e1', fontSize: '0.8rem' }}>
+                <div style={{ display: 'flex', alignItems: 'center', gap: '6px', color: '#475569', fontSize: '0.8rem' }}>
                   <Phone size={12} color="#60a5fa" />
-                  <a href="tel:+917593066771" style={{ color: '#cbd5e1', textDecoration: 'none' }}>+91 75930 66771</a>
+                  <a href="tel:+917593066771" style={{ color: '#475569', textDecoration: 'none' }}>+91 75930 66771</a>
                   <span>/</span>
-                  <a href="tel:+917593066776" style={{ color: '#cbd5e1', textDecoration: 'none' }}>+91 75930 66776</a>
+                  <a href="tel:+917593066776" style={{ color: '#475569', textDecoration: 'none' }}>+91 75930 66776</a>
                 </div>
               </div>
 
             </div>
 
-          </div>
-        </div>
-      </div>
-
-      {/* Full-width Registered Office Strip */}
-      <div style={{
-        background: '#071026',
-        borderTop: '1px solid rgba(255,255,255,0.08)',
-        borderBottom: '1px solid rgba(255,255,255,0.08)',
-        padding: '20px 0'
-      }}>
-        <div className="container">
-          <div style={{
-            display: 'flex',
-            alignItems: 'center',
-            justifyContent: 'space-between',
-            flexWrap: 'wrap',
-            gap: '16px'
-          }}>
-            <div style={{ display: 'flex', alignItems: 'flex-start', gap: '12px', maxWidth: '780px' }}>
-              <span style={{
-                background: 'rgba(59,130,246,0.18)',
-                color: '#60a5fa',
-                border: '1px solid rgba(59,130,246,0.35)',
-                borderRadius: '6px',
-                padding: '4px 10px',
-                fontSize: '0.74rem',
-                fontWeight: 800,
-                textTransform: 'uppercase',
-                letterSpacing: '0.5px',
-                flexShrink: 0,
-                marginTop: '2px'
-              }}>
-                Registered Office
-              </span>
-              <div>
-                <div style={{ color: '#ffffff', fontWeight: 700, fontSize: '0.9rem', marginBottom: '2px' }}>
-                  Registered Office – Chennai, Tamil Nadu (EUROPA FUSION PRIVATE LIMITED)
-                </div>
-                <div style={{ color: '#94a3b8', fontSize: '0.82rem', lineHeight: 1.5 }}>
-                  Office No. 715A, No. 769, Spencer Plaza, Anna Salai, Chennai, Tamil Nadu – 600002, India
-                </div>
-              </div>
-            </div>
-
-            <div style={{ display: 'flex', alignItems: 'center', gap: '8px', color: '#cbd5e1', fontSize: '0.84rem' }}>
-              <Phone size={13} color="#60a5fa" />
-              <span style={{ color: '#94a3b8' }}>Phone:</span>
-              <a href="tel:+919974798803" style={{ color: '#ffffff', fontWeight: 600, textDecoration: 'none' }}>+91 99747 98803</a>
-              <span style={{ color: '#475569' }}>/</span>
-              <a href="tel:+919220406733" style={{ color: '#ffffff', fontWeight: 600, textDecoration: 'none' }}>+91 92204 06733</a>
-            </div>
           </div>
         </div>
       </div>
 
       {/* Bottom Legal & Regulatory Strip */}
-      <div style={{ background: '#050c1e', padding: '22px 0' }}>
+      <div style={{ background: '#f8fafc', borderTop: '1px solid #e2e8f0', padding: '24px 0' }}>
         <div className="container">
           <div style={{
             display: 'flex',
             justifyContent: 'space-between',
-            alignItems: 'center',
+            alignItems: 'flex-start',
             flexWrap: 'wrap',
             gap: '14px',
-            marginBottom: '10px'
+            marginBottom: '16px'
           }}>
-            <div style={{ display: 'flex', alignItems: 'center', gap: '12px', flexWrap: 'wrap' }}>
-              <span style={{ color: '#ffffff', fontWeight: 700, fontSize: '0.88rem' }}>EUROPA FUSION PRIVATE LIMITED</span>
-              <span style={{ color: '#334155' }}>|</span>
-              <span style={{ color: '#94a3b8', fontSize: '0.82rem' }}>CIN: U80302TN2021PTC146401</span>
+            <div style={{ display: 'flex', flexDirection: 'column', gap: '6px' }}>
+              <div style={{ display: 'flex', alignItems: 'center', gap: '12px', flexWrap: 'wrap' }}>
+                <span style={{ color: '#0a1633', fontWeight: 700, fontSize: '0.88rem' }}>EUROPA FUSION PRIVATE LIMITED</span>
+                <span style={{ color: '#cbd5e1' }}>|</span>
+                <span style={{ color: '#475569', fontSize: '0.82rem' }}>CIN: U80302TN2021PTC146401</span>
+              </div>
+              <div style={{ color: '#475569', fontSize: '0.82rem' }}>
+                Office No. 715A, No. 769, Spencer Plaza, Anna Salai, Chennai, Tamil Nadu – 600002, India
+              </div>
             </div>
 
             <div style={{ display: 'flex', alignItems: 'center', gap: '14px', flexWrap: 'wrap' }}>
-              <span style={{ color: '#64748b', fontSize: '0.82rem' }}>© 2026 FREIE ADMITS. All Rights Reserved.</span>
-              <span style={{ color: '#334155' }}>|</span>
+              <span style={{ color: '#475569', fontSize: '0.82rem' }}>© 2026 FREIE ADMITS. All Rights Reserved.</span>
+              <span style={{ color: '#cbd5e1' }}>|</span>
               {[
                 { label: 'Privacy Policy', to: '/privacy-policy' },
                 { label: 'Terms & Conditions', to: '/terms-conditions' },
@@ -374,23 +327,19 @@ export function Footer() {
                   key={i}
                   to={item.to}
                   style={{
-                    color: '#94a3b8',
+                    color: '#475569',
                     fontSize: '0.82rem',
                     textDecoration: 'none',
                     transition: 'color 0.2s'
                   }}
-                  onMouseEnter={(e) => (e.target.style.color = '#ffffff')}
-                  onMouseLeave={(e) => (e.target.style.color = '#94a3b8')}
+                  onMouseEnter={(e) => (e.target.style.color = '#3b82f6')}
+                  onMouseLeave={(e) => (e.target.style.color = '#475569')}
                 >
                   {item.label}
                 </Link>
               ))}
             </div>
           </div>
-
-          <p style={{ color: '#475569', fontSize: '0.76rem', margin: 0, lineHeight: 1.55 }}>
-            <em>FREIE ADMITS is an education consultancy brand. Admission, scholarship, visa, and employment outcomes depend on eligibility, university/institutional decisions, and applicable immigration regulations.</em>
-          </p>
         </div>
       </div>
 
