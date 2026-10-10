@@ -49,6 +49,7 @@ export function Navbar({ onOpenCounselling, onOpenEvaluation }) {
     { name: 'About Us', path: '/about', icon: Users },
     { name: 'Destinations', path: '/destinations', icon: Globe, hasDropdown: true },
     { name: 'Services', path: '/services', icon: Wrench },
+    { name: 'Exam Prep', path: '/exam-prep', icon: Laptop },
     { name: 'dMAT', path: '/dmat-germany', icon: Laptop, isSpecial: true },
     { name: 'Contact', path: '/contact', icon: Phone },
     { name: 'B2B Partner', path: '/b2b', icon: Handshake, isB2B: true },
@@ -92,9 +93,9 @@ export function Navbar({ onOpenCounselling, onOpenEvaluation }) {
               <span>Free Profile Evaluation</span>
             </button>
             <span className="top-dot">•</span>
-            <a href="tel:+919220406733" className="top-phone">
+            <a href="tel:+919974798803" className="top-phone">
               <PhoneCall size={12} />
-              <span>+91 92204 06733</span>
+              <span>+91 99747 98803</span>
             </a>
           </div>
         </div>

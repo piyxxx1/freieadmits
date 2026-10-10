@@ -76,7 +76,7 @@ export function CounsellingModal({ isOpen, onClose, initialType = 'counselling' 
                   <input
                     type="tel"
                     required
-                    placeholder="+91 92204 06733"
+                    placeholder="+91 99747 98803"
                     className="form-input"
                     value={formData.phone}
                     onChange={(e) => setFormData({ ...formData, phone: e.target.value })}

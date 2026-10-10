@@ -37,38 +37,38 @@ export function AboutHeroIllustration({ width = '100%', height = 'auto' }) {
           <path d="M60 0 L120 25 L120 95 Q60 150 60 150 Q0 95 0 25 Z" fill="url(#aboutGrad1)" />
           {/* Inner Crest */}
           <path d="M60 12 L108 32 L108 90 Q60 138 60 138 Q12 90 12 32 Z" fill="#1c2a4f" />
-          {/* Star and 28+ */}
-          <text x="60" y="65" fill="#e2e8f0" fontSize="28" fontWeight="bold" textAnchor="middle" fontFamily="system-ui">28+</text>
-          <text x="60" y="85" fill="#ffffff" fontSize="12" fontWeight="600" textAnchor="middle" letterSpacing="1" fontFamily="system-ui">YEARS</text>
-          <text x="60" y="105" fill="#93c5fd" fontSize="9.5" textAnchor="middle" fontFamily="system-ui">ESTD 1998</text>
+          {/* Star and Text */}
+          <polygon points="60,35 65,48 80,48 68,58 72,72 60,63 48,72 52,58 40,48 55,48" fill="#e2e8f0" />
+          <text x="60" y="95" fill="#ffffff" fontSize="14" fontWeight="600" textAnchor="middle" letterSpacing="1" fontFamily="system-ui">TRUSTED</text>
+          <text x="60" y="112" fill="#93c5fd" fontSize="11" textAnchor="middle" fontFamily="system-ui">ADVISORY</text>
         </g>
 
-        {/* Left Node: 1,200+ Global Universities */}
+        {/* Left Node: Global Universities */}
         <g transform="translate(45, 120)">
           <circle cx="40" cy="40" r="38" fill="#ffffff" stroke="#e2e8f0" strokeWidth="2" />
           <circle cx="40" cy="40" r="28" fill="#f8fafc" />
           <path d="M40 24 L54 31 L40 38 L26 31 Z" fill="#1c2a4f" />
           <path d="M30 36 L30 46 Q40 52 50 46 L50 36" stroke="#1c2a4f" strokeWidth="2" fill="none" />
-          <text x="40" y="68" fill="#1c2a4f" fontSize="11" fontWeight="bold" textAnchor="middle" fontFamily="system-ui">1200+ Unis</text>
+          <text x="40" y="68" fill="#1c2a4f" fontSize="11" fontWeight="bold" textAnchor="middle" fontFamily="system-ui">European Unis</text>
         </g>
 
-        {/* Right Node: 55+ Global Offices */}
+        {/* Right Node: Global Offices */}
         <g transform="translate(345, 110)">
           <circle cx="40" cy="40" r="38" fill="#ffffff" stroke="#e2e8f0" strokeWidth="2" />
           <circle cx="40" cy="40" r="28" fill="#fff7ed" />
           {/* Pin */}
           <path d="M40 22 C34 22 29 27 29 33 C29 42 40 52 40 52 C40 52 51 42 51 33 C51 27 46 22 40 22 Z" fill="#ea580c" />
           <circle cx="40" cy="32" r="4.5" fill="#ffffff" />
-          <text x="40" y="68" fill="#1c2a4f" fontSize="11" fontWeight="bold" textAnchor="middle" fontFamily="system-ui">55+ Offices</text>
+          <text x="40" y="68" fill="#1c2a4f" fontSize="11" fontWeight="bold" textAnchor="middle" fontFamily="system-ui">Expert Guidance</text>
         </g>
 
-        {/* Bottom Node: 250,000+ Students */}
+        {/* Bottom Node: Students */}
         <g transform="translate(190, 240)">
           <circle cx="60" cy="40" r="38" fill="#ffffff" stroke="#e2e8f0" strokeWidth="2" />
           <circle cx="60" cy="40" r="28" fill="#ffffff" />
           <circle cx="60" cy="34" r="8" fill="#1c2a4f" />
           <path d="M48 54 C48 47 53 44 60 44 C67 44 72 47 72 54 Z" fill="#1c2a4f" />
-          <text x="60" y="68" fill="#1c2a4f" fontSize="10.5" fontWeight="bold" textAnchor="middle" fontFamily="system-ui">2.5L+ Students</text>
+          <text x="60" y="68" fill="#1c2a4f" fontSize="10.5" fontWeight="bold" textAnchor="middle" fontFamily="system-ui">Student First</text>
         </g>
       </svg>
     </div>

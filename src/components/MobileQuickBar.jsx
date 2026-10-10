@@ -6,7 +6,7 @@ export function MobileQuickBar({ onOpenCounselling }) {
     <>
       <div className="mobile-bottom-quickbar">
         <a
-          href="tel:+919220406733"
+          href="tel:+919974798803"
           className="mobile-quick-btn mobile-quick-call"
           aria-label="Call admissions support"
         >
@@ -15,7 +15,7 @@ export function MobileQuickBar({ onOpenCounselling }) {
         </a>
 
         <a
-          href="https://wa.me/919220406733"
+          href="https://wa.me/919974798803"
           target="_blank"
           rel="noreferrer"
           className="mobile-quick-btn mobile-quick-wa"

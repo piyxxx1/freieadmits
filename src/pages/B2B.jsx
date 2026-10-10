@@ -134,7 +134,7 @@ export function B2B({ onOpenCounselling: _onOpenCounselling }) {
                 <ArrowRight size={16} />
               </button>
             </a>
-            <a href="tel:+919220406733" style={{ textDecoration: 'none' }}>
+            <a href="tel:+919974798803" style={{ textDecoration: 'none' }}>
               <button className="b2b-outline-btn">
                 <Phone size={16} />
                 <span>Talk to B2B Team</span>
@@ -275,10 +275,10 @@ export function B2B({ onOpenCounselling: _onOpenCounselling }) {
                     <span>Email Us Directly</span>
                   </button>
                 </a>
-                <a href="tel:+919220406733" style={{ textDecoration: 'none' }}>
+                <a href="tel:+919974798803" style={{ textDecoration: 'none' }}>
                   <button className="btn btn-secondary">
                     <Phone size={16} />
-                    <span>+91 92204 06733</span>
+                    <span>+91 99747 98803</span>
                   </button>
                 </a>
               </div>
@@ -428,10 +428,10 @@ export function B2B({ onOpenCounselling: _onOpenCounselling }) {
             Our B2B team is available Mon–Sat, 10am–7pm IST. Reach us at any of our offices.
           </p>
           <div style={{ display: 'flex', gap: '16px', justifyContent: 'center', flexWrap: 'wrap' }}>
-            <a href="tel:+919220406733" style={{ textDecoration: 'none' }}>
+            <a href="tel:+919974798803" style={{ textDecoration: 'none' }}>
               <button className="btn btn-primary btn-lg">
                 <Phone size={18} />
-                <span>+91 92204 06733</span>
+                <span>+91 99747 98803</span>
               </button>
             </a>
             <a href="mailto:freieadmits@gmail.com" style={{ textDecoration: 'none' }}>

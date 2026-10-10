@@ -1,69 +1,75 @@
 import React from 'react';
 
+// Line 1: Germany & Netherlands
 const line1 = [
-  { name: 'Technical University of Munich (TUM)', domain: 'tum.de' },
-  { name: 'KU Leuven', domain: 'kuleuven.be' },
-  { name: 'University of Amsterdam', domain: 'uva.nl' },
-  { name: 'Politecnico di Milano', domain: 'polimi.it' },
-  { name: 'University of Vienna', domain: 'univie.ac.at' },
-  { name: 'Aalto University', domain: 'aalto.fi' },
-  { name: 'Heidelberg University', domain: 'uni-heidelberg.de' }
+  // Germany (5 universities)
+  { name: 'Technical University of Munich (TUM)', logo: '/images/universitys/germany1.png', country: 'Germany' },
+  { name: 'Ludwig Maximilian University of Munich (LMU)', logo: '/images/universitys/germany2.png', country: 'Germany' },
+  { name: 'Heidelberg University', logo: '/images/universitys/germany3.jpg', country: 'Germany' },
+  { name: 'RWTH Aachen University', logo: '/images/universitys/germany4.png', country: 'Germany' },
+  { name: 'Frankfurt School of Finance & Management', logo: '/images/universitys/germany5.png', country: 'Germany' },
+  // Netherlands (3 universities)
+  { name: 'University of Amsterdam', logo: '/images/universitys/Netherlands1.png', country: 'Netherlands' },
+  { name: 'Eindhoven University of Technology (TU/e)', logo: '/images/universitys/Netherlands2.png', country: 'Netherlands' },
+  { name: 'Utrecht University', logo: '/images/universitys/Netherlands3.jpg', country: 'Netherlands' },
 ];
 
+// Line 2: Italy & Finland
 const line2 = [
-  { name: 'Ludwig Maximilian University of Munich (LMU)', domain: 'lmu.de' },
-  { name: 'Delft University of Technology (TU Delft)', domain: 'tudelft.nl' },
-  { name: 'University of Bologna', domain: 'unibo.it' },
-  { name: 'TU Wien', domain: 'tuwien.at' },
-  { name: 'Ghent University', domain: 'ugent.be' },
-  { name: 'University of Helsinki', domain: 'helsinki.fi' },
-  { name: 'RWTH Aachen University', domain: 'rwth-aachen.de' }
+  // Italy (3 universities)
+  { name: 'Politecnico di Milano (POLIMI)', logo: '/images/universitys/Italy1.jpg', country: 'Italy' },
+  { name: 'University of Bologna', logo: '/images/universitys/Italy2.jpg', country: 'Italy' },
+  { name: 'Sapienza University of Rome', logo: '/images/universitys/italy3.jpg', country: 'Italy' },
+  // Finland (2 universities)
+  { name: 'Aalto University', logo: '/images/universitys/finland1.jpg', country: 'Finland' },
+  { name: 'University of Helsinki', logo: '/images/universitys/finland2.jpg', country: 'Finland' },
 ];
 
+// Line 3: Italy, Austria & Belgium
 const line3 = [
-  { name: 'Freie Universität Berlin', domain: 'fu-berlin.de' },
-  { name: 'Utrecht University', domain: 'uu.nl' },
-  { name: 'Sapienza University of Rome', domain: 'uniroma1.it' },
-  { name: 'Eindhoven University of Technology (TU/e)', domain: 'tue.nl' },
-  { name: 'University of Padua', domain: 'unipd.it' },
-  { name: 'Leiden University', domain: 'universiteitleiden.nl' }
+  // Italy (1 university)
+  { name: 'University of Padua', logo: '/images/universitys/italy4.png', country: 'Italy' },
+  // Austria (2 universities)
+  { name: 'University of Vienna', logo: '/images/universitys/Austria1.png', country: 'Austria' },
+  { name: 'TU Wien', logo: '/images/universitys/Austria2.png', country: 'Austria' },
+  // Belgium (2 universities)
+  { name: 'KU Leuven', logo: '/images/universitys/Belgium.avif', country: 'Belgium' },
+  { name: 'Ghent University', logo: '/images/universitys/Belgium2.jpg', country: 'Belgium' },
 ];
 
 export function UniversitySlider() {
-  // Using Clearbit Logo API
-  const getLogo = (domain) => `https://logo.clearbit.com/${domain}`;
+  const renderTrack = (items, direction, speed, repeatCount = 4) => {
+    // Generate repeated items: setA and setB (identical) for seamless 50% translation loop
+    const setA = Array(repeatCount).fill(items).flat();
+    const allItems = [...setA, ...setA];
 
-  // Fallback to a letter if logo fails
-  const handleImageError = (e, name) => {
-    e.target.style.display = 'none';
-    if (e.target.nextElementSibling) {
-      e.target.nextElementSibling.style.display = 'flex';
-    }
-  };
-
-  const renderTrack = (items, direction, speed) => (
-    <div className="slider-track-container" style={{ '--speed': speed, '--direction': direction === 'left' ? 'normal' : 'reverse' }}>
-      <div className="slider-track">
-        {[...items, ...items, ...items].map((uni, idx) => (
-          <div key={idx} className="uni-badge">
-            <div className="uni-logo-wrapper">
+    return (
+      <div 
+        className="slider-track-container" 
+        style={{ 
+          '--speed': speed, 
+          '--anim-name': direction === 'left' ? 'slide-left' : 'slide-right' 
+        }}
+      >
+        <div className="slider-track">
+          {allItems.map((uni, idx) => (
+            <div 
+              key={idx} 
+              className="uni-logo-card" 
+              title={`${uni.name} (${uni.country})`}
+            >
               <img 
-                src={getLogo(uni.domain)} 
+                src={uni.logo} 
                 alt={uni.name} 
-                className="uni-logo" 
-                onError={(e) => handleImageError(e, uni.name)}
+                className="uni-logo-img" 
                 loading="lazy"
               />
-              <div className="uni-logo-fallback" style={{ display: 'none' }}>
-                {uni.name.charAt(0)}
-              </div>
             </div>
-            <span className="uni-name">{uni.name}</span>
-          </div>
-        ))}
+          ))}
+        </div>
       </div>
-    </div>
-  );
+    );
+  };
 
   return (
     <div className="university-slider-wrapper">
@@ -71,9 +77,9 @@ export function UniversitySlider() {
       <div className="slider-fade slider-fade-right"></div>
       
       <div className="slider-rows">
-        {renderTrack(line1, 'left', '40s')}
-        {renderTrack(line2, 'right', '45s')}
-        {renderTrack(line3, 'left', '38s')}
+        {renderTrack(line1, 'left', '40s', 4)}
+        {renderTrack(line2, 'right', '36s', 6)}
+        {renderTrack(line3, 'left', '38s', 6)}
       </div>
 
       <style>{`
@@ -81,15 +87,16 @@ export function UniversitySlider() {
           position: relative;
           width: 100%;
           overflow: hidden;
-          padding: 40px 0;
+          padding: 52px 0;
           background: #f8fafc;
           border-top: 1px solid #e2e8f0;
+          border-bottom: 1px solid #e2e8f0;
         }
         .slider-fade {
           position: absolute;
           top: 0;
           bottom: 0;
-          width: 150px;
+          width: 200px;
           z-index: 2;
           pointer-events: none;
         }
@@ -104,7 +111,7 @@ export function UniversitySlider() {
         .slider-rows {
           display: flex;
           flex-direction: column;
-          gap: 16px;
+          gap: 32px;
         }
         .slider-track-container {
           display: flex;
@@ -112,77 +119,77 @@ export function UniversitySlider() {
         }
         .slider-track {
           display: flex;
-          gap: 16px;
-          animation: slide var(--speed) linear infinite var(--direction);
+          gap: 32px;
+          animation: var(--anim-name) var(--speed) linear infinite;
+          will-change: transform;
         }
-        .uni-badge {
+        .slider-track:hover {
+          animation-play-state: paused;
+        }
+        .uni-logo-card {
           display: flex;
           align-items: center;
-          gap: 12px;
-          padding: 8px 20px 8px 8px;
+          justify-content: center;
+          height: 160px;
+          min-width: 380px;
+          max-width: 480px;
+          padding: 24px 48px;
           background: #ffffff;
           border: 1px solid #e2e8f0;
-          border-radius: 100px;
-          box-shadow: 0 2px 10px rgba(28, 42, 79, 0.03);
-          white-space: nowrap;
-          transition: all 0.3s ease;
-        }
-        .uni-badge:hover {
-          border-color: #1c2a4f;
-          transform: translateY(-2px);
-          box-shadow: 0 4px 15px rgba(28, 42, 79, 0.08);
-        }
-        
-        .uni-logo-wrapper {
-          width: 28px;
-          height: 28px;
-          border-radius: 50%;
-          overflow: hidden;
-          display: flex;
-          align-items: center;
-          justify-content: center;
-          background: #f1f5f9;
+          border-radius: 24px;
+          box-shadow: 0 4px 14px rgba(28, 42, 79, 0.05);
           flex-shrink: 0;
-          border: 1px solid #e2e8f0;
+          cursor: pointer;
+          transition: all 0.25s ease;
+          transform: translateZ(0);
+          backface-visibility: hidden;
         }
-        .uni-logo {
-          width: 100%;
-          height: 100%;
-          object-fit: cover;
-          background: white;
+        .uni-logo-card:hover {
+          border-color: #1c2a4f;
+          transform: translateY(-6px) translateZ(0);
+          box-shadow: 0 12px 32px rgba(28, 42, 79, 0.12);
         }
-        .uni-logo-fallback {
-          width: 100%;
-          height: 100%;
-          display: flex;
-          align-items: center;
-          justify-content: center;
-          font-weight: 800;
-          font-size: 0.8rem;
-          color: #475569;
-        }
-        
-        .uni-name {
-          font-size: 0.95rem;
-          font-weight: 700;
-          color: #1c2a4f;
+        .uni-logo-img {
+          max-height: 125px;
+          max-width: 360px;
+          width: auto;
+          height: auto;
+          object-fit: contain;
+          display: block;
+          border-radius: 6px;
+          image-rendering: -webkit-optimize-contrast;
+          image-rendering: crisp-edges;
+          image-rendering: high-quality;
+          transform: translateZ(0);
+          backface-visibility: hidden;
         }
 
-        @keyframes slide {
-          0% {
-            transform: translateX(0);
-          }
-          100% {
-            transform: translateX(calc(-33.33% - 5.33px));
-          }
+        @keyframes slide-left {
+          0% { transform: translateX(0); }
+          100% { transform: translateX(-50%); }
         }
-        
+
+        @keyframes slide-right {
+          0% { transform: translateX(-50%); }
+          100% { transform: translateX(0); }
+        }
+
         @media (max-width: 768px) {
-          .university-slider-wrapper { padding: 24px 0; }
-          .slider-rows { gap: 12px; }
-          .uni-badge { padding: 6px 16px 6px 6px; }
-          .uni-logo-wrapper { width: 24px; height: 24px; }
-          .uni-name { font-size: 0.85rem; }
+          .university-slider-wrapper { padding: 40px 0; }
+          .slider-rows { gap: 20px; }
+          .slider-track { gap: 20px; }
+          .uni-logo-card { 
+            height: 110px; 
+            min-width: 250px; 
+            max-width: 300px; 
+            padding: 16px 28px; 
+            border-radius: 18px;
+          }
+          .uni-logo-img { 
+            max-height: 85px; 
+            max-width: 240px; 
+          }
+          .slider-fade { width: 90px; }
         }
       `}</style>
     </div>

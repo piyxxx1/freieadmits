@@ -10,18 +10,6 @@ import {
 } from 'lucide-react';
 
 export function AboutUs({ onOpenCounselling }) {
-  const whatWeDoList = [
-    'Profile evaluation',
-    'Course selection',
-    'University selection',
-    'Application assistance',
-    'Documentation guidance',
-    'Scholarship guidance',
-    'Education loan guidance',
-    'Visa guidance',
-    'Pre-departure assistance'
-  ];
-
   const approachSteps = [
     {
       step: '01',
@@ -88,31 +76,20 @@ export function AboutUs({ onOpenCounselling }) {
                 <Sparkles size={14} /> About FREIE ADMITS
               </span>
               <h1 style={{ fontSize: '2.85rem', fontWeight: 800, color: '#1c2a4f', lineHeight: 1.18, marginBottom: '20px', letterSpacing: '-0.02em' }}>
-                Helping Students Make <span style={{ color: '#1c2a4f' }}>Informed</span> Global Education Decisions
+                Education Deserves a <span style={{ color: '#1c2a4f' }}>Considered Choice</span>
               </h1>
-              <p style={{ fontSize: '1.15rem', color: '#475569', lineHeight: 1.65, marginBottom: '20px' }}>
-                Choosing to study abroad is one of the most important decisions in a student's academic journey. 
-                At <strong>FREIE ADMITS</strong>, our focus is to simplify that decision.
+              <p style={{ fontSize: '1.15rem', color: '#475569', lineHeight: 1.65, marginBottom: '16px' }}>
+                <strong>FREIE ADMITS</strong> is a European higher-education advisory built around a simple belief: where and what you study deserves careful consideration.
+              </p>
+              <p style={{ fontSize: '1.02rem', color: '#64748b', lineHeight: 1.6, marginBottom: '16px' }}>
+                We help students make sense of the European academic landscape — its universities, programmes, admission pathways and possibilities — and approach it with greater knowledge and direction.
+              </p>
+              <p style={{ fontSize: '1.02rem', color: '#64748b', lineHeight: 1.6, marginBottom: '16px' }}>
+                Our counsel is individual, informed and academically grounded, shaped by the understanding that no two students arrive with the same background or ambition.
               </p>
               <p style={{ fontSize: '1.02rem', color: '#64748b', lineHeight: 1.6, marginBottom: '28px' }}>
-                We help students understand their study options, identify suitable courses and universities, 
-                prepare applications and navigate the steps involved in pursuing international education.
+                We bring clarity to the possibilities; students can choose their path with purpose.
               </p>
-
-              <div style={{
-                background: '#f8fafc',
-                borderLeft: '4px solid #1c2a4f',
-                padding: '16px 20px',
-                borderRadius: '0 10px 10px 0',
-                marginBottom: '28px'
-              }}>
-                <div style={{ fontSize: '0.82rem', fontWeight: 700, color: '#1c2a4f', textTransform: 'uppercase', letterSpacing: '0.5px', marginBottom: '4px' }}>
-                  Our Core Approach
-                </div>
-                <div style={{ fontSize: '1.15rem', fontWeight: 700, color: '#1c2a4f' }}>
-                  Understand the student first. Recommend the pathway second.
-                </div>
-              </div>
 
               <button onClick={onOpenCounselling} className="btn btn-primary btn-lg">
                 <span>Book a Counselling Session</span>
@@ -129,40 +106,31 @@ export function AboutUs({ onOpenCounselling }) {
 
       {/* 2. WHAT WE DO */}
       <section className="section-py" style={{ background: '#ffffff' }}>
-        <div className="container">
-          <div className="section-header">
-            <span className="badge-pill badge-primary">Comprehensive Guidance</span>
-            <h2 className="section-title">
-              What <span className="text-highlight">We Do</span>
-            </h2>
-            <p className="section-desc">
-              We provide structured guidance across the major stages of the international education journey.
+        <div className="container" style={{ maxWidth: '860px', margin: '0 auto', textAlign: 'center' }}>
+          <span className="badge-pill badge-primary">Comprehensive Guidance</span>
+          <h2 className="section-title">
+            What <span className="text-highlight">We Do</span>
+          </h2>
+          <h3 style={{ fontFamily: 'var(--font-heading)', fontWeight: 500, fontStyle: 'italic', fontSize: '1.8rem', color: '#1c2a4f', marginBottom: '24px' }}>
+            From Ambition to Academic Direction.
+          </h3>
+          
+          <div style={{ textAlign: 'left', color: '#475569', fontSize: '1.05rem', lineHeight: 1.7 }}>
+            <p style={{ marginBottom: '16px' }}>
+              European higher education is not a single system. Each country, university, and programme brings its own academic structures, expectations, and routes to admission.
             </p>
-          </div>
-
-          <div style={{ display: 'grid', gridTemplateColumns: 'repeat(3, 1fr)', gap: '16px' }} className="what-we-do-grid">
-            {whatWeDoList.map((item, idx) => (
-              <div
-                key={idx}
-                style={{
-                  background: '#f8fafc',
-                  border: '1.5px solid #e2e8f0',
-                  borderRadius: '12px',
-                  padding: '20px',
-                  display: 'flex',
-                  alignItems: 'center',
-                  gap: '12px',
-                  transition: 'all 0.2s ease'
-                }}
-              >
-                <div style={{ width: '32px', height: '32px', borderRadius: '50%', background: '#f8fafc', color: '#1c2a4f', display: 'flex', alignItems: 'center', justifyContent: 'center', flexShrink: 0 }}>
-                  <CheckCircle2 size={18} />
-                </div>
-                <span style={{ fontSize: '1.02rem', fontWeight: 700, color: '#1c2a4f' }}>
-                  {item}
-                </span>
-              </div>
-            ))}
+            <p style={{ marginBottom: '16px' }}>
+              <strong>FREIE ADMITS</strong> brings these elements into perspective.
+            </p>
+            <p style={{ marginBottom: '16px' }}>
+              We examine the opportunities available to each student, distinguish what is relevant from what is merely possible, and shape a coherent pathway from initial exploration through to admission.
+            </p>
+            <p style={{ marginBottom: '16px' }}>
+              Behind every recommendation is research. Behind every application is preparation. And behind every pathway is a reason for choosing it.
+            </p>
+            <p>
+              Our purpose is not to multiply possibilities, but to identify that worth pursuing.
+            </p>
           </div>
         </div>
       </section>
@@ -274,28 +242,50 @@ export function AboutUs({ onOpenCounselling }) {
         <div className="container">
           <div style={{ display: 'grid', gridTemplateColumns: 'repeat(2, 1fr)', gap: '32px' }} className="mission-grid">
             {/* Mission */}
-            <div className="card-white" style={{ borderTop: '5px solid #1c2a4f', padding: '36px' }}>
+            <div className="card-white" style={{ borderTop: '5px solid #1c2a4f', padding: '36px', display: 'flex', flexDirection: 'column' }}>
               <div style={{ width: '56px', height: '56px', borderRadius: '14px', background: '#f8fafc', color: '#1c2a4f', display: 'flex', alignItems: 'center', justifyContent: 'center', marginBottom: '20px' }}>
                 <Target size={30} />
               </div>
-              <h3 style={{ fontSize: '1.6rem', fontWeight: 800, color: '#1c2a4f', marginBottom: '12px' }}>
+              <h3 style={{ fontSize: '1.6rem', fontWeight: 800, color: '#1c2a4f', marginBottom: '8px', textTransform: 'uppercase' }}>
                 Our Mission
               </h3>
-              <p style={{ color: '#475569', fontSize: '1.08rem', lineHeight: 1.7, margin: 0 }}>
-                To make international education more accessible, transparent and easier to understand for students and families.
+              <h4 style={{ fontFamily: 'var(--font-heading)', fontWeight: 500, fontStyle: 'italic', fontSize: '1.4rem', color: '#1c2a4f', marginBottom: '20px' }}>
+                To Cultivate Scholars, Not Merely Applicants.
+              </h4>
+              <div style={{ color: '#475569', fontSize: '1.02rem', lineHeight: 1.6, flex: 1 }}>
+                <p style={{ marginBottom: '14px' }}>
+                  FREIE ADMITS exists to uphold the seriousness of the academic journey. We believe a university education is among the most consequential commitments a young person will make, and it deserves to be entered with rigor, reflection, and intellectual honesty.
+                </p>
+                <p style={{ marginBottom: '14px' }}>
+                  We seek to nurture in every student a clear sense of scholarly purpose: the discipline to question, the humility to learn, and the resolve to pursue excellence for its own sake. In doing so, we hope to restore to the pursuit of higher education its proper dignity, where ambition is governed by understanding, and achievement is measured by substance rather than status.
+                </p>
+              </div>
+              <p style={{ fontStyle: 'italic', fontSize: '0.95rem', color: '#64748b', marginTop: '16px', borderTop: '1px solid #e2e8f0', paddingTop: '16px' }}>
+                To cultivate scholars, not merely applicants, guided by rigour, reflection and purpose.
               </p>
             </div>
 
             {/* Vision */}
-            <div className="card-white" style={{ borderTop: '5px solid #475569', padding: '36px' }}>
+            <div className="card-white" style={{ borderTop: '5px solid #475569', padding: '36px', display: 'flex', flexDirection: 'column' }}>
               <div style={{ width: '56px', height: '56px', borderRadius: '14px', background: '#f8fafc', color: '#475569', display: 'flex', alignItems: 'center', justifyContent: 'center', marginBottom: '20px' }}>
                 <Compass size={30} />
               </div>
-              <h3 style={{ fontSize: '1.6rem', fontWeight: 800, color: '#1c2a4f', marginBottom: '12px' }}>
+              <h3 style={{ fontSize: '1.6rem', fontWeight: 800, color: '#1c2a4f', marginBottom: '8px', textTransform: 'uppercase' }}>
                 Our Vision
               </h3>
-              <p style={{ color: '#475569', fontSize: '1.08rem', lineHeight: 1.7, margin: 0 }}>
-                To become a trusted education guidance brand connecting ambitious students with meaningful international academic opportunities.
+              <h4 style={{ fontFamily: 'var(--font-heading)', fontWeight: 500, fontStyle: 'italic', fontSize: '1.4rem', color: '#1c2a4f', marginBottom: '20px' }}>
+                To Advance the Enduring Ideals of Scholarship.
+              </h4>
+              <div style={{ color: '#475569', fontSize: '1.02rem', lineHeight: 1.6, flex: 1 }}>
+                <p style={{ marginBottom: '14px' }}>
+                  We envision a generation of students who approach the world's great institutions not as destinations to be won, but as communities of thought to join and enrich. We aspire to become a trusted name in international education, recognized for our principles as much as our outcomes.
+                </p>
+                <p style={{ marginBottom: '14px' }}>
+                  Guided by integrity, intellectual independence and a long view of what learning can achieve, we aim to help shape a culture in which education serves both the individual and the wider good. In every student we support, we hope to see the beginnings of a life devoted to knowledge, service and distinction.
+                </p>
+              </div>
+              <p style={{ fontStyle: 'italic', fontSize: '0.95rem', color: '#64748b', marginTop: '16px', borderTop: '1px solid #e2e8f0', paddingTop: '16px' }}>
+                To advance the enduring ideals of scholarship across the global academic community.
               </p>
             </div>
           </div>
@@ -357,15 +347,7 @@ export function AboutUs({ onOpenCounselling }) {
           .about-hero-grid {
             grid-template-columns: 1fr !important;
           }
-          .what-we-do-grid {
-            grid-template-columns: 1fr 1fr !important;
-          }
           .mission-grid {
-            grid-template-columns: 1fr !important;
-          }
-        }
-        @media (max-width: 600px) {
-          .what-we-do-grid {
             grid-template-columns: 1fr !important;
           }
         }

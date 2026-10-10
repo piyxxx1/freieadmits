@@ -19,6 +19,7 @@ import { PrivacyPolicy } from './pages/DataProtection';
 import { TermsConditions } from './pages/TermsConditions';
 import { Disclaimer } from './pages/Disclaimer';
 import { RefundPolicy } from './pages/RefundPolicy';
+import ExamPrep from './pages/ExamPrep';
 
 function App() {
   const { currentPath, navigate } = useRouter();
@@ -42,6 +43,9 @@ function App() {
       case '/dmat-germany':
       case '/dmat':
         return <DmatGermany onOpenCounselling={openCounselling} />;
+      case '/exam-prep':
+      case '/exams':
+        return <ExamPrep />;
       case '/contact':
         return <Contact onOpenCounselling={openCounselling} />;
       case '/b2b':

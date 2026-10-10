@@ -88,13 +88,13 @@ export function Contact({ onOpenCounselling }) {
             <div style={{ background: '#ffffff', padding: '18px', borderRadius: '12px', border: '1.5px solid #e2e8f0', boxShadow: '0 2px 8px rgba(0,0,0,0.04)' }}>
               <div style={{ color: '#1c2a4f', marginBottom: '8px' }}><Phone size={22} /></div>
               <div style={{ fontSize: '0.8rem', color: '#64748b', fontWeight: 600 }}>Call Directly</div>
-              <a href="tel:+919220406733" style={{ fontSize: '0.98rem', fontWeight: 700, color: '#1c2a4f' }}>+91 92204 06733</a>
+              <a href="tel:+919974798803" style={{ fontSize: '0.98rem', fontWeight: 700, color: '#1c2a4f' }}>+91 99747 98803</a>
             </div>
 
             <div style={{ background: '#ffffff', padding: '18px', borderRadius: '12px', border: '1.5px solid #e2e8f0', boxShadow: '0 2px 8px rgba(0,0,0,0.04)' }}>
               <div style={{ color: '#1c2a4f', marginBottom: '8px' }}><MessageSquare size={22} /></div>
               <div style={{ fontSize: '0.8rem', color: '#64748b', fontWeight: 600 }}>WhatsApp Us</div>
-              <a href="https://wa.me/919220406733" target="_blank" rel="noreferrer" style={{ fontSize: '0.98rem', fontWeight: 700, color: '#1c2a4f' }}>+91 92204 06733</a>
+              <a href="https://wa.me/919974798803" target="_blank" rel="noreferrer" style={{ fontSize: '0.98rem', fontWeight: 700, color: '#1c2a4f' }}>+91 99747 98803</a>
             </div>
 
             <div style={{ background: '#ffffff', padding: '18px', borderRadius: '12px', border: '1.5px solid #e2e8f0', boxShadow: '0 2px 8px rgba(0,0,0,0.04)' }}>
@@ -141,7 +141,7 @@ export function Contact({ onOpenCounselling }) {
                       <input
                         type="tel"
                         required
-                        placeholder="+91 92204 06733"
+                        placeholder="+91 99747 98803"
                         className="form-input"
                         value={formData.phone}
                         onChange={(e) => setFormData({ ...formData, phone: e.target.value })}
@@ -328,8 +328,8 @@ export function Contact({ onOpenCounselling }) {
                 </div>
 
                 <div style={{ display: 'flex', flexDirection: 'column', gap: '10px', fontSize: '0.86rem', color: '#cbd5e1', marginBottom: '20px' }}>
-                  <div><strong>Phone:</strong> <a href="tel:+919220406733" style={{ color: '#eef2fa', textDecoration: 'none' }}>+91 92204 06733</a></div>
-                  <div><strong>WhatsApp:</strong> <a href="https://wa.me/919220406733" target="_blank" rel="noreferrer" style={{ color: '#eef2fa', textDecoration: 'none' }}>+91 92204 06733</a></div>
+                  <div><strong>Phone:</strong> <a href="tel:+919974798803" style={{ color: '#eef2fa', textDecoration: 'none' }}>+91 99747 98803</a></div>
+                  <div><strong>WhatsApp:</strong> <a href="https://wa.me/919974798803" target="_blank" rel="noreferrer" style={{ color: '#eef2fa', textDecoration: 'none' }}>+91 99747 98803</a></div>
                   <div><strong>Email:</strong> <a href="mailto:freieadmits@gmail.com" style={{ color: '#eef2fa', textDecoration: 'none' }}>freieadmits@gmail.com</a></div>
                   <div><strong>Website:</strong> www.freieadmits.com</div>
                 </div>

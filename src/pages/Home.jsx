@@ -116,7 +116,7 @@ export function Home({ onOpenCounselling, onOpenEvaluation }) {
       {/* 2. SPECIAL GERMANY & dMAT HIGHLIGHT BANNER */}
       <section style={{ background: '#1c2a4f', color: '#ffffff', padding: '48px 0', borderTop: '1px solid #1c2a4f', borderBottom: '1px solid #1c2a4f' }}>
         <div className="container">
-          <div style={{ display: 'grid', gridTemplateColumns: '1.2fr 0.8fr', gap: '36px', alignItems: 'center' }} className="dmat-banner-grid">
+          <div style={{ textAlign: 'center', maxWidth: '800px', margin: '0 auto' }}>
             <div>
               <div style={{ display: 'inline-flex', alignItems: 'center', gap: '6px', background: '#ffffff', color: '#1c2a4f', padding: '4px 12px', borderRadius: '4px', fontSize: '0.78rem', fontWeight: 800, textTransform: 'uppercase', letterSpacing: '0.5px', marginBottom: '12px' }}>
                 <span>🇩🇪 Germany dMAT Guidance</span>
@@ -127,39 +127,11 @@ export function Home({ onOpenCounselling, onOpenEvaluation }) {
               <p style={{ color: '#cbd5e1', fontSize: '1.05rem', lineHeight: 1.6, marginBottom: '24px' }}>
                 FREIE ADMITS provides structured guidance for students preparing for the <strong>Digital Master's Assessment Test (dMAT)</strong>. Understand the process, prepare effectively and move forward with greater confidence.
               </p>
-              <div style={{ display: 'flex', gap: '14px', flexWrap: 'wrap' }}>
+              <div style={{ display: 'flex', gap: '14px', flexWrap: 'wrap', justifyContent: 'center' }}>
                 <button onClick={() => navigate('/dmat-germany')} className="btn btn-gold">
                   <span>Explore dMAT Germany</span>
                   <ArrowRight size={16} />
                 </button>
-                <button onClick={() => navigate('/destinations')} className="btn btn-secondary" style={{ background: '#1c2a4f', color: '#ffffff', borderColor: '#334155' }}>
-                  <span>Why Germany?</span>
-                </button>
-              </div>
-            </div>
-
-            {/* Quick Spec Box for Germany */}
-            <div style={{ background: '#1c2a4f', border: '1px solid #eef2fa', borderRadius: '16px', padding: '28px' }}>
-              <div style={{ fontSize: '0.82rem', fontWeight: 700, color: '#eef2fa', textTransform: 'uppercase', letterSpacing: '0.5px', marginBottom: '14px' }}>
-                German Higher Education Highlights
-              </div>
-              <div style={{ display: 'flex', flexDirection: 'column', gap: '12px', fontSize: '0.9rem' }}>
-                <div style={{ display: 'flex', justifyContent: 'space-between', borderBottom: '1px solid #334155', paddingBottom: '8px' }}>
-                  <span style={{ color: '#94a3b8' }}>Tuition at Public Unis:</span>
-                  <strong style={{ color: '#ffffff' }}>€0 (Tuition-Free)</strong>
-                </div>
-                <div style={{ display: 'flex', justifyContent: 'space-between', borderBottom: '1px solid #334155', paddingBottom: '8px' }}>
-                  <span style={{ color: '#94a3b8' }}>Post-Study Work Visa:</span>
-                  <strong style={{ color: '#ffffff' }}>18 Months Job Seeker</strong>
-                </div>
-                <div style={{ display: 'flex', justifyContent: 'space-between', borderBottom: '1px solid #334155', paddingBottom: '8px' }}>
-                  <span style={{ color: '#94a3b8' }}>Target Programs:</span>
-                  <strong style={{ color: '#ffffff' }}>Master's, IT &amp; Engineering</strong>
-                </div>
-                <div style={{ display: 'flex', justifyContent: 'space-between' }}>
-                  <span style={{ color: '#94a3b8' }}>Vocational Training:</span>
-                  <strong style={{ color: '#ffffff' }}>Ausbildung with Stipend</strong>
-                </div>
               </div>
             </div>
           </div>
@@ -185,7 +157,9 @@ export function Home({ onOpenCounselling, onOpenEvaluation }) {
             {/* Pillar 1 */}
             <div className="why-pillar-card">
               <div className="why-pillar-num">01</div>
-              <div style={{ width: "100%", height: "180px", overflow: "hidden", borderRadius: "12px", marginBottom: "8px", border: "1px solid #e2e8f0" }}><img src="/images/why/1.jpg" alt="Public University Focus" style={{ width: "100%", height: "100%", objectFit: "contain", padding: "16px" }} /></div>
+              <div style={{ width: "100%", height: "280px", overflow: "hidden", borderRadius: "12px", marginBottom: "16px", border: "1px solid #e2e8f0", background: "#ffffff" }}>
+                <img src="/images/why/1.jpg" alt="Public University Focus" style={{ width: "100%", height: "100%", objectFit: "cover" }} />
+              </div>
               <h3 className="why-pillar-title">Public University Focus</h3>
               <p className="why-pillar-desc">
                 We specialise in guiding students into government-funded public universities across Europe — where tuition is free or near-zero, quality is world-class, and degrees are globally recognised.
@@ -200,7 +174,9 @@ export function Home({ onOpenCounselling, onOpenEvaluation }) {
             {/* Pillar 2 */}
             <div className="why-pillar-card">
               <div className="why-pillar-num">02</div>
-              <div style={{ width: "100%", height: "180px", overflow: "hidden", borderRadius: "12px", marginBottom: "8px", border: "1px solid #e2e8f0" }}><img src="/images/why/2.jpg" alt="Personalised Guidance" style={{ width: "100%", height: "100%", objectFit: "contain", padding: "16px" }} /></div>
+              <div style={{ width: "100%", height: "280px", overflow: "hidden", borderRadius: "12px", marginBottom: "16px", border: "1px solid #e2e8f0", background: "#ffffff" }}>
+                <img src="/images/why/2.jpg" alt="Personalised Guidance" style={{ width: "100%", height: "100%", objectFit: "cover" }} />
+              </div>
               <h3 className="why-pillar-title">Personalised Guidance</h3>
               <p className="why-pillar-desc">
                 No templates, no mass counselling. Every student gets individual attention — we evaluate your academic background, goals and budget before suggesting a single university or country.
@@ -215,7 +191,9 @@ export function Home({ onOpenCounselling, onOpenEvaluation }) {
             {/* Pillar 3 */}
             <div className="why-pillar-card">
               <div className="why-pillar-num">03</div>
-              <div style={{ width: "100%", height: "180px", overflow: "hidden", borderRadius: "12px", marginBottom: "8px", border: "1px solid #e2e8f0" }}><img src="/images/why/3.jpg" alt="Germany &amp; Europe Expertise" style={{ width: "100%", height: "100%", objectFit: "contain", padding: "16px" }} /></div>
+              <div style={{ width: "100%", height: "280px", overflow: "hidden", borderRadius: "12px", marginBottom: "16px", border: "1px solid #e2e8f0", background: "#ffffff" }}>
+                <img src="/images/why/3.jpg" alt="Germany &amp; Europe Expertise" style={{ width: "100%", height: "100%", objectFit: "cover" }} />
+              </div>
               <h3 className="why-pillar-title">Germany &amp; Europe Expertise</h3>
               <p className="why-pillar-desc">
                 Deep specialisation in Germany (dMAT, APS, TU9 universities), Finland, Ireland, Netherlands, France, Poland and 6 more destinations — not a generic global consultancy.
@@ -230,7 +208,9 @@ export function Home({ onOpenCounselling, onOpenEvaluation }) {
             {/* Pillar 4 */}
             <div className="why-pillar-card">
               <div className="why-pillar-num">04</div>
-              <div style={{ width: "100%", height: "180px", overflow: "hidden", borderRadius: "12px", marginBottom: "8px", border: "1px solid #e2e8f0" }}><img src="/images/why/4.jpg" alt="End-to-End Support" style={{ width: "100%", height: "100%", objectFit: "contain", padding: "16px" }} /></div>
+              <div style={{ width: "100%", height: "280px", overflow: "hidden", borderRadius: "12px", marginBottom: "16px", border: "1px solid #e2e8f0", background: "#ffffff" }}>
+                <img src="/images/why/4.jpg" alt="End-to-End Support" style={{ width: "100%", height: "100%", objectFit: "cover" }} />
+              </div>
               <h3 className="why-pillar-title">End-to-End Support</h3>
               <p className="why-pillar-desc">
                 From your first profile evaluation to visa filing and pre-departure prep — we are with you at every step, ensuring nothing falls through the cracks in your international journey.
@@ -358,29 +338,7 @@ export function Home({ onOpenCounselling, onOpenEvaluation }) {
         </div>
       </section>
 
-      {/* 7. FINAL INSPIRATIONAL CTA SECTION */}
-      <section className="section-py" style={{ background: '#1c2a4f', color: '#ffffff', textAlign: 'center' }}>
-        <div className="container" style={{ maxWidth: '800px' }}>
-          <span style={{ background: 'rgba(245, 158, 11, 0.2)', color: '#94a3b8', padding: '4px 14px', borderRadius: '50px', fontSize: '0.82rem', fontWeight: 700, textTransform: 'uppercase', letterSpacing: '0.5px' }}>
-            FREIE ADMITS
-          </span>
-          <h2 style={{ fontSize: '2.6rem', fontWeight: 800, color: '#ffffff', margin: '18px 0 14px 0' }}>
-            Your Future Starts with the Right Decision
-          </h2>
-          <p style={{ fontSize: '1.15rem', color: '#cbd5e1', lineHeight: 1.65, marginBottom: '32px' }}>
-            Don't choose a country simply because it is popular. Choose a course and university that fit your profile and your future goals.
-          </p>
-          <div style={{ display: 'flex', gap: '16px', justifyContent: 'center', flexWrap: 'wrap' }}>
-            <button onClick={onOpenCounselling} className="btn btn-primary btn-lg">
-              <span>Book Free Counselling</span>
-              <ArrowRight size={18} />
-            </button>
-            <button onClick={onOpenEvaluation} className="btn btn-gold btn-lg">
-              <span>Get Profile Evaluation</span>
-            </button>
-          </div>
-        </div>
-      </section>
+
 
       <style>{`
         /* ====== PREMIUM HERO KEYFRAMES ====== */

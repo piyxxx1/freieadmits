@@ -21,29 +21,9 @@ export function Destinations({ onOpenCounselling, onOpenEvaluation }) {
 
   return (
     <div>
-      {/* 1. HERO HEADER */}
-      <section className="dest-hero-section">
-        <div className="container" style={{ maxWidth: '840px' }}>
-          <span className="badge-pill badge-primary">
-            <Globe size={14} /> European Higher Education Network
-          </span>
-          <h1 className="dest-hero-title">
-            Study Destinations
-          </h1>
-          <div className="dest-hero-subtitle">
-            Explore. Compare. Choose Your Path.
-          </div>
-          <p className="dest-hero-desc">
-            The right destination depends on more than a university ranking. Consider your course, career goals, 
-            budget, language requirements, academic profile and long-term plans before making a decision.
-          </p>
-          <p className="dest-hero-subdesc">
-            <strong>FREIE ADMITS</strong> helps you explore study opportunities across Germany, Finland, Ireland, the Netherlands, France, Spain, Poland, Italy, Austria, Sweden and Denmark.
-          </p>
-        </div>
-      </section>
 
-      <section style={{ background: '#ffffff', paddingBottom: '32px' }}>
+
+      <section style={{ background: '#ffffff', paddingTop: '120px', paddingBottom: '32px' }}>
         <div className="container">
           {/* 3. ALL EUROPEAN DESTINATIONS GRID WITH CLEAN PHOTOS */}
           <div className="section-header" style={{ marginBottom: '32px' }}>
