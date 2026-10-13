@@ -18,7 +18,17 @@ import {
   Laptop,
   ArrowRight,
   CheckCircle2,
-  Handshake
+  Handshake,
+  Compass,
+  FileText,
+  ShieldCheck,
+  CheckSquare,
+  Award,
+  Landmark,
+  Plane,
+  Home,
+  Map,
+  BookOpen
 } from 'lucide-react';
 
 const getFlagUrl = (id) => { 
@@ -30,25 +40,64 @@ export function Navbar({ onOpenCounselling, onOpenEvaluation }) {
   const { currentPath, navigate } = useRouter();
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
   const [destinationsOpen, setDestinationsOpen] = useState(false);
+  const [servicesOpen, setServicesOpen] = useState(false);
   const [mobileDestExpanded, setMobileDestExpanded] = useState(false);
+  const [mobileServicesExpanded, setMobileServicesExpanded] = useState(false);
   const dropdownRef = useRef(null);
+  const servicesDropdownRef = useRef(null);
 
-  // Close dropdown on click outside
+  // Close dropdowns on click outside
   useEffect(() => {
     function handleClickOutside(event) {
       if (dropdownRef.current && !dropdownRef.current.contains(event.target)) {
         setDestinationsOpen(false);
+      }
+      if (servicesDropdownRef.current && !servicesDropdownRef.current.contains(event.target)) {
+        setServicesOpen(false);
       }
     }
     document.addEventListener('mousedown', handleClickOutside);
     return () => document.removeEventListener('mousedown', handleClickOutside);
   }, []);
 
+  const academicServicesList = [
+    { title: 'Counselling', id: 'counselling', icon: Compass, desc: 'Personalized profile & path evaluation' },
+    { title: 'Course Selection', id: 'course-selection', icon: BookOpen, desc: 'Targeting top accredited programs' },
+    { title: 'Applications', id: 'applications', icon: FileText, desc: 'SOP, CV & university documentation' },
+    { title: 'Visa Guidance', id: 'visa-guidance', icon: ShieldCheck, desc: 'Embassy checklist & file preparation' },
+    { title: 'Test Preparation', id: 'test-preparation', icon: CheckSquare, desc: 'Language & entrance exam coaching' },
+    { title: 'Scholarships', id: 'scholarships', icon: Award, desc: 'Merit recognition & financial grants' },
+  ];
+
+  const beyondServicesList = [
+    { title: 'Education Finance', id: 'education-finance', icon: Landmark, desc: 'Blocked accounts & loan advisory' },
+    { title: 'Travel Arrangements', id: 'travel-arrangements', icon: Plane, desc: 'Flights, routing & transit guidance' },
+    { title: 'Accommodation', id: 'accommodation', icon: Home, desc: 'Dormitory & student housing search' },
+    { title: 'Pre-Departure Briefing', id: 'pre-departure-briefing', icon: Map, desc: 'Cultural orientation & packing prep' },
+    { title: 'Arrival and Settlement', id: 'arrival-and-settlement', icon: Users, desc: 'City registration & bank setup support' },
+  ];
+
+  const handleServiceSelect = (id) => {
+    setServicesOpen(false);
+    setMobileMenuOpen(false);
+    if (currentPath === '/services') {
+      window.location.hash = id;
+      const el = document.getElementById(id);
+      if (el) el.scrollIntoView({ behavior: 'smooth', block: 'start' });
+    } else {
+      navigate('/services');
+      setTimeout(() => {
+        window.location.hash = id;
+        const el = document.getElementById(id);
+        if (el) el.scrollIntoView({ behavior: 'smooth', block: 'start' });
+      }, 150);
+    }
+  };
+
   const navLinks = [
-    { name: 'Home', path: '/', icon: GraduationCap },
-    { name: 'About Us', path: '/about', icon: Users },
+    { name: 'About Us', path: '/', icon: Users },
     { name: 'Destinations', path: '/destinations', icon: Globe, hasDropdown: true },
-    { name: 'Services', path: '/services', icon: Wrench },
+    { name: 'Services', path: '/services', icon: Wrench, hasServicesDropdown: true },
     { name: 'Exam Prep', path: '/exam-prep', icon: Laptop },
     { name: 'dMAT', path: '/dmat-germany', icon: Laptop, isSpecial: true },
     { name: 'Contact', path: '/contact', icon: Phone },
@@ -84,7 +133,7 @@ export function Navbar({ onOpenCounselling, onOpenEvaluation }) {
           <div className="top-strip-left">
             <span className="top-pill">Germany &amp; Europe Specialist</span>
             <span className="top-msg">
-              Public Universities • Master's &amp; IT • dMAT Prep • Ausbildung Pathways
+              Public Universities • dMAT Prep • Ausbildung Pathways
             </span>
           </div>
 
@@ -203,6 +252,120 @@ export function Navbar({ onOpenCounselling, onOpenEvaluation }) {
                 );
               }
 
+              if (item.hasServicesDropdown) {
+                return (
+                  <div
+                    key={item.path}
+                    className="dropdown-wrapper"
+                    ref={servicesDropdownRef}
+                    onMouseEnter={() => setServicesOpen(true)}
+                    onMouseLeave={() => setServicesOpen(false)}
+                  >
+                    <button
+                      type="button"
+                      className={`nav-link-btn ${isActive ? 'active' : ''} ${servicesOpen ? 'hovered' : ''}`}
+                      onClick={() => {
+                        navigate('/services');
+                        setServicesOpen(false);
+                      }}
+                    >
+                      <Wrench size={15} className="link-icon-subtle" />
+                      <span>{item.name}</span>
+                      <ChevronDown size={14} className={`chevron-icon ${servicesOpen ? 'open' : ''}`} />
+                    </button>
+
+                    {/* 2-Column Services Sub-Navbar Dropdown */}
+                    {servicesOpen && (
+                      <div className="services-dropdown-box">
+                        <div className="mega-hover-bridge" />
+                        <div className="services-dropdown-inner">
+                          {/* Header */}
+                          <div className="services-dropdown-header">
+                            <div>
+                              <h4 className="services-dropdown-title">Our End-to-End Services</h4>
+                              <p className="services-dropdown-subtitle">
+                                Structured guidance from your first consultation to campus settlement
+                              </p>
+                            </div>
+                            <Link
+                              to="/services"
+                              className="services-view-all-btn"
+                              onClick={() => setServicesOpen(false)}
+                            >
+                              <span>View All Services Overview</span>
+                              <ArrowRight size={14} />
+                            </Link>
+                          </div>
+
+                          {/* 2 Columns: Academic Guidance & Beyond Admission */}
+                          <div className="services-columns-grid">
+                            {/* Column 1: Academic Guidance */}
+                            <div className="services-column">
+                              <div className="services-col-header">
+                                <span className="services-col-num">I.</span>
+                                <div>
+                                  <h5 className="services-col-title">Academic Guidance</h5>
+                                </div>
+                              </div>
+                              <div className="services-items-list">
+                                {academicServicesList.map((srv) => {
+                                  const IconComponent = srv.icon;
+                                  return (
+                                    <div
+                                      key={srv.id}
+                                      className="service-subnav-item"
+                                      onClick={() => handleServiceSelect(srv.id)}
+                                    >
+                                      <div className="service-subnav-icon">
+                                        <IconComponent size={16} />
+                                      </div>
+                                      <div className="service-subnav-content">
+                                        <span className="service-subnav-name">{srv.title}</span>
+                                        <span className="service-subnav-desc">{srv.desc}</span>
+                                      </div>
+                                    </div>
+                                  );
+                                })}
+                              </div>
+                            </div>
+
+                            {/* Column 2: Beyond Admission */}
+                            <div className="services-column">
+                              <div className="services-col-header">
+                                <span className="services-col-num">II.</span>
+                                <div>
+                                  <h5 className="services-col-title">Beyond Admission</h5>
+                                </div>
+                              </div>
+                              <div className="services-items-list">
+                                {beyondServicesList.map((srv) => {
+                                  const IconComponent = srv.icon;
+                                  return (
+                                    <div
+                                      key={srv.id}
+                                      className="service-subnav-item"
+                                      onClick={() => handleServiceSelect(srv.id)}
+                                    >
+                                      <div className="service-subnav-icon">
+                                        <IconComponent size={16} />
+                                      </div>
+                                      <div className="service-subnav-content">
+                                        <span className="service-subnav-name">{srv.title}</span>
+                                        <span className="service-subnav-desc">{srv.desc}</span>
+                                      </div>
+                                    </div>
+                                  );
+                                })}
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    )}
+                  </div>
+                );
+              }
+
               return (
                 <Link
                   key={item.path}
@@ -219,14 +382,6 @@ export function Navbar({ onOpenCounselling, onOpenEvaluation }) {
 
           {/* Right Action Button */}
           <div className="nav-actions-right">
-            <button
-              onClick={onOpenCounselling}
-              className="counselling-cta-btn"
-            >
-              <Sparkles size={15} />
-              <span>Book Free Counselling</span>
-            </button>
-
             {/* Mobile Menu Button */}
             <button
               onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
@@ -291,6 +446,74 @@ export function Navbar({ onOpenCounselling, onOpenEvaluation }) {
                 );
               }
 
+              if (item.hasServicesDropdown) {
+                return (
+                  <div key={item.path} className="mobile-nav-group">
+                    <div
+                      className={`mobile-row ${isActive ? 'active' : ''}`}
+                      onClick={() => setMobileServicesExpanded(!mobileServicesExpanded)}
+                    >
+                      <div className="mobile-row-left">
+                        <Icon size={18} className="mobile-icon" />
+                        <span>{item.name}</span>
+                        <span className="mobile-badge-count">2 Categories</span>
+                      </div>
+                      <ChevronDown size={16} className={`chevron-trans ${mobileServicesExpanded ? 'open' : ''}`} />
+                    </div>
+
+                    {mobileServicesExpanded && (
+                      <div className="mobile-services-expand">
+                        <Link
+                          to="/services"
+                          className="mobile-all-dest-link"
+                          onClick={() => setMobileMenuOpen(false)}
+                        >
+                          <span>All Services Page Overview →</span>
+                        </Link>
+
+                        {/* Category 1 */}
+                        <div className="mobile-serv-col-wrap">
+                          <div className="mobile-serv-col-heading">
+                            <span>I. Academic Guidance</span>
+                          </div>
+                          <div className="mobile-serv-list">
+                            {academicServicesList.map((srv) => (
+                              <div
+                                key={srv.id}
+                                className="mobile-serv-item"
+                                onClick={() => handleServiceSelect(srv.id)}
+                              >
+                                <span>{srv.title}</span>
+                                <ChevronRight size={14} className="chevron-right-muted" />
+                              </div>
+                            ))}
+                          </div>
+                        </div>
+
+                        {/* Category 2 */}
+                        <div className="mobile-serv-col-wrap" style={{ marginTop: '12px' }}>
+                          <div className="mobile-serv-col-heading">
+                            <span>II. Beyond Admission</span>
+                          </div>
+                          <div className="mobile-serv-list">
+                            {beyondServicesList.map((srv) => (
+                              <div
+                                key={srv.id}
+                                className="mobile-serv-item"
+                                onClick={() => handleServiceSelect(srv.id)}
+                              >
+                                <span>{srv.title}</span>
+                                <ChevronRight size={14} className="chevron-right-muted" />
+                              </div>
+                            ))}
+                          </div>
+                        </div>
+                      </div>
+                    )}
+                  </div>
+                );
+              }
+
               return (
                 <Link
                   key={item.path}
@@ -309,17 +532,6 @@ export function Navbar({ onOpenCounselling, onOpenEvaluation }) {
             })}
 
             <div className="mobile-drawer-bottom">
-              <button
-                onClick={() => {
-                  setMobileMenuOpen(false);
-                  onOpenCounselling();
-                }}
-                className="mobile-cta-primary"
-              >
-                <Sparkles size={16} />
-                <span>Book Free Counselling</span>
-              </button>
-
               <button
                 onClick={() => {
                   setMobileMenuOpen(false);
@@ -578,6 +790,265 @@ export function Navbar({ onOpenCounselling, onOpenEvaluation }) {
           margin: 0 auto;
           z-index: 1200;
           animation: megaIn 0.2s ease-out;
+        }
+
+        /* SERVICES 2-COLUMN MEGA DROPDOWN */
+        .services-dropdown-box {
+          position: absolute;
+          top: calc(100% - 4px);
+          left: 0;
+          right: 0;
+          width: 100%;
+          max-width: 920px;
+          margin: 0 auto;
+          z-index: 1200;
+          animation: megaIn 0.2s ease-out;
+        }
+
+        .services-dropdown-inner {
+          background: #ffffff;
+          border-radius: 18px;
+          border: 1.5px solid #e2e8f0;
+          box-shadow: 0 20px 50px rgba(15, 23, 42, 0.16);
+          padding: 22px 26px;
+          box-sizing: border-box;
+        }
+
+        .services-dropdown-header {
+          display: flex;
+          justify-content: space-between;
+          align-items: center;
+          padding-bottom: 12px;
+          border-bottom: 1px solid #f1f5f9;
+          margin-bottom: 16px;
+        }
+
+        .services-dropdown-title {
+          font-size: 1.05rem;
+          font-weight: 800;
+          color: #1c2a4f;
+          margin: 0;
+        }
+
+        .services-dropdown-subtitle {
+          font-size: 0.8rem;
+          color: #64748b;
+          margin: 3px 0 0 0;
+        }
+
+        .services-view-all-btn {
+          display: inline-flex;
+          align-items: center;
+          gap: 6px;
+          font-size: 0.82rem;
+          font-weight: 700;
+          color: #1c2a4f;
+          text-decoration: none;
+          background: #f8fafc;
+          padding: 6px 14px;
+          border-radius: 7px;
+          transition: background 0.2s;
+          white-space: nowrap;
+          border: 1px solid #e2e8f0;
+        }
+
+        .services-view-all-btn:hover {
+          background: #e2e8f0;
+        }
+
+        .services-columns-grid {
+          display: grid;
+          grid-template-columns: repeat(2, 1fr);
+          gap: 20px;
+        }
+
+        .services-column {
+          background: #f8fafc;
+          border-radius: 14px;
+          padding: 16px 18px;
+          border: 1px solid #e2e8f0;
+        }
+
+        .services-col-header {
+          display: flex;
+          align-items: center;
+          gap: 10px;
+          padding-bottom: 12px;
+          margin-bottom: 10px;
+          border-bottom: 1px solid #e2e8f0;
+        }
+
+        .services-col-num {
+          font-family: var(--font-heading, serif);
+          font-size: 1.3rem;
+          font-weight: 700;
+          color: #1c2a4f;
+          opacity: 0.5;
+        }
+
+        .services-col-title {
+          font-size: 0.96rem;
+          font-weight: 800;
+          color: #1c2a4f;
+          margin: 0;
+          letter-spacing: -0.01em;
+        }
+
+        .services-col-badge {
+          font-size: 0.68rem;
+          color: #64748b;
+          font-weight: 600;
+        }
+
+        .services-items-list {
+          display: flex;
+          flex-direction: column;
+          gap: 6px;
+        }
+
+        .service-subnav-item {
+          display: flex;
+          align-items: flex-start;
+          gap: 12px;
+          padding: 8px 10px;
+          border-radius: 9px;
+          background: #ffffff;
+          border: 1px solid transparent;
+          cursor: pointer;
+          transition: all 0.18s ease;
+        }
+
+        .service-subnav-item:hover {
+          background: #ffffff;
+          border-color: #cbd5e1;
+          transform: translateX(3px);
+          box-shadow: 0 4px 12px rgba(28, 42, 79, 0.05);
+        }
+
+        .service-subnav-icon {
+          width: 32px;
+          height: 32px;
+          border-radius: 8px;
+          background: #f1f5f9;
+          color: #1c2a4f;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          flex-shrink: 0;
+          margin-top: 2px;
+          transition: background 0.18s, color 0.18s;
+        }
+
+        .service-subnav-item:hover .service-subnav-icon {
+          background: #1c2a4f;
+          color: #ffffff;
+        }
+
+        .service-subnav-content {
+          display: flex;
+          flex-direction: column;
+          min-width: 0;
+        }
+
+        .service-subnav-name {
+          font-size: 0.86rem;
+          font-weight: 700;
+          color: #1c2a4f;
+          line-height: 1.25;
+        }
+
+        .service-subnav-desc {
+          font-size: 0.72rem;
+          color: #64748b;
+          line-height: 1.3;
+          margin-top: 2px;
+        }
+
+        .services-dropdown-footer {
+          display: flex;
+          align-items: center;
+          justify-content: space-between;
+          gap: 12px;
+          margin-top: 16px;
+          padding-top: 14px;
+          border-top: 1px solid #f1f5f9;
+        }
+
+        .services-footer-prompt {
+          display: flex;
+          align-items: center;
+          gap: 8px;
+          font-size: 0.8rem;
+          color: #475569;
+          font-weight: 500;
+        }
+
+        .services-footer-cta {
+          font-size: 0.82rem;
+          font-weight: 700;
+          color: #1c2a4f;
+          background: #f8fafc;
+          border: 1px solid #cbd5e1;
+          border-radius: 6px;
+          padding: 6px 14px;
+          cursor: pointer;
+          transition: all 0.2s;
+          white-space: nowrap;
+        }
+
+        .services-footer-cta:hover {
+          background: #1c2a4f;
+          color: #ffffff;
+          border-color: #1c2a4f;
+        }
+
+        /* Mobile Services Expansion */
+        .mobile-services-expand {
+          background: #f8fafc;
+          border-radius: 12px;
+          padding: 12px;
+          margin: 8px 0 12px 0;
+          border: 1px solid #e2e8f0;
+        }
+
+        .mobile-serv-col-wrap {
+          background: #ffffff;
+          border-radius: 10px;
+          padding: 10px 12px;
+          border: 1px solid #e2e8f0;
+        }
+
+        .mobile-serv-col-heading {
+          font-size: 0.82rem;
+          font-weight: 800;
+          color: #1c2a4f;
+          padding-bottom: 8px;
+          margin-bottom: 6px;
+          border-bottom: 1px solid #f1f5f9;
+        }
+
+        .mobile-serv-list {
+          display: flex;
+          flex-direction: column;
+          gap: 4px;
+        }
+
+        .mobile-serv-item {
+          display: flex;
+          align-items: center;
+          justify-content: space-between;
+          padding: 8px 10px;
+          border-radius: 6px;
+          font-size: 0.84rem;
+          font-weight: 600;
+          color: #334155;
+          cursor: pointer;
+          transition: background 0.15s;
+        }
+
+        .mobile-serv-item:hover, .mobile-serv-item:active {
+          background: #f1f5f9;
+          color: #1c2a4f;
         }
 
         .mega-hover-bridge {

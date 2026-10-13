@@ -90,9 +90,6 @@ export function DmatGermany({ onOpenCounselling }) {
                   <span>Enquire About dMAT</span>
                   <ArrowRight size={18} />
                 </button>
-                <button onClick={onOpenCounselling} className="btn btn-gold btn-lg">
-                  <span>Book Counselling</span>
-                </button>
               </div>
             </div>
 
@@ -237,33 +234,6 @@ export function DmatGermany({ onOpenCounselling }) {
                 • University-specific eligibility, academic requirements and other admission conditions continue to apply.
               </p>
             </div>
-          </div>
-        </div>
-      </section>
-
-      {/* 6. YOUR MASTER'S JOURNEY STARTS WITH PREPARATION */}
-      <section className="section-py" style={{ background: '#1c2a4f', color: '#ffffff', textAlign: 'center' }}>
-        <div className="container" style={{ maxWidth: '800px' }}>
-          <span style={{ background: 'rgba(245, 158, 11, 0.25)', color: '#94a3b8', padding: '4px 12px', borderRadius: '50px', fontSize: '0.8rem', fontWeight: 700, textTransform: 'uppercase', letterSpacing: '0.5px' }}>
-            FREIE ADMITS
-          </span>
-          <h2 style={{ fontSize: '2.5rem', fontWeight: 800, color: '#ffffff', margin: '16px 0 12px 0' }}>
-            Your Master's Journey Starts With Preparation
-          </h2>
-          <p style={{ fontSize: '1.15rem', color: '#cbd5e1', lineHeight: 1.65, marginBottom: '14px' }}>
-            If Germany is your target destination, start planning early.
-          </p>
-          <div style={{ fontSize: '0.95rem', color: '#94a3b8', fontStyle: 'italic', marginBottom: '32px' }}>
-            Your Journey. Our Guidance. Your Global Future.
-          </div>
-          <div style={{ display: 'flex', gap: '14px', justifyContent: 'center', flexWrap: 'wrap' }}>
-            <button onClick={onOpenCounselling} className="btn btn-gold btn-lg">
-              <span>Enquire About dMAT</span>
-              <ArrowRight size={18} />
-            </button>
-            <button onClick={onOpenCounselling} className="btn btn-primary btn-lg">
-              <span>Book Counselling</span>
-            </button>
           </div>
         </div>
       </section>

@@ -1,40 +1,36 @@
 import React from 'react';
 
-// Line 1: Germany & Netherlands
+// Line 1: Germany & Netherlands (7 universities)
 const line1 = [
-  // Germany (5 universities)
-  { name: 'Technical University of Munich (TUM)', logo: '/images/universitys/germany1.png', country: 'Germany' },
-  { name: 'Ludwig Maximilian University of Munich (LMU)', logo: '/images/universitys/germany2.png', country: 'Germany' },
+  { name: 'Technical University of Munich (TUM)', logo: '/images/universitys/uni/5.jpeg', country: 'Germany' },
   { name: 'Heidelberg University', logo: '/images/universitys/germany3.jpg', country: 'Germany' },
   { name: 'RWTH Aachen University', logo: '/images/universitys/germany4.png', country: 'Germany' },
-  { name: 'Frankfurt School of Finance & Management', logo: '/images/universitys/germany5.png', country: 'Germany' },
-  // Netherlands (3 universities)
-  { name: 'University of Amsterdam', logo: '/images/universitys/Netherlands1.png', country: 'Netherlands' },
-  { name: 'Eindhoven University of Technology (TU/e)', logo: '/images/universitys/Netherlands2.png', country: 'Netherlands' },
-  { name: 'Utrecht University', logo: '/images/universitys/Netherlands3.jpg', country: 'Netherlands' },
+  { name: 'Delft University of Technology (TU Delft)', logo: '/images/universitys/uni/1.jpeg', country: 'Netherlands' },
+  { name: 'University of Amsterdam', logo: '/images/universitys/uni/2.jpeg', country: 'Netherlands' },
+  { name: 'Leiden University', logo: '/images/universitys/uni/3.jpeg', country: 'Netherlands' },
+  { name: 'Eindhoven University of Technology (TU/e)', logo: '/images/universitys/uni/4.jpeg', country: 'Netherlands' },
 ];
 
-// Line 2: Italy & Finland
+// Line 2: Germany, Italy & Finland (7 universities)
 const line2 = [
-  // Italy (3 universities)
+  { name: 'Karlsruhe Institute of Technology (KIT)', logo: '/images/universitys/uni/6.jpeg', country: 'Germany' },
+  { name: 'Technical University of Berlin (TU Berlin)', logo: '/images/universitys/uni/7.jpeg', country: 'Germany' },
+  { name: 'TU Dresden', logo: '/images/universitys/uni/8.jpeg', country: 'Germany' },
   { name: 'Politecnico di Milano (POLIMI)', logo: '/images/universitys/Italy1.jpg', country: 'Italy' },
   { name: 'University of Bologna', logo: '/images/universitys/Italy2.jpg', country: 'Italy' },
-  { name: 'Sapienza University of Rome', logo: '/images/universitys/italy3.jpg', country: 'Italy' },
-  // Finland (2 universities)
   { name: 'Aalto University', logo: '/images/universitys/finland1.jpg', country: 'Finland' },
   { name: 'University of Helsinki', logo: '/images/universitys/finland2.jpg', country: 'Finland' },
 ];
 
-// Line 3: Italy, Austria & Belgium
+// Line 3: Austria, Belgium & Italy (7 universities)
 const line3 = [
-  // Italy (1 university)
-  { name: 'University of Padua', logo: '/images/universitys/italy4.png', country: 'Italy' },
-  // Austria (2 universities)
-  { name: 'University of Vienna', logo: '/images/universitys/Austria1.png', country: 'Austria' },
+  { name: 'University of Vienna', logo: '/images/universitys/uni/9.jpeg', country: 'Austria' },
+  { name: 'University of Innsbruck', logo: '/images/universitys/uni/10.jpeg', country: 'Austria' },
   { name: 'TU Wien', logo: '/images/universitys/Austria2.png', country: 'Austria' },
-  // Belgium (2 universities)
   { name: 'KU Leuven', logo: '/images/universitys/Belgium.avif', country: 'Belgium' },
   { name: 'Ghent University', logo: '/images/universitys/Belgium2.jpg', country: 'Belgium' },
+  { name: 'Sapienza University of Rome', logo: '/images/universitys/italy3.jpg', country: 'Italy' },
+  { name: 'University of Padua', logo: '/images/universitys/italy4.png', country: 'Italy' },
 ];
 
 export function UniversitySlider() {
@@ -75,11 +71,25 @@ export function UniversitySlider() {
     <div className="university-slider-wrapper">
       <div className="slider-fade slider-fade-left"></div>
       <div className="slider-fade slider-fade-right"></div>
+
+      <div className="container" style={{ textAlign: 'center', marginBottom: '36px', position: 'relative', zIndex: 1 }}>
+        <h2 style={{
+          fontFamily: 'var(--font-heading)',
+          fontSize: 'clamp(1.9rem, 3vw, 2.5rem)',
+          fontWeight: 700,
+          color: '#1c2a4f',
+          margin: 0,
+          letterSpacing: '-0.02em',
+          lineHeight: 1.2
+        }}>
+          Explore Leading Universities Across Europe
+        </h2>
+      </div>
       
       <div className="slider-rows">
-        {renderTrack(line1, 'left', '40s', 4)}
-        {renderTrack(line2, 'right', '36s', 6)}
-        {renderTrack(line3, 'left', '38s', 6)}
+        {renderTrack(line1, 'left', '75s', 4)}
+        {renderTrack(line2, 'right', '68s', 4)}
+        {renderTrack(line3, 'left', '72s', 4)}
       </div>
 
       <style>{`
@@ -87,8 +97,8 @@ export function UniversitySlider() {
           position: relative;
           width: 100%;
           overflow: hidden;
-          padding: 52px 0;
-          background: #f8fafc;
+          padding: 60px 0;
+          background: #ffffff;
           border-top: 1px solid #e2e8f0;
           border-bottom: 1px solid #e2e8f0;
         }
@@ -96,22 +106,22 @@ export function UniversitySlider() {
           position: absolute;
           top: 0;
           bottom: 0;
-          width: 200px;
+          width: 220px;
           z-index: 2;
           pointer-events: none;
         }
         .slider-fade-left {
           left: 0;
-          background: linear-gradient(to right, #f8fafc 0%, rgba(248,250,252,0) 100%);
+          background: linear-gradient(to right, #ffffff 0%, rgba(255,255,255,0) 100%);
         }
         .slider-fade-right {
           right: 0;
-          background: linear-gradient(to left, #f8fafc 0%, rgba(248,250,252,0) 100%);
+          background: linear-gradient(to left, #ffffff 0%, rgba(255,255,255,0) 100%);
         }
         .slider-rows {
           display: flex;
           flex-direction: column;
-          gap: 32px;
+          gap: 44px;
         }
         .slider-track-container {
           display: flex;
@@ -119,7 +129,8 @@ export function UniversitySlider() {
         }
         .slider-track {
           display: flex;
-          gap: 32px;
+          align-items: center;
+          gap: 80px;
           animation: var(--anim-name) var(--speed) linear infinite;
           will-change: transform;
         }
@@ -130,33 +141,28 @@ export function UniversitySlider() {
           display: flex;
           align-items: center;
           justify-content: center;
-          height: 160px;
-          min-width: 380px;
-          max-width: 480px;
-          padding: 24px 48px;
-          background: #ffffff;
-          border: 1px solid #e2e8f0;
-          border-radius: 24px;
-          box-shadow: 0 4px 14px rgba(28, 42, 79, 0.05);
+          height: 135px;
+          padding: 0 16px;
           flex-shrink: 0;
           cursor: pointer;
-          transition: all 0.25s ease;
+          background: transparent;
+          border: none;
+          box-shadow: none;
+          transition: transform 0.3s cubic-bezier(0.16, 1, 0.3, 1);
           transform: translateZ(0);
           backface-visibility: hidden;
         }
         .uni-logo-card:hover {
-          border-color: #1c2a4f;
-          transform: translateY(-6px) translateZ(0);
-          box-shadow: 0 12px 32px rgba(28, 42, 79, 0.12);
+          transform: scale(1.08) translateZ(0);
         }
         .uni-logo-img {
-          max-height: 125px;
-          max-width: 360px;
+          max-height: 120px;
+          max-width: 340px;
           width: auto;
           height: auto;
           object-fit: contain;
           display: block;
-          border-radius: 6px;
+          mix-blend-mode: multiply;
           image-rendering: -webkit-optimize-contrast;
           image-rendering: crisp-edges;
           image-rendering: high-quality;
@@ -175,21 +181,18 @@ export function UniversitySlider() {
         }
 
         @media (max-width: 768px) {
-          .university-slider-wrapper { padding: 40px 0; }
-          .slider-rows { gap: 20px; }
-          .slider-track { gap: 20px; }
+          .university-slider-wrapper { padding: 36px 0; }
+          .slider-rows { gap: 28px; }
+          .slider-track { gap: 48px; }
           .uni-logo-card { 
-            height: 110px; 
-            min-width: 250px; 
-            max-width: 300px; 
-            padding: 16px 28px; 
-            border-radius: 18px;
+            height: 85px; 
+            padding: 0 8px; 
           }
           .uni-logo-img { 
-            max-height: 85px; 
-            max-width: 240px; 
+            max-height: 75px; 
+            max-width: 220px; 
           }
-          .slider-fade { width: 90px; }
+          .slider-fade { width: 80px; }
         }
       `}</style>
     </div>

@@ -1,15 +1,18 @@
 import React from 'react';
 import { AboutHeroIllustration } from '../components/illustrations/AboutIllustrations';
+import { HeroIllustration } from '../components/illustrations/HeroIllustration';
+import { UniversitySlider } from '../components/UniversitySlider';
 import { 
   Target, 
   Compass, 
   Sparkles, 
   ArrowRight, 
   CheckCircle2, 
-  ShieldCheck
+  ShieldCheck,
+  UserCheck
 } from 'lucide-react';
 
-export function AboutUs({ onOpenCounselling }) {
+export function AboutUs({ onOpenCounselling, onOpenEvaluation }) {
   const approachSteps = [
     {
       step: '01',
@@ -43,58 +46,102 @@ export function AboutUs({ onOpenCounselling }) {
     }
   ];
 
-  const whyStudentsChoose = [
-    {
-      title: 'Personalised Guidance',
-      desc: 'Every student has a different academic profile and career goal. We provide tailored recommendations rather than generic templates.'
-    },
-    {
-      title: 'European Study Opportunities',
-      desc: 'We help students explore diverse, world-class academic and career opportunities across Germany and the wider European Union.'
-    },
-    {
-      title: 'Transparent Process',
-      desc: 'We explain entry requirements, real timelines, living costs, and processes clearly without making misleading guarantees.'
-    },
-    {
-      title: 'End-to-End Support',
-      desc: 'Our guidance covers the complete journey from initial counseling to university admissions, visa file checks, and pre-departure planning.'
-    }
-  ];
-
   return (
     <div>
-      {/* 1. HERO HEADER */}
+      {/* 1. HERO SECTION */}
+      <section className="hero-section-premium">
+        {/* Animated Mesh Background */}
+        <div className="hero-mesh-bg" aria-hidden="true">
+          <div className="hero-orb hero-orb-1" />
+          <div className="hero-orb hero-orb-2" />
+          <div className="hero-orb hero-orb-3" />
+          <div className="hero-grid-dots" />
+        </div>
+
+        <div className="container" style={{ position: 'relative', zIndex: 1 }}>
+          <div className="hero-grid">
+            {/* Left Column */}
+            <div className="hero-left-col">
+
+              {/* Premium eyebrow pill */}
+              <div className="hero-eyebrow-pill">
+                <span className="hero-eyebrow-dot" />
+                <span>Trusted European Study Abroad Experts</span>
+              </div>
+
+              <h1 className="hero-headline">
+                Where Academic <span className="hero-headline-dark">Ambition</span>
+                <br className="hero-br-hide-sm" />
+                Meets <span className="hero-gradient-text-blue">European Opportunity</span>
+              </h1>
+
+              <p className="hero-subtext">
+                Personalised guidance for ambitious students seeking the right university and programme across <strong>Germany and Europe</strong>.
+              </p>
+
+              {/* Action Buttons */}
+              <div className="hero-cta-row">
+                <button onClick={onOpenCounselling} className="btn btn-primary btn-lg hero-btn-primary">
+                  <Sparkles size={18} />
+                  <span>Book Free Counselling</span>
+                  <ArrowRight size={16} />
+                </button>
+                <button onClick={onOpenEvaluation} className="btn hero-btn-outline btn-lg">
+                  <UserCheck size={18} />
+                  <span>Get Profile Evaluation</span>
+                </button>
+              </div>
+            </div>
+
+            {/* Right Column: Hero Illustration */}
+            <div className="hero-art-col">
+              <div className="hero-art-glow-ring" />
+              <div className="hero-art-inner animate-float">
+                <HeroIllustration />
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* 2. SLIDER */}
+      <UniversitySlider />
+
+      {/* 3. ABOUT US */}
       <section style={{
         background: 'linear-gradient(180deg, #f8fafc 0%, #ffffff 100%)',
-        padding: '60px 0 65px 0'
+        padding: '64px 0 65px 0'
       }}>
         <div className="container">
           <div style={{ display: 'grid', gridTemplateColumns: '1.15fr 0.85fr', alignItems: 'center', gap: '48px' }} className="about-hero-grid">
             <div>
               <span className="badge-pill badge-primary">
-                <Sparkles size={14} /> About FREIE ADMITS
+                <Sparkles size={14} /> ABOUT US
               </span>
-              <h1 style={{ fontSize: '2.85rem', fontWeight: 800, color: '#1c2a4f', lineHeight: 1.18, marginBottom: '20px', letterSpacing: '-0.02em' }}>
-                Education Deserves a <span style={{ color: '#1c2a4f' }}>Considered Choice</span>
+              <h1 className="about-hero-title">
+                Education Deserves a Considered Choice.
               </h1>
-              <p style={{ fontSize: '1.15rem', color: '#475569', lineHeight: 1.65, marginBottom: '16px' }}>
-                <strong>FREIE ADMITS</strong> is a European higher-education advisory built around a simple belief: where and what you study deserves careful consideration.
-              </p>
-              <p style={{ fontSize: '1.02rem', color: '#64748b', lineHeight: 1.6, marginBottom: '16px' }}>
-                We help students make sense of the European academic landscape — its universities, programmes, admission pathways and possibilities — and approach it with greater knowledge and direction.
-              </p>
-              <p style={{ fontSize: '1.02rem', color: '#64748b', lineHeight: 1.6, marginBottom: '16px' }}>
-                Our counsel is individual, informed and academically grounded, shaped by the understanding that no two students arrive with the same background or ambition.
-              </p>
-              <p style={{ fontSize: '1.02rem', color: '#64748b', lineHeight: 1.6, marginBottom: '28px' }}>
-                We bring clarity to the possibilities; students can choose their path with purpose.
-              </p>
-
-              <button onClick={onOpenCounselling} className="btn btn-primary btn-lg">
-                <span>Book a Counselling Session</span>
-                <ArrowRight size={18} />
-              </button>
+              <div className="about-editorial-prose" style={{
+                fontFamily: "'Cormorant Garamond', serif",
+                fontStyle: 'italic',
+                fontWeight: 500,
+                fontSize: '1.42rem',
+                lineHeight: 1.65,
+                color: '#334155'
+              }}>
+                <p style={{ marginBottom: '18px' }}>
+                  <strong style={{ fontStyle: 'normal', fontWeight: 700, color: '#1c2a4f' }}>FREIE ADMITS</strong> is a European higher-education advisory built around a simple belief: where and what you study deserves careful consideration.
+                </p>
+                <p style={{ marginBottom: '18px' }}>
+                  We help students make sense of the European academic landscape — its universities, programmes, admission pathways and possibilities — and approach it with greater knowledge and direction.
+                </p>
+                <p style={{ marginBottom: '18px' }}>
+                  Our counsel is individual, informed and academically grounded, shaped by the understanding that no two students arrive with the same background or ambition.
+                </p>
+                <p style={{ margin: 0 }}>
+                  We bring clarity to the possibilities; students can choose their path with purpose.
+                </p>
+              </div>
             </div>
 
             <div className="about-hero-art">
@@ -104,12 +151,72 @@ export function AboutUs({ onOpenCounselling }) {
         </div>
       </section>
 
-      {/* 2. WHAT WE DO */}
-      <section className="section-py" style={{ background: '#ffffff' }}>
+      {/* 4. OUR MISSION & OUR VISION */}
+      <section className="section-py" style={{ background: '#ffffff', borderTop: '1px solid #f1f5f9' }}>
+        <div className="container" style={{ maxWidth: '820px', margin: '0 auto' }}>
+          
+          {/* Mission Block */}
+          <div style={{ marginBottom: '64px' }}>
+            <div style={{ display: 'flex', alignItems: 'center', gap: '12px', marginBottom: '14px' }}>
+              <span style={{ fontSize: '0.8rem', fontWeight: 800, textTransform: 'uppercase', letterSpacing: '0.12em', color: '#1c2a4f' }}>
+                Our Mission
+              </span>
+              <div style={{ flex: 1, height: '1px', background: '#e2e8f0' }} />
+            </div>
+
+            <h3 style={{ fontFamily: 'var(--font-heading)', fontWeight: 600, fontStyle: 'italic', fontSize: '2.1rem', color: '#1c2a4f', lineHeight: 1.25, marginBottom: '24px' }}>
+              To Cultivate Scholars, Not Merely Applicants.
+            </h3>
+
+            <div style={{ color: '#475569', fontSize: '1.08rem', lineHeight: 1.8 }}>
+              <p style={{ marginBottom: '18px' }}>
+                FREIE ADMITS exists to uphold the seriousness of the academic journey. We believe a university education is among the most consequential commitments a young person will make, and it deserves to be entered with rigor, reflection, and intellectual honesty.
+              </p>
+              <p style={{ margin: 0 }}>
+                We seek to nurture in every student a clear sense of scholarly purpose: the discipline to question, the humility to learn, and the resolve to pursue excellence for its own sake. In doing so, we hope to restore to the pursuit of higher education its proper dignity, where ambition is governed by understanding, and achievement is measured by substance rather than status.
+              </p>
+            </div>
+          </div>
+
+          {/* Elegant Section Break */}
+          <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'center', gap: '16px', margin: '56px 0' }}>
+            <div style={{ width: '40px', height: '1px', background: '#cbd5e1' }} />
+            <div style={{ width: '6px', height: '6px', borderRadius: '50%', background: '#1c2a4f', opacity: 0.4 }} />
+            <div style={{ width: '40px', height: '1px', background: '#cbd5e1' }} />
+          </div>
+
+          {/* Vision Block */}
+          <div>
+            <div style={{ display: 'flex', alignItems: 'center', gap: '12px', marginBottom: '14px' }}>
+              <span style={{ fontSize: '0.8rem', fontWeight: 800, textTransform: 'uppercase', letterSpacing: '0.12em', color: '#475569' }}>
+                Our Vision
+              </span>
+              <div style={{ flex: 1, height: '1px', background: '#e2e8f0' }} />
+            </div>
+
+            <h3 style={{ fontFamily: 'var(--font-heading)', fontWeight: 600, fontStyle: 'italic', fontSize: '2.1rem', color: '#1c2a4f', lineHeight: 1.25, marginBottom: '24px' }}>
+              To Advance the Enduring Ideals of Scholarship.
+            </h3>
+
+            <div style={{ color: '#475569', fontSize: '1.08rem', lineHeight: 1.8 }}>
+              <p style={{ marginBottom: '18px' }}>
+                We envision a generation of students who approach the world's great institutions not as destinations to be won, but as communities of thought to join and enrich. We aspire to become a trusted name in international education, recognized for our principles as much as our outcomes.
+              </p>
+              <p style={{ margin: 0 }}>
+                Guided by integrity, intellectual independence and a long view of what learning can achieve, we aim to help shape a culture in which education serves both the individual and the wider good. In every student we support, we hope to see the beginnings of a life devoted to knowledge, service and distinction.
+              </p>
+            </div>
+          </div>
+
+        </div>
+      </section>
+
+      {/* 5. WHAT WE DO */}
+      <section className="section-py" style={{ background: '#f8fafc', borderTop: '1px solid #e2e8f0' }}>
         <div className="container" style={{ maxWidth: '860px', margin: '0 auto', textAlign: 'center' }}>
           <span className="badge-pill badge-primary">Comprehensive Guidance</span>
           <h2 className="section-title">
-            What <span className="text-highlight">We Do</span>
+            WHAT <span className="text-highlight">WE DO</span>
           </h2>
           <h3 style={{ fontFamily: 'var(--font-heading)', fontWeight: 500, fontStyle: 'italic', fontSize: '1.8rem', color: '#1c2a4f', marginBottom: '24px' }}>
             From Ambition to Academic Direction.
@@ -128,35 +235,45 @@ export function AboutUs({ onOpenCounselling }) {
             <p style={{ marginBottom: '16px' }}>
               Behind every recommendation is research. Behind every application is preparation. And behind every pathway is a reason for choosing it.
             </p>
-            <p>
-              Our purpose is not to multiply possibilities, but to identify that worth pursuing.
-            </p>
           </div>
         </div>
       </section>
 
-      {/* 3. OUR APPROACH (5 STAGES) */}
-      <section className="section-py" style={{ background: '#f8fafc', borderTop: '1px solid #e2e8f0', borderBottom: '1px solid #e2e8f0' }}>
-        <div className="container">
-          <div className="section-header">
-            <span className="badge-pill badge-primary">Structured Methodology</span>
-            <h2 className="section-title">
-              Our <span>Approach</span>
+      {/* 6. OUR APPROACH (5 STAGES) - IN LAST */}
+      <section className="section-py" style={{ background: '#ffffff', borderTop: '1px solid #e2e8f0', padding: '80px 0 90px 0' }}>
+        <div className="container" style={{ maxWidth: '1160px' }}>
+          <div className="section-header" style={{ textAlign: 'center', marginBottom: '56px' }}>
+            <h2 style={{
+              fontFamily: 'var(--font-heading)',
+              fontSize: '3rem',
+              fontWeight: 700,
+              color: '#1c2a4f',
+              marginBottom: '14px',
+              letterSpacing: '-0.01em'
+            }}>
+              Our Approach
             </h2>
-            <p className="section-desc">
+            <p style={{
+              fontSize: '1.1rem',
+              color: '#475569',
+              maxWidth: '680px',
+              margin: '0 auto',
+              lineHeight: 1.6
+            }}>
               A 5-stage framework designed to give clarity, avoid common application errors, and keep you confident.
             </p>
           </div>
 
-          <div className="milestone-grid">
+          {/* 3 + 2 Grid Layout matching the screenshot */}
+          <div className="approach-cards-grid">
             {approachSteps.map((st, i) => (
-              <div key={i} className="milestone-card">
-                <div className="milestone-img-wrap">
-                  <img src={st.img} alt={st.title} className="milestone-img" loading="lazy" />
+              <div key={i} className="approach-card">
+                <div className="approach-card-img-wrap">
+                  <img src={st.img} alt={st.title} className="approach-card-img" />
                 </div>
-                <div className="milestone-content">
-                  <h3 className="milestone-title">{st.title}</h3>
-                  <p className="milestone-desc">{st.desc}</p>
+                <div className="approach-card-body">
+                  <h3 className="approach-card-title">{st.title}</h3>
+                  <p className="approach-card-desc">{st.desc}</p>
                 </div>
               </div>
             ))}
@@ -164,192 +281,335 @@ export function AboutUs({ onOpenCounselling }) {
         </div>
       </section>
 
+
+
+
+
       <style>{`
-        /* ====== MILESTONE TIMELINE ====== */
-        .milestone-grid {
+        /* ====== PREMIUM HERO KEYFRAMES ====== */
+        @keyframes orbFloat1 {
+          0%, 100% { transform: translate(0, 0) scale(1); }
+          33% { transform: translate(30px, -20px) scale(1.05); }
+          66% { transform: translate(-20px, 15px) scale(0.97); }
+        }
+        @keyframes orbFloat2 {
+          0%, 100% { transform: translate(0, 0) scale(1); }
+          40% { transform: translate(-40px, 30px) scale(1.08); }
+          70% { transform: translate(20px, -10px) scale(0.95); }
+        }
+        @keyframes orbFloat3 {
+          0%, 100% { transform: translate(0, 0); }
+          50% { transform: translate(25px, 20px); }
+        }
+        @keyframes glowPulse {
+          0%, 100% { opacity: 0.5; transform: scale(1); }
+          50% { opacity: 0.75; transform: scale(1.06); }
+        }
+        @keyframes eyebrowFade {
+          from { opacity: 0; transform: translateY(-8px); }
+          to { opacity: 1; transform: translateY(0); }
+        }
+        @keyframes dotScroll {
+          from { background-position: 0 0; }
+          to { background-position: 40px 40px; }
+        }
+
+        /* ====== HERO SECTION ====== */
+        .hero-section-premium {
+          position: relative;
+          overflow: hidden;
+          padding: 140px 0 160px 0;
+          min-height: 85vh;
+          display: flex;
+          align-items: center;
+          background: #ffffff;
+        }
+
+        /* Animated mesh/orb background */
+        .hero-mesh-bg {
+          position: absolute;
+          inset: 0;
+          pointer-events: none;
+          z-index: 0;
+        }
+        .hero-orb {
+          position: absolute;
+          border-radius: 50%;
+          filter: blur(70px);
+        }
+        .hero-orb-1 {
+          width: 540px; height: 540px;
+          top: -15%; right: -8%;
+          background: radial-gradient(circle, rgba(28, 42, 79, 0.05) 0%, rgba(28, 42, 79, 0.02) 60%, transparent 100%);
+          animation: orbFloat1 14s ease-in-out infinite;
+        }
+        .hero-orb-2 {
+          width: 420px; height: 420px;
+          bottom: -10%; left: -6%;
+          background: radial-gradient(circle, rgba(148, 163, 184, 0.1) 0%, rgba(148, 163, 184, 0.03) 60%, transparent 100%);
+          animation: orbFloat2 18s ease-in-out infinite;
+        }
+        .hero-orb-3 {
+          width: 280px; height: 280px;
+          top: 40%; left: 40%;
+          background: radial-gradient(circle, rgba(28, 42, 79, 0.04) 0%, transparent 70%);
+          animation: orbFloat3 10s ease-in-out infinite;
+        }
+        .hero-grid-dots {
+          position: absolute;
+          inset: 0;
+          background-image: radial-gradient(rgba(28, 42, 79, 0.05) 1.5px, transparent 1.5px);
+          background-size: 28px 28px;
+          animation: dotScroll 6s linear infinite;
+          opacity: 0.7;
+        }
+
+        /* ====== HERO GRID ====== */
+        .hero-grid {
+          display: grid;
+          grid-template-columns: 1.15fr 0.85fr;
+          align-items: center;
+          gap: 48px;
+        }
+
+        .hero-left-col {
+          animation: eyebrowFade 0.6s ease both;
+        }
+
+        /* ====== EYEBROW PILL ====== */
+        .hero-eyebrow-pill {
+          display: inline-flex;
+          align-items: center;
+          gap: 8px;
+          background: rgba(255, 255, 255, 0.85);
+          border: 1.5px solid rgba(147, 197, 253, 0.6);
+          border-radius: 100px;
+          padding: 6px 14px 6px 10px;
+          font-size: 0.78rem;
+          font-weight: 700;
+          color: #1c2a4f;
+          margin-bottom: 20px;
+          backdrop-filter: blur(8px);
+          box-shadow: 0 2px 12px rgba(59, 130, 246, 0.12);
+          letter-spacing: 0.02em;
+        }
+        .hero-eyebrow-dot {
+          width: 8px; height: 8px;
+          border-radius: 50%;
+          background: #22c55e;
+          box-shadow: 0 0 0 3px rgba(34, 197, 94, 0.25);
+          animation: glowPulse 2.5s ease-in-out infinite;
+          flex-shrink: 0;
+        }
+
+        /* ====== HEADLINE ====== */
+        .hero-headline {
+          font-size: clamp(2.3rem, 3.8vw, 3.35rem);
+          font-weight: 700;
+          color: #1c2a4f;
+          line-height: 1.14;
+          margin-bottom: 20px;
+          letter-spacing: -0.03em;
+          font-family: var(--font-heading);
+        }
+        .hero-headline-dark { color: #1c2a4f; }
+        .hero-gradient-text-blue {
+          background: linear-gradient(135deg, #1c2a4f 0%, #1c2a4f 50%, #0ea5e9 100%);
+          -webkit-background-clip: text;
+          -webkit-text-fill-color: transparent;
+          background-clip: text;
+        }
+        .hero-br-hide-sm { display: inline; }
+
+        /* ====== SUBTEXT ====== */
+        .hero-subtext {
+          font-size: 1.07rem;
+          color: #475569;
+          line-height: 1.68;
+          margin-bottom: 28px;
+          max-width: 580px;
+        }
+
+        /* ====== CTA ROW ====== */
+        .hero-cta-row {
+          display: flex;
+          gap: 14px;
+          flex-wrap: wrap;
+          align-items: center;
+          margin-bottom: 28px;
+        }
+        .hero-btn-primary {
+          box-shadow: 0 10px 28px -4px rgba(29, 78, 216, 0.42), 0 0 0 0 rgba(29,78,216,0);
+          padding: 14px 28px;
+          transition: box-shadow 0.25s ease, transform 0.2s ease;
+        }
+        .hero-btn-primary:hover {
+          box-shadow: 0 14px 36px -4px rgba(29, 78, 216, 0.55);
+          transform: translateY(-2px);
+        }
+        .hero-btn-outline {
+          background: rgba(255,255,255,0.9);
+          border: 1.5px solid #cbd5e1;
+          padding: 14px 24px;
+          color: #1c2a4f;
+          backdrop-filter: blur(8px);
+          transition: border-color 0.2s ease, background 0.2s ease, transform 0.2s ease;
+        }
+        .hero-btn-outline:hover {
+          background: #f8faff;
+          border-color: #93c5fd;
+          color: #1c2a4f;
+          transform: translateY(-2px);
+        }
+
+        /* ====== ART COLUMN ====== */
+        .hero-art-col {
+          position: relative;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+        }
+        .hero-art-glow-ring {
+          position: absolute;
+          width: 88%;
+          height: 88%;
+          border-radius: 50%;
+          background: radial-gradient(circle, rgba(191, 219, 254, 0.45) 0%, rgba(254, 243, 199, 0.25) 60%, transparent 100%);
+          animation: glowPulse 5s ease-in-out infinite;
+          pointer-events: none;
+        }
+        .hero-art-inner {
+          position: relative;
+          z-index: 1;
+          width: 100%;
+          max-width: 560px;
+        }
+
+        .about-hero-title {
+          font-size: clamp(1.75rem, 2.5vw, 2.65rem);
+          font-weight: 800;
+          color: #1c2a4f;
+          line-height: 1.2;
+          margin-bottom: 20px;
+          letter-spacing: -0.02em;
+          white-space: nowrap;
+        }
+
+        /* ====== OUR APPROACH 3+2 CARDS GRID (FROM SCREENSHOT) ====== */
+        .approach-cards-grid {
           display: flex;
           flex-wrap: wrap;
           justify-content: center;
-          gap: 24px;
+          gap: 28px;
         }
-        .milestone-card {
+
+        .approach-card {
+          flex: 0 0 calc(33.333% - 20px);
+          max-width: calc(33.333% - 20px);
           background: #ffffff;
-          border: 1px solid #e2e8f0;
-          border-radius: 16px;
-          width: calc(33.333% - 16px);
-          min-width: 280px;
+          border: 1.5px solid #eef2f6;
+          border-radius: 20px;
           overflow: hidden;
-          transition: transform 0.25s ease, box-shadow 0.25s ease;
+          box-shadow: 0 8px 30px rgba(28, 42, 79, 0.05);
           display: flex;
           flex-direction: column;
+          transition: transform 0.25s ease, box-shadow 0.25s ease, border-color 0.25s ease;
         }
-        .milestone-card:hover {
-          transform: translateY(-4px);
-          box-shadow: 0 12px 32px rgba(28, 42, 79, 0.08);
+
+        .approach-card:hover {
+          transform: translateY(-5px);
+          box-shadow: 0 16px 40px rgba(28, 42, 79, 0.1);
+          border-color: #cbd5e1;
         }
-        .milestone-img-wrap {
-          position: relative;
+
+        .approach-card-img-wrap {
           width: 100%;
-          padding-top: 70%;
+          height: 240px;
           background: #ffffff;
-          overflow: hidden;
-          border-bottom: 1px solid #e2e8f0;
+          padding: 24px 24px 10px 24px;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          box-sizing: border-box;
         }
-        .milestone-img {
-          position: absolute;
-          top: 0;
-          left: 0;
+
+        .approach-card-img {
           width: 100%;
           height: 100%;
           object-fit: contain;
-          padding: 16px;
-          box-sizing: border-box;
-          transition: transform 0.5s ease;
+          display: block;
         }
-        .milestone-card:hover .milestone-img {
-          transform: scale(1.05);
-        }
-        .milestone-content {
-          padding: 32px 24px 24px;
+
+        .approach-card-body {
+          padding: 16px 28px 36px 28px;
           display: flex;
           flex-direction: column;
           flex: 1;
         }
-        .milestone-title {
-          font-size: 1.25rem;
+
+        .approach-card-title {
+          font-size: 1.35rem;
           font-weight: 700;
           color: #1c2a4f;
           margin: 0 0 10px 0;
-          line-height: 1.3;
+          letter-spacing: -0.01em;
         }
-        .milestone-desc {
-          font-size: 0.95rem;
-          color: #475569;
-          line-height: 1.6;
+
+        .approach-card-desc {
+          font-size: 0.96rem;
+          color: #64748b;
+          line-height: 1.65;
           margin: 0;
         }
-        
+
         @media (max-width: 992px) {
-          .milestone-card { width: calc(50% - 12px); }
+          .approach-card {
+            flex: 0 0 calc(50% - 15px);
+            max-width: calc(50% - 15px);
+          }
         }
+
         @media (max-width: 640px) {
-          .milestone-card { width: 100%; }
+          .approach-card {
+            flex: 0 0 100%;
+            max-width: 100%;
+          }
+          .approach-card-img-wrap {
+            height: 200px;
+            padding: 18px;
+          }
         }
-      `}</style>
 
-      {/* 4. MISSION & VISION */}
-      <section className="section-py" style={{ background: '#ffffff' }}>
-        <div className="container">
-          <div style={{ display: 'grid', gridTemplateColumns: 'repeat(2, 1fr)', gap: '32px' }} className="mission-grid">
-            {/* Mission */}
-            <div className="card-white" style={{ borderTop: '5px solid #1c2a4f', padding: '36px', display: 'flex', flexDirection: 'column' }}>
-              <div style={{ width: '56px', height: '56px', borderRadius: '14px', background: '#f8fafc', color: '#1c2a4f', display: 'flex', alignItems: 'center', justifyContent: 'center', marginBottom: '20px' }}>
-                <Target size={30} />
-              </div>
-              <h3 style={{ fontSize: '1.6rem', fontWeight: 800, color: '#1c2a4f', marginBottom: '8px', textTransform: 'uppercase' }}>
-                Our Mission
-              </h3>
-              <h4 style={{ fontFamily: 'var(--font-heading)', fontWeight: 500, fontStyle: 'italic', fontSize: '1.4rem', color: '#1c2a4f', marginBottom: '20px' }}>
-                To Cultivate Scholars, Not Merely Applicants.
-              </h4>
-              <div style={{ color: '#475569', fontSize: '1.02rem', lineHeight: 1.6, flex: 1 }}>
-                <p style={{ marginBottom: '14px' }}>
-                  FREIE ADMITS exists to uphold the seriousness of the academic journey. We believe a university education is among the most consequential commitments a young person will make, and it deserves to be entered with rigor, reflection, and intellectual honesty.
-                </p>
-                <p style={{ marginBottom: '14px' }}>
-                  We seek to nurture in every student a clear sense of scholarly purpose: the discipline to question, the humility to learn, and the resolve to pursue excellence for its own sake. In doing so, we hope to restore to the pursuit of higher education its proper dignity, where ambition is governed by understanding, and achievement is measured by substance rather than status.
-                </p>
-              </div>
-              <p style={{ fontStyle: 'italic', fontSize: '0.95rem', color: '#64748b', marginTop: '16px', borderTop: '1px solid #e2e8f0', paddingTop: '16px' }}>
-                To cultivate scholars, not merely applicants, guided by rigour, reflection and purpose.
-              </p>
-            </div>
-
-            {/* Vision */}
-            <div className="card-white" style={{ borderTop: '5px solid #475569', padding: '36px', display: 'flex', flexDirection: 'column' }}>
-              <div style={{ width: '56px', height: '56px', borderRadius: '14px', background: '#f8fafc', color: '#475569', display: 'flex', alignItems: 'center', justifyContent: 'center', marginBottom: '20px' }}>
-                <Compass size={30} />
-              </div>
-              <h3 style={{ fontSize: '1.6rem', fontWeight: 800, color: '#1c2a4f', marginBottom: '8px', textTransform: 'uppercase' }}>
-                Our Vision
-              </h3>
-              <h4 style={{ fontFamily: 'var(--font-heading)', fontWeight: 500, fontStyle: 'italic', fontSize: '1.4rem', color: '#1c2a4f', marginBottom: '20px' }}>
-                To Advance the Enduring Ideals of Scholarship.
-              </h4>
-              <div style={{ color: '#475569', fontSize: '1.02rem', lineHeight: 1.6, flex: 1 }}>
-                <p style={{ marginBottom: '14px' }}>
-                  We envision a generation of students who approach the world's great institutions not as destinations to be won, but as communities of thought to join and enrich. We aspire to become a trusted name in international education, recognized for our principles as much as our outcomes.
-                </p>
-                <p style={{ marginBottom: '14px' }}>
-                  Guided by integrity, intellectual independence and a long view of what learning can achieve, we aim to help shape a culture in which education serves both the individual and the wider good. In every student we support, we hope to see the beginnings of a life devoted to knowledge, service and distinction.
-                </p>
-              </div>
-              <p style={{ fontStyle: 'italic', fontSize: '0.95rem', color: '#64748b', marginTop: '16px', borderTop: '1px solid #e2e8f0', paddingTop: '16px' }}>
-                To advance the enduring ideals of scholarship across the global academic community.
-              </p>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      {/* 5. WHY STUDENTS CHOOSE FREIE ADMITS */}
-      <section className="section-py" style={{ background: '#f8fafc', borderTop: '1px solid #e2e8f0' }}>
-        <div className="container">
-          <div className="section-header">
-            <span className="badge-pill badge-primary">Student Centricity</span>
-            <h2 className="section-title">
-              Why Students Choose <span className="text-highlight">FREIE ADMITS</span>
-            </h2>
-            <p className="section-desc">
-              Integrity, deep European institutional expertise, and structured end-to-end guidance.
-            </p>
-          </div>
-
-          <div className="grid-2">
-            {whyStudentsChoose.map((item, idx) => (
-              <div key={idx} className="card-white" style={{ padding: '32px' }}>
-                <div style={{ display: 'flex', alignItems: 'center', gap: '10px', marginBottom: '12px' }}>
-                  <ShieldCheck size={24} color="#1c2a4f" />
-                  <h3 style={{ fontSize: '1.3rem', fontWeight: 700, color: '#1c2a4f' }}>
-                    {item.title}
-                  </h3>
-                </div>
-                <p style={{ color: '#64748b', fontSize: '0.98rem', lineHeight: 1.65, margin: 0 }}>
-                  {item.desc}
-                </p>
-              </div>
-            ))}
-          </div>
-        </div>
-      </section>
-
-      {/* 6. START WITH A CONVERSATION CTA */}
-      <section className="section-py" style={{ background: '#1c2a4f', color: '#ffffff', textAlign: 'center' }}>
-        <div className="container" style={{ maxWidth: '760px' }}>
-          <span style={{ background: 'rgba(217, 119, 6, 0.25)', color: '#94a3b8', padding: '4px 12px', borderRadius: '50px', fontSize: '0.8rem', fontWeight: 700, textTransform: 'uppercase', letterSpacing: '0.5px' }}>
-            Get in Touch
-          </span>
-          <h2 style={{ fontSize: '2.5rem', fontWeight: 800, color: '#ffffff', margin: '16px 0 14px 0' }}>
-            Start With a Conversation
-          </h2>
-          <p style={{ fontSize: '1.12rem', color: '#cbd5e1', lineHeight: 1.65, marginBottom: '28px' }}>
-            Your international education journey doesn't need to begin with a complicated application. It can begin with one conversation.
-          </p>
-          <button onClick={onOpenCounselling} className="btn btn-primary btn-lg">
-            <span>Book a Counselling Session</span>
-            <ArrowRight size={18} />
-          </button>
-        </div>
-      </section>
-
-      <style>{`
         @media (max-width: 960px) {
+          .hero-grid {
+            grid-template-columns: 1fr !important;
+            gap: 32px !important;
+          }
+          .hero-art-col {
+            order: -1;
+            max-width: 380px;
+            margin: 0 auto;
+          }
+          .about-hero-title {
+            white-space: normal;
+          }
           .about-hero-grid {
             grid-template-columns: 1fr !important;
           }
           .mission-grid {
             grid-template-columns: 1fr !important;
           }
+        }
+
+        @media (max-width: 640px) {
+          .hero-section-premium { padding: 100px 0 120px 0; min-height: 80vh; }
+          .hero-headline { font-size: clamp(2rem, 7.5vw, 2.5rem); }
+          .hero-br-hide-sm { display: none; }
+          .hero-cta-row { gap: 10px; }
+        }
+
+        @media (max-width: 480px) {
+          .hero-art-col { max-width: 100%; }
         }
       `}</style>
     </div>

@@ -19,8 +19,7 @@ import {
 } from 'react-icons/fa';
 
 const quickLinks = [
-  { label: 'Home', to: '/' },
-  { label: 'About Us', to: '/about' },
+  { label: 'About Us', to: '/' },
   { label: 'Destinations', to: '/destinations' },
   { label: 'Courses', to: '/courses' },
   { label: 'Services', to: '/services' },

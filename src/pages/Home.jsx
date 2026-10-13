@@ -57,91 +57,10 @@ export function Home({ onOpenCounselling, onOpenEvaluation }) {
 
   return (
     <div>
-      {/* 1. HERO SECTION */}
-      <section className="hero-section-premium">
-        {/* Animated Mesh Background */}
-        <div className="hero-mesh-bg" aria-hidden="true">
-          <div className="hero-orb hero-orb-1" />
-          <div className="hero-orb hero-orb-2" />
-          <div className="hero-orb hero-orb-3" />
-          <div className="hero-grid-dots" />
-        </div>
 
-        <div className="container" style={{ position: 'relative', zIndex: 1 }}>
-          <div className="hero-grid">
-            {/* Left Column */}
-            <div className="hero-left-col">
-
-              {/* Premium eyebrow pill */}
-              <div className="hero-eyebrow-pill">
-                <span className="hero-eyebrow-dot" />
-                <span>Trusted European Study Abroad Experts</span>
-              </div>
-
-              <h1 className="hero-headline">
-                Where Academic <span className="hero-headline-dark">Ambition</span>
-                <br className="hero-br-hide-sm" />
-                Meets <span className="hero-gradient-text-blue">European Opportunity</span>
-              </h1>
-
-              <p className="hero-subtext">
-                Personalised guidance for ambitious students seeking the right university and programme across <strong>Germany and Europe</strong>.
-              </p>
-
-              {/* Action Buttons */}
-              <div className="hero-cta-row">
-                <button onClick={onOpenCounselling} className="btn btn-primary btn-lg hero-btn-primary">
-                  <Sparkles size={18} />
-                  <span>Book Free Counselling</span>
-                  <ArrowRight size={16} />
-                </button>
-                <button onClick={onOpenEvaluation} className="btn hero-btn-outline btn-lg">
-                  <UserCheck size={18} />
-                  <span>Get Profile Evaluation</span>
-                </button>
-              </div>
-            </div>
-
-            {/* Right Column: Hero Illustration */}
-            <div className="hero-art-col">
-              <div className="hero-art-glow-ring" />
-              <div className="hero-art-inner animate-float">
-                <HeroIllustration />
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      {/* 2. SPECIAL GERMANY & dMAT HIGHLIGHT BANNER */}
-      <section style={{ background: '#1c2a4f', color: '#ffffff', padding: '48px 0', borderTop: '1px solid #1c2a4f', borderBottom: '1px solid #1c2a4f' }}>
-        <div className="container">
-          <div style={{ textAlign: 'center', maxWidth: '800px', margin: '0 auto' }}>
-            <div>
-              <div style={{ display: 'inline-flex', alignItems: 'center', gap: '6px', background: '#ffffff', color: '#1c2a4f', padding: '4px 12px', borderRadius: '4px', fontSize: '0.78rem', fontWeight: 800, textTransform: 'uppercase', letterSpacing: '0.5px', marginBottom: '12px' }}>
-                <span>🇩🇪 Germany dMAT Guidance</span>
-              </div>
-              <h2 style={{ fontSize: '2.2rem', fontWeight: 800, color: '#ffffff', lineHeight: 1.25, marginBottom: '14px' }}>
-                Planning to Study a <span style={{ color: '#eef2fa' }}>Master's in Germany?</span>
-              </h2>
-              <p style={{ color: '#cbd5e1', fontSize: '1.05rem', lineHeight: 1.6, marginBottom: '24px' }}>
-                FREIE ADMITS provides structured guidance for students preparing for the <strong>Digital Master's Assessment Test (dMAT)</strong>. Understand the process, prepare effectively and move forward with greater confidence.
-              </p>
-              <div style={{ display: 'flex', gap: '14px', flexWrap: 'wrap', justifyContent: 'center' }}>
-                <button onClick={() => navigate('/dmat-germany')} className="btn btn-gold">
-                  <span>Explore dMAT Germany</span>
-                  <ArrowRight size={16} />
-                </button>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      <UniversitySlider />
       
-      {/* 3. WHY CHOOSE FREIE ADMITS */}
-      <section className="section-py" style={{ background: '#ffffff' }}>
+      {/* WHY CHOOSE FREIE ADMITS */}
+      <section className="section-py" style={{ background: '#ffffff', paddingTop: '120px' }}>
         <div className="container">
           <div className="section-header">
             <span className="badge-pill badge-primary">Why FREIE ADMITS?</span>

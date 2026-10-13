@@ -104,14 +104,6 @@ const ExamPrep = () => {
                   <span><strong>Diagnostic</strong> Led</span>
                 </div>
               </div>
-
-              <div className="hero-cta-row">
-                <button onClick={() => navigate('/contact')} className="btn btn-primary btn-lg hero-btn-primary">
-                  <Sparkles size={18} />
-                  <span>Free Expert Consultation</span>
-                  <ArrowRight size={16} />
-                </button>
-              </div>
             </div>
 
             <div className="ep-hero-right">
@@ -201,12 +193,6 @@ const ExamPrep = () => {
                 <h4 className="ep-exam-title">{exam.title}</h4>
                 {exam.full && <p className="ep-exam-full">{exam.full}</p>}
                 <p className="ep-exam-desc">{exam.desc}</p>
-                <div className="ep-exam-footer">
-                  <button onClick={() => navigate('/contact')} className="btn btn-sm" style={{ background: '#f1f5f9', color: '#1c2a4f', border: '1px solid #e2e8f0' }}>
-                    <span>Start Preparation</span>
-                    <ArrowRight size={14} />
-                  </button>
-                </div>
               </div>
             ))}
           </div>
@@ -254,7 +240,7 @@ const ExamPrep = () => {
               <div key={idx} className="ep-std-card">
                 <div className="ep-std-card-top">
                   <h4 className="ep-std-card-title">{exam.title}</h4>
-                  <p className="ep-std-card-full">{exam.full}</p>
+                  {exam.full && <p className="ep-std-card-full">{exam.full}</p>}
                 </div>
                 <p className="ep-std-card-desc">{exam.desc}</p>
                 <div className="ep-std-card-tags">
@@ -262,10 +248,6 @@ const ExamPrep = () => {
                     <span key={tIdx} className="ep-std-tag">{tag}</span>
                   ))}
                 </div>
-                <button onClick={() => navigate('/contact')} className="ep-std-card-btn">
-                  <span>Book Diagnostic</span>
-                  <ArrowRight size={14} />
-                </button>
               </div>
             ))}
           </div>
@@ -650,7 +632,7 @@ const ExamPrep = () => {
         .ep-std-grid {
           display: grid;
           grid-template-columns: repeat(3, 1fr);
-          gap: 20px;
+          gap: 24px;
         }
         .ep-std-card {
           background: rgba(255,255,255,0.04);
@@ -659,33 +641,41 @@ const ExamPrep = () => {
           padding: 28px 24px;
           display: flex;
           flex-direction: column;
-          gap: 12px;
+          gap: 14px;
           transition: all 0.22s ease;
         }
         .ep-std-card:hover {
           background: rgba(255,255,255,0.08);
-          border-color: rgba(255,255,255,0.2);
+          border-color: rgba(255,255,255,0.22);
           transform: translateY(-4px);
-          box-shadow: 0 12px 40px rgba(0, 0, 0, 0.3);
+          box-shadow: 0 14px 40px rgba(0, 0, 0, 0.35);
         }
-        .ep-std-card-top { }
+        .ep-std-card-top {
+          display: flex;
+          flex-direction: column;
+          gap: 4px;
+          padding-bottom: 12px;
+          border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+        }
         .ep-std-card-title {
           font-size: 1.5rem;
           font-weight: 800;
           color: #ffffff;
-          margin: 0 0 4px 0;
+          margin: 0;
           font-family: var(--font-heading);
+          letter-spacing: -0.01em;
         }
         .ep-std-card-full {
           font-size: 0.82rem;
           color: #94a3b8;
           font-style: italic;
           margin: 0;
+          line-height: 1.35;
         }
         .ep-std-card-desc {
-          font-size: 0.9rem;
+          font-size: 0.92rem;
           color: #cbd5e1;
-          line-height: 1.6;
+          line-height: 1.65;
           margin: 0;
           flex: 1;
         }
@@ -693,6 +683,9 @@ const ExamPrep = () => {
           display: flex;
           flex-wrap: wrap;
           gap: 6px;
+          padding-top: 14px;
+          margin-top: auto;
+          border-top: 1px solid rgba(255, 255, 255, 0.08);
         }
         .ep-std-tag {
           background: rgba(255,255,255,0.08);
@@ -702,25 +695,6 @@ const ExamPrep = () => {
           padding: 3px 10px;
           border-radius: 100px;
           border: 1px solid rgba(255,255,255,0.12);
-        }
-        .ep-std-card-btn {
-          display: inline-flex;
-          align-items: center;
-          gap: 8px;
-          padding: 10px 20px;
-          background: rgba(255,255,255,0.08);
-          border: 1px solid rgba(255,255,255,0.15);
-          border-radius: 10px;
-          color: #ffffff;
-          font-size: 0.88rem;
-          font-weight: 600;
-          cursor: pointer;
-          transition: all 0.22s ease;
-          margin-top: auto;
-        }
-        .ep-std-card-btn:hover {
-          background: rgba(255,255,255,0.15);
-          border-color: rgba(255,255,255,0.3);
         }
 
         /* ====== FAQ ====== */

@@ -7,7 +7,6 @@ import { CounsellingModal } from './components/CounsellingModal';
 import { MobileQuickBar } from './components/MobileQuickBar';
 
 // Pages
-import { Home } from './pages/Home';
 import { AboutUs } from './pages/AboutUs';
 import { Destinations } from './pages/Destinations';
 
@@ -29,13 +28,12 @@ function App() {
   const openEvaluation = () => setModalState({ isOpen: true, type: 'evaluation' });
   const closeModal = () => setModalState({ isOpen: false, type: 'counselling' });
 
-  // Route switcher for the 7 pages
+  // Route switcher
   const renderPage = () => {
     switch (currentPath) {
       case '/':
-        return <Home onOpenCounselling={openCounselling} onOpenEvaluation={openEvaluation} />;
       case '/about':
-        return <AboutUs onOpenCounselling={openCounselling} />;
+        return <AboutUs onOpenCounselling={openCounselling} onOpenEvaluation={openEvaluation} />;
       case '/destinations':
         return <Destinations onOpenCounselling={openCounselling} onOpenEvaluation={openEvaluation} />;
       case '/services':
