@@ -185,7 +185,7 @@ export function CounsellingModal({ isOpen, onClose, initialType = 'counselling' 
               </button>
 
               <p style={{ textAlign: 'center', fontSize: '0.78rem', color: '#94a3b8', marginTop: '12px' }}>
-                🔒 Admission decisions are made by individual universities. Visa decisions are made by relevant immigration authorities. FREIE ADMITS provides ethical guidance throughout the process.
+                🔒 Admission decisions are made by individual universities. Visa decisions are made by relevant immigration authorities. EUROPA FUSION provides ethical guidance throughout the process.
               </p>
             </form>
           </div>

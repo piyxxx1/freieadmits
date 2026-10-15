@@ -95,7 +95,7 @@ export function Courses({ onOpenCounselling }) {
             Choose a Course That Builds Your Future
           </div>
           <p style={{ fontSize: '1.08rem', color: '#475569', lineHeight: 1.65, marginBottom: '28px' }}>
-            The right course can shape your academic journey and future career. At <strong>FREIE ADMITS</strong>, 
+            The right course can shape your academic journey and future career. At <strong>EUROPA FUSION</strong>, 
             we help students explore programs based on their previous education, interests and career objectives.
           </p>
 

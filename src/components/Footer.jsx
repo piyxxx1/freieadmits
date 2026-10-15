@@ -21,7 +21,6 @@ import {
 const quickLinks = [
   { label: 'About Us', to: '/' },
   { label: 'Destinations', to: '/destinations' },
-  { label: 'Courses', to: '/courses' },
   { label: 'Services', to: '/services' },
   { label: 'dMAT Preparation', to: '/dmat-germany' },
   { label: 'Contact Us', to: '/contact' },
@@ -65,7 +64,7 @@ export function Footer() {
             alignItems: 'flex-start'
           }} className="footer-4col-grid">
 
-            {/* Column 1 — FREIE ADMITS */}
+            {/* Column 1 — EUROPA FUSION */}
             <div>
               <div style={{ marginBottom: '14px' }}>
                 <BrandLogo theme="light" size="default" />
@@ -75,7 +74,7 @@ export function Footer() {
               </p>
               <div style={{ width: '40px', height: '3px', background: '#3b82f6', marginBottom: '14px', borderRadius: '2px' }} />
               <p style={{ fontSize: '0.84rem', color: '#475569', lineHeight: 1.68, marginBottom: '22px' }}>
-                FREIE ADMITS is a study-abroad guidance brand of <strong style={{ color: '#1c2a4f' }}>EUROPA FUSION PRIVATE LIMITED</strong>, helping students explore international education opportunities through personalised counselling, university applications, language preparation, and visa guidance.
+                <strong style={{ color: '#1c2a4f' }}>EUROPA FUSION PRIVATE LIMITED</strong> is a premier study-abroad guidance organisation, helping students explore international education opportunities through personalised counselling, university applications, language preparation, and visa guidance.
               </p>
 
               {/* Contact Us Direct Links */}
@@ -312,7 +311,7 @@ export function Footer() {
             </div>
 
             <div style={{ display: 'flex', alignItems: 'center', gap: '14px', flexWrap: 'wrap' }}>
-              <span style={{ color: '#475569', fontSize: '0.82rem' }}>© 2026 FREIE ADMITS. All Rights Reserved.</span>
+              <span style={{ color: '#475569', fontSize: '0.82rem' }}>© 2026 EUROPA FUSION. All Rights Reserved.</span>
               <span style={{ color: '#cbd5e1' }}>|</span>
               {[
                 { label: 'Privacy Policy', to: '/privacy-policy' },

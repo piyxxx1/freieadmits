@@ -20,7 +20,7 @@ export function RefundPolicy() {
             Refund Policy
           </h1>
           <p style={{ color: '#cbd5e1', fontSize: '1.05rem', lineHeight: 1.6, margin: 0 }}>
-            Clear, transparent terms by EUROPA FUSION PRIVATE LIMITED (Brand: FREIE ADMITS)
+            Clear, transparent terms by EUROPA FUSION PRIVATE LIMITED
           </p>
         </div>
       </section>
@@ -48,7 +48,7 @@ export function RefundPolicy() {
             1. Overview & Scope
           </h2>
           <p style={{ marginBottom: '20px' }}>
-            This Refund & Cancellation Policy sets forth the terms and conditions under which <strong>EUROPA FUSION PRIVATE LIMITED</strong> (operating as <strong>FREIE ADMITS</strong>, CIN: U80302TN2021PTC146401) processes service cancellations and refund requests for student consulting, application processing, dMAT prep, and related educational services.
+            This Refund & Cancellation Policy sets forth the terms and conditions under which <strong>EUROPA FUSION PRIVATE LIMITED</strong> (CIN: U80302TN2021PTC146401) processes service cancellations and refund requests for student consulting, application processing, dMAT prep, and related educational services.
           </p>
           <p style={{ marginBottom: '28px' }}>
             We are dedicated to honest, student-first guidance. Our policies are designed to be equitable, transparent, and compliant with all statutory consumer protection norms in India.

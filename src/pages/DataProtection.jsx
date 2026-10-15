@@ -20,7 +20,7 @@ export function PrivacyPolicy() {
             Privacy Policy
           </h1>
           <p style={{ color: '#cbd5e1', fontSize: '1.05rem', lineHeight: 1.6, margin: 0 }}>
-            Last Updated: January 2026 | EUROPA FUSION PRIVATE LIMITED (Brand: FREIE ADMITS)
+            Last Updated: January 2026 | EUROPA FUSION PRIVATE LIMITED
           </p>
         </div>
       </section>
@@ -48,7 +48,7 @@ export function PrivacyPolicy() {
             1. Introduction & Overview
           </h2>
           <p style={{ marginBottom: '20px' }}>
-            Welcome to <strong>FREIE ADMITS</strong>, a premium overseas education guidance brand owned and operated by <strong>EUROPA FUSION PRIVATE LIMITED</strong> (CIN: U80302TN2021PTC146401), having its registered office at Office No. 715A, Spencer Plaza, Anna Salai, Chennai, Tamil Nadu – 600002.
+            Welcome to <strong>EUROPA FUSION PRIVATE LIMITED</strong> (CIN: U80302TN2021PTC146401), a premium overseas education guidance organisation having its registered office at Office No. 715A, Spencer Plaza, Anna Salai, Chennai, Tamil Nadu – 600002.
           </p>
           <p style={{ marginBottom: '28px' }}>
             We respect your privacy and are committed to protecting your personal information. This Privacy Policy outlines our practices concerning the collection, use, disclosure, and safeguarding of information when you interact with our website (<a href="https://www.freieadmits.io" style={{ color: '#1c2a4f', fontWeight: 600 }}>www.freieadmits.io</a>), consult with our counselors, or use our admission guidance services.
@@ -121,7 +121,7 @@ export function PrivacyPolicy() {
             If you have questions, concerns, or requests regarding this Privacy Policy or data security, please contact our grievance officer:
           </p>
           <div style={{ background: '#f8fafc', padding: '20px 24px', borderRadius: '12px', border: '1px solid #e2e8f0' }}>
-            <div style={{ fontWeight: 700, color: '#1c2a4f', marginBottom: '6px' }}>EUROPA FUSION PRIVATE LIMITED (FREIE ADMITS)</div>
+            <div style={{ fontWeight: 700, color: '#1c2a4f', marginBottom: '6px' }}>EUROPA FUSION PRIVATE LIMITED</div>
             <div>Office No. 715A, Spencer Plaza, Anna Salai, Chennai, Tamil Nadu – 600002</div>
             <div>Email: <a href="mailto:info@freieadmits.io" style={{ color: '#1c2a4f', fontWeight: 600 }}>info@freieadmits.io</a> / <a href="mailto:freieadmits@gmail.com" style={{ color: '#1c2a4f', fontWeight: 600 }}>freieadmits@gmail.com</a></div>
             <div>Phone: <a href="tel:+919974798803" style={{ color: '#1c2a4f', fontWeight: 600 }}>+91 99747 98803</a></div>

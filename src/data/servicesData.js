@@ -103,7 +103,7 @@ export const servicesData = [
     ],
     iconName: 'ShieldCheck',
     color: '#1c2a4f',
-    disclaimer: 'Visa decisions are made solely by the relevant immigration authorities and consulates. FREIE ADMITS provides guidance and application assistance.'
+    disclaimer: 'Visa decisions are made solely by the relevant immigration authorities and consulates. EUROPA FUSION provides guidance and application assistance.'
   },
   {
     id: 'pre-departure-support',

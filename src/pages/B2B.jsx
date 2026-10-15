@@ -116,7 +116,7 @@ export function B2B({ onOpenCounselling: _onOpenCounselling }) {
             lineHeight: 1.12, marginBottom: '20px',
             letterSpacing: '-0.025em'
           }}>
-            Partner with FREIE ADMITS<br />
+            Partner with EUROPA FUSION<br />
             <span style={{ background: 'linear-gradient(135deg, #eef2fa 0%, #eef2fa 100%)', WebkitBackgroundClip: 'text', WebkitTextFillColor: 'transparent' }}>
               Grow Together in European Education
             </span>

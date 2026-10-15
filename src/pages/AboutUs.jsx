@@ -130,7 +130,7 @@ export function AboutUs({ onOpenCounselling, onOpenEvaluation }) {
                 color: '#334155'
               }}>
                 <p style={{ marginBottom: '18px' }}>
-                  <strong style={{ fontStyle: 'normal', fontWeight: 700, color: '#1c2a4f' }}>FREIE ADMITS</strong> is a European higher-education advisory built around a simple belief: where and what you study deserves careful consideration.
+                  <strong style={{ fontStyle: 'normal', fontWeight: 700, color: '#1c2a4f' }}>EUROPA FUSION</strong> is a European higher-education advisory built around a simple belief: where and what you study deserves careful consideration.
                 </p>
                 <p style={{ marginBottom: '18px' }}>
                   We help students make sense of the European academic landscape — its universities, programmes, admission pathways and possibilities — and approach it with greater knowledge and direction.
@@ -152,59 +152,79 @@ export function AboutUs({ onOpenCounselling, onOpenEvaluation }) {
       </section>
 
       {/* 4. OUR MISSION & OUR VISION */}
-      <section className="section-py" style={{ background: '#ffffff', borderTop: '1px solid #f1f5f9' }}>
-        <div className="container" style={{ maxWidth: '820px', margin: '0 auto' }}>
+      <section className="section-py" style={{ background: '#ffffff', borderTop: '1px solid #f1f5f9', overflow: 'hidden' }}>
+        <div className="container">
           
-          {/* Mission Block */}
-          <div style={{ marginBottom: '64px' }}>
-            <div style={{ display: 'flex', alignItems: 'center', gap: '12px', marginBottom: '14px' }}>
-              <span style={{ fontSize: '0.8rem', fontWeight: 800, textTransform: 'uppercase', letterSpacing: '0.12em', color: '#1c2a4f' }}>
-                Our Mission
-              </span>
-              <div style={{ flex: 1, height: '1px', background: '#e2e8f0' }} />
-            </div>
+          {/* Mission Block - Left Aligned */}
+          <div style={{ display: 'flex', justifyContent: 'flex-start', marginBottom: '72px' }}>
+            <div style={{ maxWidth: '780px', width: '100%' }}>
+              <div style={{ display: 'flex', alignItems: 'center', gap: '16px', marginBottom: '18px' }}>
+                <h2 style={{
+                  fontSize: '1.85rem',
+                  fontWeight: 800,
+                  textTransform: 'uppercase',
+                  letterSpacing: '0.04em',
+                  color: '#1c2a4f',
+                  margin: 0,
+                  lineHeight: 1
+                }}>
+                  OUR <span style={{ color: '#3b82f6' }}>MISSION</span>
+                </h2>
+                <div style={{ flex: 1, height: '2px', background: 'linear-gradient(90deg, #3b82f6 0%, #e2e8f0 100%)' }} />
+              </div>
 
-            <h3 style={{ fontFamily: 'var(--font-heading)', fontWeight: 600, fontStyle: 'italic', fontSize: '2.1rem', color: '#1c2a4f', lineHeight: 1.25, marginBottom: '24px' }}>
-              To Cultivate Scholars, Not Merely Applicants.
-            </h3>
+              <h3 style={{ fontFamily: 'var(--font-heading)', fontWeight: 600, fontStyle: 'italic', fontSize: '2.15rem', color: '#1c2a4f', lineHeight: 1.28, marginBottom: '20px' }}>
+                To Cultivate Scholars, Not Merely Applicants.
+              </h3>
 
-            <div style={{ color: '#475569', fontSize: '1.08rem', lineHeight: 1.8 }}>
-              <p style={{ marginBottom: '18px' }}>
-                FREIE ADMITS exists to uphold the seriousness of the academic journey. We believe a university education is among the most consequential commitments a young person will make, and it deserves to be entered with rigor, reflection, and intellectual honesty.
-              </p>
-              <p style={{ margin: 0 }}>
-                We seek to nurture in every student a clear sense of scholarly purpose: the discipline to question, the humility to learn, and the resolve to pursue excellence for its own sake. In doing so, we hope to restore to the pursuit of higher education its proper dignity, where ambition is governed by understanding, and achievement is measured by substance rather than status.
-              </p>
+              <div style={{ color: '#475569', fontSize: '1.08rem', lineHeight: 1.8 }}>
+                <p style={{ marginBottom: '18px' }}>
+                  EUROPA FUSION exists to uphold the seriousness of the academic journey. We believe a university education is among the most consequential commitments a young person will make, and it deserves to be entered with rigor, reflection, and intellectual honesty.
+                </p>
+                <p style={{ margin: 0 }}>
+                  We seek to nurture in every student a clear sense of scholarly purpose: the discipline to question, the humility to learn, and the resolve to pursue excellence for its own sake. In doing so, we hope to restore to the pursuit of higher education its proper dignity, where ambition is governed by understanding, and achievement is measured by substance rather than status.
+                </p>
+              </div>
             </div>
           </div>
 
-          {/* Elegant Section Break */}
-          <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'center', gap: '16px', margin: '56px 0' }}>
-            <div style={{ width: '40px', height: '1px', background: '#cbd5e1' }} />
-            <div style={{ width: '6px', height: '6px', borderRadius: '50%', background: '#1c2a4f', opacity: 0.4 }} />
-            <div style={{ width: '40px', height: '1px', background: '#cbd5e1' }} />
+          {/* Elegant Connector Divider */}
+          <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'center', gap: '20px', margin: '0 auto 72px auto', maxWidth: '600px' }}>
+            <div style={{ flex: 1, height: '1px', background: 'linear-gradient(90deg, transparent, #cbd5e1)' }} />
+            <div style={{ width: '7px', height: '7px', borderRadius: '50%', background: '#3b82f6', opacity: 0.6 }} />
+            <div style={{ flex: 1, height: '1px', background: 'linear-gradient(90deg, #cbd5e1, transparent)' }} />
           </div>
 
-          {/* Vision Block */}
-          <div>
-            <div style={{ display: 'flex', alignItems: 'center', gap: '12px', marginBottom: '14px' }}>
-              <span style={{ fontSize: '0.8rem', fontWeight: 800, textTransform: 'uppercase', letterSpacing: '0.12em', color: '#475569' }}>
-                Our Vision
-              </span>
-              <div style={{ flex: 1, height: '1px', background: '#e2e8f0' }} />
-            </div>
+          {/* Vision Block - Right Aligned */}
+          <div style={{ display: 'flex', justifyContent: 'flex-end' }}>
+            <div style={{ maxWidth: '780px', width: '100%' }}>
+              <div style={{ display: 'flex', alignItems: 'center', gap: '16px', marginBottom: '18px' }}>
+                <div style={{ flex: 1, height: '2px', background: 'linear-gradient(90deg, #e2e8f0 0%, #3b82f6 100%)' }} />
+                <h2 style={{
+                  fontSize: '1.85rem',
+                  fontWeight: 800,
+                  textTransform: 'uppercase',
+                  letterSpacing: '0.04em',
+                  color: '#1c2a4f',
+                  margin: 0,
+                  lineHeight: 1
+                }}>
+                  OUR <span style={{ color: '#3b82f6' }}>VISION</span>
+                </h2>
+              </div>
 
-            <h3 style={{ fontFamily: 'var(--font-heading)', fontWeight: 600, fontStyle: 'italic', fontSize: '2.1rem', color: '#1c2a4f', lineHeight: 1.25, marginBottom: '24px' }}>
-              To Advance the Enduring Ideals of Scholarship.
-            </h3>
+              <h3 style={{ fontFamily: 'var(--font-heading)', fontWeight: 600, fontStyle: 'italic', fontSize: '2.15rem', color: '#1c2a4f', lineHeight: 1.28, marginBottom: '20px' }}>
+                To Advance the Enduring Ideals of Scholarship.
+              </h3>
 
-            <div style={{ color: '#475569', fontSize: '1.08rem', lineHeight: 1.8 }}>
-              <p style={{ marginBottom: '18px' }}>
-                We envision a generation of students who approach the world's great institutions not as destinations to be won, but as communities of thought to join and enrich. We aspire to become a trusted name in international education, recognized for our principles as much as our outcomes.
-              </p>
-              <p style={{ margin: 0 }}>
-                Guided by integrity, intellectual independence and a long view of what learning can achieve, we aim to help shape a culture in which education serves both the individual and the wider good. In every student we support, we hope to see the beginnings of a life devoted to knowledge, service and distinction.
-              </p>
+              <div style={{ color: '#475569', fontSize: '1.08rem', lineHeight: 1.8 }}>
+                <p style={{ marginBottom: '18px' }}>
+                  We envision a generation of students who approach the world's great institutions not as destinations to be won, but as communities of thought to join and enrich. We aspire to become a trusted name in international education, recognized for our principles as much as our outcomes.
+                </p>
+                <p style={{ margin: 0 }}>
+                  Guided by integrity, intellectual independence and a long view of what learning can achieve, we aim to help shape a culture in which education serves both the individual and the wider good. In every student we support, we hope to see the beginnings of a life devoted to knowledge, service and distinction.
+                </p>
+              </div>
             </div>
           </div>
 
@@ -214,7 +234,6 @@ export function AboutUs({ onOpenCounselling, onOpenEvaluation }) {
       {/* 5. WHAT WE DO */}
       <section className="section-py" style={{ background: '#f8fafc', borderTop: '1px solid #e2e8f0' }}>
         <div className="container" style={{ maxWidth: '860px', margin: '0 auto', textAlign: 'center' }}>
-          <span className="badge-pill badge-primary">Comprehensive Guidance</span>
           <h2 className="section-title">
             WHAT <span className="text-highlight">WE DO</span>
           </h2>
@@ -227,7 +246,7 @@ export function AboutUs({ onOpenCounselling, onOpenEvaluation }) {
               European higher education is not a single system. Each country, university, and programme brings its own academic structures, expectations, and routes to admission.
             </p>
             <p style={{ marginBottom: '16px' }}>
-              <strong>FREIE ADMITS</strong> brings these elements into perspective.
+              <strong>EUROPA FUSION</strong> brings these elements into perspective.
             </p>
             <p style={{ marginBottom: '16px' }}>
               We examine the opportunities available to each student, distinguish what is relevant from what is merely possible, and shape a coherent pathway from initial exploration through to admission.

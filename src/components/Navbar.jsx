@@ -180,7 +180,6 @@ export function Navbar({ onOpenCounselling, onOpenEvaluation }) {
                         setDestinationsOpen(false);
                       }}
                     >
-                      <Globe size={15} className="link-icon-subtle" />
                       <span>{item.name}</span>
                       <ChevronDown size={14} className={`chevron-icon ${destinationsOpen ? 'open' : ''}`} />
                     </button>
@@ -269,7 +268,6 @@ export function Navbar({ onOpenCounselling, onOpenEvaluation }) {
                         setServicesOpen(false);
                       }}
                     >
-                      <Wrench size={15} className="link-icon-subtle" />
                       <span>{item.name}</span>
                       <ChevronDown size={14} className={`chevron-icon ${servicesOpen ? 'open' : ''}`} />
                     </button>
@@ -373,7 +371,6 @@ export function Navbar({ onOpenCounselling, onOpenEvaluation }) {
                   className={`nav-link ${isActive ? 'active' : ''} ${item.isSpecial ? 'special-link' : ''} ${item.isB2B ? 'b2b-link' : ''}`}
                 >
                   {item.isSpecial && <CountryFlag countryId="germany" size={14} />}
-                  {item.isB2B && <Handshake size={14} />}
                   <span>{item.name}</span>
                 </Link>
               );

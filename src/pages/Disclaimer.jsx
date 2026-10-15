@@ -20,7 +20,7 @@ export function Disclaimer() {
             Legal Disclaimer
           </h1>
           <p style={{ color: '#cbd5e1', fontSize: '1.05rem', lineHeight: 1.6, margin: 0 }}>
-            Official disclosures by EUROPA FUSION PRIVATE LIMITED (Brand: FREIE ADMITS)
+            Official disclosures by EUROPA FUSION PRIVATE LIMITED
           </p>
         </div>
       </section>
@@ -48,7 +48,7 @@ export function Disclaimer() {
             1. Nature of Advisory Services
           </h2>
           <p style={{ marginBottom: '20px' }}>
-            <strong>FREIE ADMITS</strong> (owned by <strong>EUROPA FUSION PRIVATE LIMITED</strong>, CIN: U80302TN2021PTC146401) is an independent overseas education advisory consultancy. We provide profile assessment, counseling, documentation review, and procedural assistance.
+            <strong>EUROPA FUSION PRIVATE LIMITED</strong> (CIN: U80302TN2021PTC146401) is an independent overseas education advisory consultancy. We provide profile assessment, counseling, documentation review, and procedural assistance.
           </p>
           <p style={{ marginBottom: '28px' }}>
             We do NOT act as an official university admissions committee, nor are we an embassy, consular office, or sovereign immigration authority.
@@ -61,7 +61,7 @@ export function Disclaimer() {
             All university admissions, including tuition-free public universities in Germany and top universities in Finland, France, Ireland, Netherlands, Sweden, etc., are granted solely at the discretion of the respective institution's admissions board.
           </p>
           <ul style={{ paddingLeft: '22px', marginBottom: '28px' }}>
-            <li>No agent, counselor, or employee of FREIE ADMITS is authorized to promise or guarantee an admission letter.</li>
+            <li>No agent, counselor, or employee of EUROPA FUSION is authorized to promise or guarantee an admission letter.</li>
             <li>Admissions are based strictly on academic merit, ECTS credit matching, subject prerequisites, GPA requirements, language scores, and program seat limits.</li>
             <li>University tuition policies (e.g. €0 public university tuition in Germany) are set by sovereign state ministries and may be subject to legislative revisions beyond our control.</li>
           </ul>
@@ -73,7 +73,7 @@ export function Disclaimer() {
             Visa issuance and entry permits are the sovereign privilege of the respective destination country's government:
           </p>
           <ul style={{ paddingLeft: '22px', marginBottom: '28px' }}>
-            <li>Neither FREIE ADMITS nor its affiliates can influence, expedite, or guarantee the outcome of any visa, residence permit, or APS verification.</li>
+            <li>Neither EUROPA FUSION nor its affiliates can influence, expedite, or guarantee the outcome of any visa, residence permit, or APS verification.</li>
             <li>Decisions are made entirely by the relevant Embassy, Consulate-General, Ausländerbehörde (Foreigners Authority), or immigration department.</li>
             <li>Processing timelines, appointment slot availability (VFS/Embassy), and financial requirements (such as blocked account amounts) are determined solely by government bodies.</li>
           </ul>
@@ -82,7 +82,7 @@ export function Disclaimer() {
             4. dMAT & Test Preparation Guidance
           </h2>
           <p style={{ marginBottom: '28px' }}>
-            FREIE ADMITS provides coaching frameworks, orientation, and preparatory guidance for the Digital Master's Assessment Test (dMAT) and language proficiencies. Performance on any standardized test depends entirely on the student's individual aptitude, dedication, and study efforts. We do not guarantee specific percentile rankings or test outcomes.
+            EUROPA FUSION provides coaching frameworks, orientation, and preparatory guidance for the Digital Master's Assessment Test (dMAT) and language proficiencies. Performance on any standardized test depends entirely on the student's individual aptitude, dedication, and study efforts. We do not guarantee specific percentile rankings or test outcomes.
           </p>
 
           <h2 style={{ fontSize: '1.5rem', fontWeight: 800, color: '#1c2a4f', marginBottom: '14px' }}>
@@ -96,7 +96,7 @@ export function Disclaimer() {
             6. External Links & Third-Party Resources
           </h2>
           <p style={{ marginBottom: '20px' }}>
-            Our website and resources may contain links to external government portals, university registries, APS India, Uni-Assist, and student banking platforms. FREIE ADMITS does not control, endorse, or assume responsibility for the content, privacy practices, or availability of third-party websites.
+            Our website and resources may contain links to external government portals, university registries, APS India, Uni-Assist, and student banking platforms. EUROPA FUSION does not control, endorse, or assume responsibility for the content, privacy practices, or availability of third-party websites.
           </p>
 
         </div>

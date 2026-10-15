@@ -81,7 +81,7 @@ export function DmatGermany({ onOpenCounselling }) {
                 students may be required to take an additional assessment such as the <strong>Digital Master's Assessment Test (dMAT)</strong>.
               </p>
               <p style={{ color: '#64748b', fontSize: '0.98rem', lineHeight: 1.6, marginBottom: '28px' }}>
-                <strong>FREIE ADMITS</strong> provides structured guidance to students preparing for the dMAT, 
+                <strong>EUROPA FUSION</strong> provides structured guidance to students preparing for the dMAT, 
                 helping you approach the test environment with clarity and confidence.
               </p>
 
@@ -120,7 +120,7 @@ export function DmatGermany({ onOpenCounselling }) {
             </p>
             <div style={{ background: '#f8fafc', padding: '16px 20px', borderRadius: '10px', border: '1px solid #e2e8f0', fontSize: '0.92rem', color: '#334155', display: 'flex', alignItems: 'center', gap: '10px' }}>
               <CheckCircle2 size={20} color="#1c2a4f" style={{ flexShrink: 0 }} />
-              <span>FREIE ADMITS helps students understand university-specific prerequisites and prepares them for the test environment.</span>
+              <span>EUROPA FUSION helps students understand university-specific prerequisites and prepares them for the test environment.</span>
             </div>
           </div>
         </div>

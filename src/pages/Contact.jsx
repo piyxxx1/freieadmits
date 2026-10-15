@@ -73,7 +73,7 @@ export function Contact({ onOpenCounselling }) {
             <Sparkles size={14} /> Get in Touch
           </span>
           <h1 style={{ fontSize: '2.8rem', fontWeight: 800, color: '#1c2a4f', marginBottom: '12px' }}>
-            Contact FREIE ADMITS
+            Contact EUROPA FUSION
           </h1>
           <div style={{ fontSize: '1.25rem', fontWeight: 700, color: '#475569', marginBottom: '16px' }}>
             Let's Start Your International Education Journey
@@ -321,7 +321,7 @@ export function Contact({ onOpenCounselling }) {
               {/* Office & Socials Card */}
               <div style={{ background: '#1c2a4f', color: '#ffffff', borderRadius: '16px', padding: '28px' }}>
                 <div style={{ fontSize: '0.76rem', color: '#94a3b8', fontWeight: 800, letterSpacing: '0.5px', textTransform: 'uppercase', marginBottom: '6px' }}>
-                  FREIE ADMITS
+                  EUROPA FUSION
                 </div>
                 <div style={{ fontSize: '1.25rem', fontWeight: 800, color: '#ffffff', marginBottom: '14px' }}>
                   Your Journey. Our Guidance. Your Global Future.
@@ -364,7 +364,7 @@ export function Contact({ onOpenCounselling }) {
 
       {/* Mandatory Disclaimer */}
       <div className="container" style={{ padding: '24px 20px', textAlign: 'center', fontSize: '0.8rem', color: '#64748b' }}>
-        Admission decisions are made by individual universities. Visa decisions are made by the relevant immigration authorities. FREIE ADMITS provides guidance and assistance throughout the application process.
+        Admission decisions are made by individual universities. Visa decisions are made by the relevant immigration authorities. EUROPA FUSION provides guidance and assistance throughout the application process.
       </div>
 
       <style>{`

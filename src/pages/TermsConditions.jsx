@@ -20,7 +20,7 @@ export function TermsConditions() {
             Terms & Conditions
           </h1>
           <p style={{ color: '#cbd5e1', fontSize: '1.05rem', lineHeight: 1.6, margin: 0 }}>
-            Governing your relationship with EUROPA FUSION PRIVATE LIMITED (Brand: FREIE ADMITS)
+            Governing your relationship with EUROPA FUSION PRIVATE LIMITED
           </p>
         </div>
       </section>
@@ -48,7 +48,7 @@ export function TermsConditions() {
             1. Acceptance of Terms
           </h2>
           <p style={{ marginBottom: '20px' }}>
-            These Terms & Conditions constitute a legally binding agreement between you (the "Student", "Client", or "User") and <strong>EUROPA FUSION PRIVATE LIMITED</strong> (CIN: U80302TN2021PTC146401), operating under the trade name <strong>FREIE ADMITS</strong>.
+            These Terms & Conditions constitute a legally binding agreement between you (the "Student", "Client", or "User") and <strong>EUROPA FUSION PRIVATE LIMITED</strong> (CIN: U80302TN2021PTC146401).
           </p>
           <p style={{ marginBottom: '28px' }}>
             By registering on our website, scheduling a consultation, or engaging our overseas education services, you acknowledge that you have read, understood, and agreed to be bound by these Terms and our Privacy Policy.
@@ -58,7 +58,7 @@ export function TermsConditions() {
             2. Scope of Services
           </h2>
           <p style={{ marginBottom: '14px' }}>
-            FREIE ADMITS provides advisory, counseling, and logistical support services for international education, including:
+            EUROPA FUSION provides advisory, counseling, and logistical support services for international education, including:
           </p>
           <ul style={{ paddingLeft: '22px', marginBottom: '28px' }}>
             <li>Academic profile evaluation and eligibility verification.</li>
@@ -72,7 +72,7 @@ export function TermsConditions() {
             3. Student Responsibilities & Authenticity
           </h2>
           <p style={{ marginBottom: '14px' }}>
-            Students entering into an agreement with FREIE ADMITS agree to the following obligations:
+            Students entering into an agreement with EUROPA FUSION agree to the following obligations:
           </p>
           <ul style={{ paddingLeft: '22px', marginBottom: '28px' }}>
             <li><strong>Accuracy of Records:</strong> You warrant that all academic transcripts, certificates, identity proofs, and test scores provided are genuine, authentic, and free from misrepresentation.</li>
@@ -85,7 +85,7 @@ export function TermsConditions() {
           </h2>
           <div style={{ background: '#f8fafc', padding: '18px 22px', borderRadius: '12px', borderLeft: '4px solid #1c2a4f', marginBottom: '28px' }}>
             <p style={{ margin: 0, fontWeight: 600, color: '#1c2a4f' }}>
-              Important Notice: FREIE ADMITS is an independent educational consulting firm. We do NOT guarantee admission into any university or the issuance of any student visa.
+              Important Notice: EUROPA FUSION is an independent educational consulting firm. We do NOT guarantee admission into any university or the issuance of any student visa.
             </p>
             <p style={{ margin: '8px 0 0 0', fontSize: '0.92rem' }}>
               Final admission decisions reside solely with the respective university admissions committees based on merit, capacity, and academic criteria. Visa issuance is exclusively within the sovereign discretion of the respective embassies, consulates, and immigration authorities.
@@ -96,7 +96,7 @@ export function TermsConditions() {
             5. Fees & Third-Party Expenses
           </h2>
           <p style={{ marginBottom: '28px' }}>
-            Service fees paid to FREIE ADMITS cover advisory and documentation assistance only. Students are solely responsible for all external third-party costs, including but not limited to university application fees (Uni-Assist, portals), APS verification charges, standardized examination fees (IELTS, TOEFL, GRE, dMAT), embassy visa fees, courier charges, blocked account deposits, and health insurance premiums.
+            Service fees paid to EUROPA FUSION cover advisory and documentation assistance only. Students are solely responsible for all external third-party costs, including but not limited to university application fees (Uni-Assist, portals), APS verification charges, standardized examination fees (IELTS, TOEFL, GRE, dMAT), embassy visa fees, courier charges, blocked account deposits, and health insurance premiums.
           </p>
 
           <h2 style={{ fontSize: '1.5rem', fontWeight: 800, color: '#1c2a4f', marginBottom: '14px' }}>

@@ -118,7 +118,7 @@ const ExamPrep = () => {
       <section className="section-py" style={{ background: '#f8fafc', borderTop: '1px solid #e2e8f0' }}>
         <div className="container">
           <div className="section-header">
-            <span className="badge-pill badge-primary">Why FREIE ADMITS?</span>
+            <span className="badge-pill badge-primary">Why EUROPA FUSION?</span>
             <h2 className="section-title">
               Unlock the Unparalleled Benefits of{' '}
               <span className="text-highlight">Test Prep</span>

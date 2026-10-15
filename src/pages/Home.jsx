@@ -59,16 +59,16 @@ export function Home({ onOpenCounselling, onOpenEvaluation }) {
     <div>
 
       
-      {/* WHY CHOOSE FREIE ADMITS */}
+      {/* WHY CHOOSE EUROPA FUSION */}
       <section className="section-py" style={{ background: '#ffffff', paddingTop: '120px' }}>
         <div className="container">
           <div className="section-header">
-            <span className="badge-pill badge-primary">Why FREIE ADMITS?</span>
+            <span className="badge-pill badge-primary">Why EUROPA FUSION?</span>
             <h2 className="section-title">
               The Difference That <span className="text-highlight">Actually Matters</span>
             </h2>
             <p className="section-desc">
-              Not every consultancy is the same. Here is what sets FREIE ADMITS apart.
+              Not every consultancy is the same. Here is what sets EUROPA FUSION apart.
             </p>
           </div>
 

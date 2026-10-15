@@ -13,7 +13,7 @@ export function BrandLogo({ size = 'default', theme = 'light', showTagline = tru
     <div className={`brand-logo-container ${className}`} style={{ display: 'inline-flex', flexDirection: 'column', alignItems: 'flex-start', textDecoration: 'none' }}>
       <img
         src={logoSrc}
-        alt="FREIE ADMITS"
+        alt="EUROPA FUSION"
         style={{
           height: `${logoHeight}px`,
           width: 'auto',
